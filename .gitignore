@@ -1,0 +1,15 @@
+# build output
+dist/
+# generated types
+.astro/
+# dependencies
+node_modules/
+# environment
+.env
+.env.production
+# logs
+npm-debug.log*
+# macOS
+.DS_Store
+# Claude Code tooling (not project source)
+.claude/

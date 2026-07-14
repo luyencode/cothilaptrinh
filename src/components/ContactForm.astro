@@ -1,0 +1,59 @@
+---
+interface Props {
+  endpoint: string;
+}
+const { endpoint } = Astro.props;
+---
+<div class="cform-wrap">
+  <form class="cform" id="cform">
+    <h3>Gửi lời nhắn</h3>
+    <p class="muted">Để lại thông tin, Cô Thi sẽ liên hệ lại sớm nhất.</p>
+    <div class="frow"><input type="text" name="hoten" placeholder="Họ và tên" required><input type="tel" name="sdt" placeholder="Số điện thoại / Zalo" required></div>
+    <input type="text" name="khoa" placeholder="Quan tâm khóa học nào?">
+    <textarea name="loinhan" rows="4" placeholder="Lời nhắn của bạn"></textarea>
+    <button class="btn btn-gold" type="submit"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg> Gửi lời nhắn</button>
+    <div class="cform-msg" id="cform-note"></div>
+  </form>
+  <div class="cform-ok" id="cform-ok" style="display:none"><svg width="34px" height="34px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><b>Đã gửi thành công!</b><p>Cảm ơn bạn đã để lại thông tin. Cô Thi sẽ liên hệ lại sớm. Cần gấp, bạn nhắn Zalo 0985 188 655 nhé.</p></div>
+</div>
+<script define:vars={{ EP: endpoint }}>
+  (function () {
+    var f = document.getElementById('cform');
+    if (!f) return;
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var note = document.getElementById('cform-note');
+      if (!EP) {
+        note.textContent = 'Biểu mẫu chưa kết nối Google Sheet. Vui lòng nhắn Zalo 0985 188 655.';
+        note.className = 'cform-msg err';
+        return;
+      }
+      var btn = f.querySelector('button[type=submit]');
+      var old = btn.innerHTML;
+      btn.disabled = true;
+      btn.textContent = 'Đang gửi...';
+      note.textContent = '';
+      note.className = 'cform-msg';
+      var d = new URLSearchParams();
+      ['hoten', 'sdt', 'khoa', 'loinhan'].forEach(function (n) {
+        var el = f.elements[n];
+        d.append(n, el ? el.value : '');
+      });
+      d.append('trang', 'Trang Lien he');
+      d.append('thoigian', new Date().toLocaleString('vi-VN'));
+      fetch(EP, { method: 'POST', mode: 'no-cors', body: d })
+        .then(function () {
+          f.style.display = 'none';
+          f.reset();
+          var ok = document.getElementById('cform-ok');
+          if (ok) ok.style.display = 'block';
+        })
+        .catch(function () {
+          btn.disabled = false;
+          btn.innerHTML = old;
+          note.textContent = 'Gửi chưa thành công. Vui lòng thử lại hoặc nhắn Zalo 0985 188 655.';
+          note.className = 'cform-msg err';
+        });
+    });
+  })();
+</script>

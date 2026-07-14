@@ -1,0 +1,66 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import DocsSidebar from '../components/DocsSidebar.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  prev?: { title: string; id: string } | null;
+  next?: { title: string; id: string } | null;
+}
+const { title, description, prev, next } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+<BaseLayout
+  title={`${title} | Cô Thi Lập Trình`}
+  description={description ?? 'Tài liệu hướng dẫn học lập trình từ Cô Thi.'}
+  accent="#2E8296"
+  heroClass="lighthero"
+>
+  <div class="wrap docs-shell">
+    <aside class="docs-side">
+      <DocsSidebar currentPath={currentPath} />
+    </aside>
+    <div class="docs-main">
+      <article class="docs-article">
+        <h1>{title}</h1>
+        <slot />
+      </article>
+      <nav class="docs-pager">
+        {prev ? (
+          <a class="docs-pager-link prev" href={`/docs/${prev.id}`}><span>&larr; Trước</span><b>{prev.title}</b></a>
+        ) : <span />}
+        {next ? (
+          <a class="docs-pager-link next" href={`/docs/${next.id}`}><span>Tiếp &rarr;</span><b>{next.title}</b></a>
+        ) : <span />}
+      </nav>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .docs-shell { display: grid; grid-template-columns: 240px 1fr; gap: 40px; padding: 40px 0 70px; align-items: start; }
+  .docs-side { position: sticky; top: 90px; }
+  .docs-article { max-width: 760px; }
+  .docs-article h1 { margin-bottom: .6em; }
+  .docs-article :global(h2) { margin-top: 2em; margin-bottom: .6em; font-size: 1.4rem; }
+  .docs-article :global(h3) { margin-top: 1.6em; margin-bottom: .5em; font-size: 1.15rem; }
+  .docs-article :global(p) { margin-bottom: 1.1em; line-height: 1.75; }
+  .docs-article :global(ul), .docs-article :global(ol) { margin: 0 0 1.1em 1.3em; line-height: 1.7; }
+  .docs-article :global(li) { margin-bottom: .4em; }
+  .docs-article :global(a) { color: var(--navy); text-decoration: underline; }
+  .docs-article :global(blockquote) { border-left: 3px solid var(--gold); padding-left: 16px; color: var(--muted); font-style: italic; margin: 1.2em 0; }
+  .docs-article :global(code) { background: #f1f3f8; padding: .15em .4em; border-radius: 6px; font-size: .9em; }
+  .docs-article :global(pre) { background: var(--navy-d); color: #e7eefb; padding: 16px 18px; border-radius: 14px; overflow-x: auto; margin: 1.2em 0; }
+  .docs-article :global(pre code) { background: none; padding: 0; color: inherit; }
+  .docs-pager { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 3em; padding-top: 2em; border-top: 1px solid var(--line); max-width: 760px; }
+  .docs-pager-link { display: flex; flex-direction: column; gap: 4px; padding: 14px 18px; border-radius: 14px; border: 1px solid var(--line); background: #fff; }
+  .docs-pager-link:hover { box-shadow: var(--shadow); }
+  .docs-pager-link.next { text-align: right; align-items: flex-end; }
+  .docs-pager-link span { font-size: .78rem; font-weight: 700; color: var(--teal); text-transform: uppercase; letter-spacing: .3px; }
+  .docs-pager-link b { color: var(--navy); font-size: .96rem; }
+  @media (max-width: 860px) {
+    .docs-shell { grid-template-columns: 1fr; }
+    .docs-side { position: static; }
+  }
+</style>

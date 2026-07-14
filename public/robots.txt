@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cothilaptrinh.vn/sitemap-index.xml

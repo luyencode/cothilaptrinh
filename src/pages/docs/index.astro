@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import DocsLayout from '../../layouts/DocsLayout.astro';
+
+const allDocs = await getCollection('docs');
+
+const sectionsMap = new Map();
+for (const doc of allDocs) {
+  const key = doc.data.section;
+  if (!sectionsMap.has(key)) {
+    sectionsMap.set(key, { section: key, sectionOrder: doc.data.sectionOrder, items: [] });
+  }
+  sectionsMap.get(key).items.push(doc);
+}
+
+const groups = Array.from(sectionsMap.values())
+  .sort((a, b) => a.sectionOrder - b.sectionOrder)
+  .map((g) => ({
+    ...g,
+    items: g.items.slice().sort((a, b) => a.data.order - b.data.order),
+  }));
+
+const firstDoc = groups[0]?.items[0];
+---
+<DocsLayout
+  title="Tài liệu hướng dẫn"
+  description="Tổng hợp tài liệu, hướng dẫn từng bước cho các khóa học của Cô Thi."
+  next={firstDoc ? { title: firstDoc.data.title, id: firstDoc.id } : null}
+>
+  <p>Chọn một chủ đề ở thanh bên để bắt đầu, hoặc xem toàn bộ danh sách bên dưới.</p>
+  {groups.map((g) => (
+    <>
+      <h2>{g.section}</h2>
+      <ul>
+        {g.items.map((item) => (
+          <li><a href={`/docs/${item.id}`}>{item.data.title}</a></li>
+        ))}
+      </ul>
+    </>
+  ))}
+</DocsLayout>

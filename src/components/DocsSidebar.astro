@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  currentPath: string;
+}
+const { currentPath } = Astro.props;
+
+const allDocs = await getCollection('docs');
+
+const sectionsMap = new Map();
+for (const doc of allDocs) {
+  const key = doc.data.section;
+  if (!sectionsMap.has(key)) {
+    sectionsMap.set(key, { section: key, sectionOrder: doc.data.sectionOrder, items: [] });
+  }
+  sectionsMap.get(key).items.push(doc);
+}
+
+const groups = Array.from(sectionsMap.values())
+  .sort((a, b) => a.sectionOrder - b.sectionOrder)
+  .map((g) => ({
+    ...g,
+    items: g.items.slice().sort((a, b) => a.data.order - b.data.order),
+  }));
+---
+<nav class="docs-nav">
+  {groups.map((g) => (
+    <div class="docs-group">
+      <div class="docs-group-title">{g.section}</div>
+      <ul>
+        {g.items.map((item) => {
+          const href = `/docs/${item.id}`;
+          const isActive = currentPath === href || currentPath === href + '/';
+          return (
+            <li>
+              <a href={href} class={isActive ? 'on' : ''}>{item.data.title}</a>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  ))}
+</nav>
+
+<style>
+  .docs-nav { display: flex; flex-direction: column; gap: 22px; }
+  .docs-group-title { font-size: .74rem; font-weight: 800; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); margin-bottom: 8px; padding: 0 12px; }
+  .docs-group ul { display: flex; flex-direction: column; gap: 2px; }
+  .docs-group a { display: block; padding: 8px 12px; border-radius: 9px; font-weight: 600; font-size: .92rem; color: #33425c; }
+  .docs-group a:hover { background: #f1f3f8; color: var(--navy); }
+  .docs-group a.on { color: var(--navy); background: color-mix(in srgb, var(--gold) 18%, #fff); font-weight: 700; }
+</style>
