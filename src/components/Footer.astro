@@ -1,5 +1,5 @@
 ---
-import { nav } from '../data/nav';
+import { footerLinks } from '../data/nav';
 ---
 <footer class="site-foot">
   <div class="wrap">
@@ -9,7 +9,7 @@ import { nav } from '../data/nav';
         <p class="slogan">"Dạy học với trọn vẹn yêu thương"</p>
         <p class="muted">Học online toàn quốc - đồng hành cùng học sinh, sinh viên trên hành trình lập trình.</p>
       </div>
-      <div class="foot-col"><h4>Liên kết</h4><div class="foot-links">{nav.map((item) => (<a href={item.href}>{item.label}</a>))}</div></div>
+      <div class="foot-col"><h4>Liên kết</h4><div class="foot-links">{footerLinks.map((item) => (<a href={item.href}>{item.label}</a>))}</div></div>
       <div class="foot-col"><h4>Liên hệ</h4>
         <div class="foot-links">
           <a href="https://zalo.me/0985188655" target="_blank" rel="noopener"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Zalo: 0985 188 655</a>
