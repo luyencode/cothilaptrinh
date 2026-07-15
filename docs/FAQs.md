@@ -17,13 +17,12 @@ tutorials; that's exactly what the two how-to guides are for.
 
 1. A change is committed and pushed to the `main` branch (either directly
    through GitHub's web editor, or via `git push` from a local clone).
-2. That push triggers a GitHub Actions workflow
-   (`.github/workflows/deploy.yml`), visible under the repo's **Actions**
-   tab.
-3. The workflow installs dependencies, runs `npm run build`, and publishes
-   the result to GitHub Pages.
-4. The whole process takes roughly 1-2 minutes. If the Actions tab shows a
-   green checkmark, it's live.
+2. That push triggers **Cloudflare Pages**, which is connected directly to
+   this GitHub repo. Cloudflare pulls the new commit, runs `npm run build`,
+   and publishes the `dist/` output.
+3. The whole process takes roughly 1-2 minutes. You can watch it (and see
+   the build log if something goes wrong) in the Cloudflare dashboard,
+   under **Workers & Pages → this project → Deployments**.
 
 ## Can I preview a change before it goes live to everyone?
 
@@ -41,53 +40,23 @@ There's no automatic "staging" preview link for full pages before merging —
 if that becomes important later, ask a developer about adding GitHub's pull
 request preview deployments.
 
-## Important: what to name the GitHub repo before the custom domain is ready
+## How do I set up the custom domain later?
 
-Every link and image on this site is written as a root path (e.g.
-`/khoa-hoc`, `/assets/logo.png`), the same way the original static site
-worked. That only resolves correctly if the site is served from the root of
-a domain — **not** from a `/repo-name/` sub-path.
+Unlike some static hosts, Cloudflare Pages always serves a project from its
+own root (either `<project>.pages.dev` or whatever custom domain you attach)
+— there's no `/repo-name/` sub-path to worry about, so this part just works
+regardless of when you add the domain.
 
-GitHub Pages serves a repo at the root, with no sub-path, in exactly two
-cases:
-
-1. The repo is named **`<your-github-username>.github.io`** (a "user/org
-   site"), or
-2. The repo has a custom domain configured (see the next question).
-
-**If you deploy to a repo with any other name and haven't set up a custom
-domain yet, the navigation, images, and styling will be broken** — every
-internal link would need a `/repo-name` prefix that isn't there. So: either
-name the repository `<username>.github.io`, or set up `public/CNAME` (below)
-before or immediately after your first deploy.
-
-If this constraint ever needs to change (e.g. you need an arbitrary repo
-name without a custom domain), that requires a developer to update how
-internal links are generated — it's a deliberate simplification, not an
-oversight.
-
-## How do I set up the custom domain (CNAME) later?
-
-To move the site from the default GitHub Pages address onto your own
-domain (e.g. `cothilaptrinh.vn`):
-
-1. At your domain registrar, create the DNS records GitHub Pages requires —
-   see [GitHub's official custom domain guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)
-   for the exact records (an `A`/`ALIAS` record for a root domain, or a
-   `CNAME` record for a subdomain like `www`).
-2. In this repo, create a file named exactly `public/CNAME` (no file
-   extension) containing just your domain, e.g.:
-   ```
-   cothilaptrinh.vn
-   ```
-3. Commit and push. The build automatically detects this file and points
-   the sitemap/SEO tags at your domain — no other file needs to change.
-4. In the repo's **Settings → Pages**, set your custom domain in the
-   "Custom domain" field and wait for GitHub to verify DNS, then enable
-   "Enforce HTTPS".
-
-If you remove `public/CNAME` later, the next build reverts to treating the
-default `github.io` address as the site's domain for SEO purposes.
+1. In the Cloudflare dashboard, go to **Workers & Pages → this project →
+   Custom domains → Set up a custom domain**, and enter your domain.
+2. Since DNS for the domain is already on Cloudflare, this is usually a
+   one-click confirmation — Cloudflare adds the right DNS record and
+   provisions HTTPS automatically.
+3. (Optional, for accurate SEO/sitemap URLs) In the project's **Settings →
+   Environment variables**, add `SITE_URL` set to your domain, e.g.
+   `https://cothilaptrinh.vn`, then trigger a redeploy. Without this, the
+   site still works correctly, but sitemap/canonical links may still point
+   at the `*.pages.dev` address until you add it.
 
 ## I made a mistake — how do I undo it?
 
@@ -116,9 +85,9 @@ open a GitHub Issue describing the change needed.
 
 ## The build failed — what do I do?
 
-Open the repo's **Actions** tab, click the failed run, and open the "Build
-site" step to read the error. The most common causes when editing Markdown
-content are:
+In the Cloudflare dashboard, go to **Workers & Pages → this project →
+Deployments**, open the failed deployment, and read the build log. The most
+common causes when editing Markdown content are:
 
 - A frontmatter field with a typo or wrong type (e.g. `date` not in
   `YYYY-MM-DD` format, or a missing quote around text with special
@@ -126,7 +95,7 @@ content are:
 - Forgetting the closing `---` after the frontmatter block.
 
 If the error isn't obviously about your content, ask a developer for help
-— paste the error message from the Actions log.
+— paste the error message from the deployment log.
 
 ## Who do I ask if something here doesn't cover my question?
 

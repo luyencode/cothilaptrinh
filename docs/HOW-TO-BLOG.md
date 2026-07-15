@@ -34,8 +34,9 @@ https://<your-domain>/blog/5-cach-lam-quen-lap-trinh/
 4. Paste the template below, fill it in, and write your post underneath.
 5. Scroll down, write a short commit message (e.g. "Add blog post: ..."),
    and click **Commit changes directly to the `main` branch**.
-6. Wait 1-2 minutes — the site rebuilds automatically and your post goes
-   live. You can watch progress in the **Actions** tab of the repo.
+6. Wait 1-2 minutes — Cloudflare Pages rebuilds the site automatically and
+   your post goes live. You can watch progress under **Workers & Pages →
+   this project → Deployments** in the Cloudflare dashboard.
 
 ### Option B — on your own computer (if you have Node.js + the repo cloned)
 
