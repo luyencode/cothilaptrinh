@@ -22,12 +22,24 @@ const groups = Array.from(sectionsMap.values())
   .map((g) => ({
     ...g,
     items: g.items.slice().sort((a, b) => a.data.order - b.data.order),
+  }))
+  .map((g) => ({
+    ...g,
+    isActive: g.items.some((item) => {
+      const href = `/docs/${item.id}`;
+      return currentPath === href || currentPath === href + '/';
+    }),
   }));
 ---
 <nav class="docs-nav">
   {groups.map((g) => (
-    <div class="docs-group">
-      <div class="docs-group-title">{g.section}</div>
+    <details class="docs-group" open={g.isActive}>
+      <summary class="docs-group-title">
+        <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span>{g.section}</span>
+      </summary>
       <ul>
         {g.items.map((item) => {
           const href = `/docs/${item.id}`;
@@ -39,15 +51,32 @@ const groups = Array.from(sectionsMap.values())
           );
         })}
       </ul>
-    </div>
+    </details>
   ))}
 </nav>
 
 <style>
-  .docs-nav { display: flex; flex-direction: column; gap: 22px; }
-  .docs-group-title { font-size: .74rem; font-weight: 800; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); margin-bottom: 8px; padding: 0 12px; }
-  .docs-group ul { display: flex; flex-direction: column; gap: 2px; }
-  .docs-group a { display: block; padding: 8px 12px; border-radius: 9px; font-weight: 600; font-size: .92rem; color: #33425c; }
+  .docs-nav { display: flex; flex-direction: column; gap: 4px; }
+  .docs-group { border: none; }
+  .docs-group-title {
+    display: flex; align-items: center; gap: 6px;
+    list-style: none;
+    font-size: .8rem; font-weight: 800; text-transform: uppercase; letter-spacing: .5px;
+    color: var(--muted);
+    padding: 8px 12px; border-radius: 9px;
+    cursor: pointer; user-select: none;
+  }
+  .docs-group-title::-webkit-details-marker { display: none; }
+  .docs-group-title:hover { background: #f1f3f8; color: var(--navy); }
+  .docs-group-title .chevron { flex-shrink: 0; transition: transform .15s ease; color: var(--muted); }
+  .docs-group[open] > .docs-group-title .chevron { transform: rotate(90deg); }
+  .docs-group ul { list-style: none; margin: 2px 0 6px; padding: 0; display: flex; flex-direction: column; gap: 1px; }
+  .docs-group li { list-style: none; }
+  .docs-group a {
+    display: block; padding: 7px 12px 7px 30px; border-radius: 9px;
+    font-weight: 600; font-size: .92rem; color: #33425c;
+    border-left: 2px solid transparent;
+  }
   .docs-group a:hover { background: #f1f3f8; color: var(--navy); }
-  .docs-group a.on { color: var(--navy); background: color-mix(in srgb, var(--gold) 18%, #fff); font-weight: 700; }
+  .docs-group a.on { color: var(--teal); background: color-mix(in srgb, var(--gold) 14%, #fff); border-left-color: var(--teal); font-weight: 700; }
 </style>
