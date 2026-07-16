@@ -1,0 +1,197 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths({ paginate }) {
+  const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+  );
+  return paginate(posts, { pageSize: 9 });
+}
+
+const { page } = Astro.props;
+
+const allPosts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const tagCounts = new Map<string, number>();
+for (const post of allPosts) {
+  for (const tag of post.data.tags) {
+    tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1);
+  }
+}
+const tags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).map(([tag]) => tag);
+
+// Lightweight index shipped to the client so tag filtering can search every
+// post, not just the ones on this paginated page. Fine up to a few hundred
+// posts; beyond that, switch to static per-tag pages or a real search index.
+const postIndex = allPosts.map((post) => ({
+  slug: post.id,
+  title: post.data.title,
+  description: post.data.description,
+  cover: post.data.cover ?? null,
+  tags: post.data.tags,
+}));
+---
+<BaseLayout
+  title={page.currentPage === 1 ? 'Blog | Cô Thi Lập Trình' : `Blog (trang ${page.currentPage}) | Cô Thi Lập Trình`}
+  description="Bài viết về học lập trình, luyện thi và kinh nghiệm giảng dạy từ Cô Thi."
+  accent="#1E3A63"
+  heroClass="lighthero"
+>
+  <section class="hero tint"><div class="wrap">
+    <span class="eyebrow"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20V2H6.5A2.5 2.5 0 0 0 4 4.5v15z"/></svg> Blog</span>
+    <h1>Bài viết từ Cô Thi</h1>
+    <p class="lead">Chia sẻ về học lập trình, luyện thi và kinh nghiệm giảng dạy - cập nhật thường xuyên.</p>
+  </div></section>
+
+  <section class="section"><div class="wrap">
+    {allPosts.length === 0 ? (
+      <p class="muted">Chưa có bài viết nào. Quay lại sau nhé!</p>
+    ) : (
+      <>
+        {tags.length > 0 && (
+          <div class="tag-pills" id="tag-pills" role="group" aria-label="Lọc theo chủ đề">
+            <button type="button" class="tag-pill active" data-tag="">Tất cả</button>
+            {tags.map((tag) => (
+              <button type="button" class="tag-pill" data-tag={tag}>{tag}</button>
+            ))}
+          </div>
+        )}
+
+        <div class="grid g3 cards" id="blog-grid">
+          {page.data.map((post) => (
+            <a class="card" href={`/blog/${post.id}`}>
+              {post.data.cover && <img class="card-cover" src={post.data.cover} alt={post.data.title} width="1200" height="630" loading="lazy" />}
+              {post.data.tags[0] && <span class="tag">{post.data.tags[0]}</span>}
+              <h3>{post.data.title}</h3>
+              <p>{post.data.description}</p>
+              <span class="more">Đọc bài viết <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+          ))}
+        </div>
+
+        <p class="empty-state" id="blog-empty" hidden>
+          Không tìm thấy bài viết nào với chủ đề này.
+          <button type="button" class="clear-filter" id="clear-filter">Xóa lọc</button>
+        </p>
+
+        {page.lastPage > 1 && (
+          <nav class="pager" id="blog-pager" aria-label="Phân trang">
+            {page.url.prev ? <a href={page.url.prev} rel="prev">← Trang trước</a> : <span class="pager-disabled">← Trang trước</span>}
+            <span class="pager-status">Trang {page.currentPage} / {page.lastPage}</span>
+            {page.url.next ? <a href={page.url.next} rel="next">Trang sau →</a> : <span class="pager-disabled">Trang sau →</span>}
+          </nav>
+        )}
+      </>
+    )}
+  </div></section>
+</BaseLayout>
+
+<script type="application/json" id="blog-index" set:html={JSON.stringify(postIndex)} />
+
+<script>
+  type IndexedPost = {
+    slug: string;
+    title: string;
+    description: string;
+    cover: string | null;
+    tags: string[];
+  };
+
+  const grid = document.getElementById('blog-grid');
+  const pager = document.getElementById('blog-pager');
+  const empty = document.getElementById('blog-empty');
+  const clearBtn = document.getElementById('clear-filter');
+  const pillsWrap = document.getElementById('tag-pills');
+  const indexScript = document.getElementById('blog-index');
+
+  if (grid && pillsWrap && indexScript) {
+    const posts: IndexedPost[] = JSON.parse(indexScript.textContent || '[]');
+    const originalGridHtml = grid.innerHTML;
+    const pills = [...pillsWrap.querySelectorAll<HTMLButtonElement>('.tag-pill')];
+
+    function renderCard(post: IndexedPost) {
+      const cover = post.cover
+        ? `<img class="card-cover" src="${post.cover}" alt="${escapeHtml(post.title)}" width="1200" height="630" loading="lazy" />`
+        : '';
+      const tag = post.tags[0] ? `<span class="tag">${escapeHtml(post.tags[0])}</span>` : '';
+      return `<a class="card" href="/blog/${post.slug}">${cover}${tag}<h3>${escapeHtml(post.title)}</h3><p>${escapeHtml(post.description)}</p><span class="more">Đọc bài viết <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>`;
+    }
+
+    function escapeHtml(str: string) {
+      return str.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c] as string));
+    }
+
+    function applyFilter(tag: string, pushHistory: boolean) {
+      pills.forEach((pill) => pill.classList.toggle('active', pill.dataset.tag === tag));
+
+      if (!tag) {
+        grid.innerHTML = originalGridHtml;
+        grid.hidden = false;
+        if (pager) pager.hidden = false;
+        if (empty) empty.hidden = true;
+      } else {
+        const matches = posts.filter((post) => post.tags.includes(tag));
+        if (pager) pager.hidden = true;
+        if (matches.length === 0) {
+          grid.hidden = true;
+          if (empty) empty.hidden = false;
+        } else {
+          grid.innerHTML = matches.map(renderCard).join('');
+          grid.hidden = false;
+          if (empty) empty.hidden = true;
+        }
+      }
+
+      if (pushHistory) {
+        const url = new URL(window.location.href);
+        if (tag) url.searchParams.set('tag', tag);
+        else url.searchParams.delete('tag');
+        history.pushState({ tag }, '', url);
+      }
+    }
+
+    pillsWrap.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('.tag-pill');
+      if (!btn) return;
+      applyFilter(btn.dataset.tag || '', true);
+    });
+
+    clearBtn?.addEventListener('click', () => applyFilter('', true));
+
+    window.addEventListener('popstate', () => {
+      const tag = new URL(window.location.href).searchParams.get('tag') || '';
+      applyFilter(tag, false);
+    });
+
+    const initialTag = new URL(window.location.href).searchParams.get('tag') || '';
+    if (initialTag) applyFilter(initialTag, false);
+  }
+</script>
+
+<style>
+  /* :global because filtered cards are injected client-side and don't carry Astro's scoped-style attribute */
+  :global(.card-cover) { display: block; width: 100%; height: auto; aspect-ratio: 1.91 / 1; object-fit: cover; border-radius: 12px; margin-bottom: 15px; border: 1px solid var(--line); }
+
+  .tag-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+  .tag-pill {
+    font: inherit; font-size: .88rem; font-weight: 600; cursor: pointer;
+    padding: 7px 16px; border-radius: 999px; border: 1px solid var(--line);
+    background: #fff; color: var(--muted); transition: .15s;
+  }
+  .tag-pill:hover { border-color: var(--c); color: var(--c); }
+  .tag-pill.active { background: var(--c); border-color: var(--c); color: #fff; }
+
+  .empty-state { text-align: center; color: var(--muted); padding: 40px 0; }
+  .clear-filter {
+    font: inherit; font-weight: 700; color: var(--c); background: none; border: none;
+    cursor: pointer; text-decoration: underline; margin-left: 6px; padding: 0;
+  }
+
+  .pager { display: flex; align-items: center; justify-content: center; gap: 24px; margin-top: 40px; font-weight: 600; }
+  .pager a { color: var(--c); }
+  .pager-disabled { color: var(--muted); opacity: .5; }
+  .pager-status { color: var(--muted); font-weight: 500; }
+</style>
