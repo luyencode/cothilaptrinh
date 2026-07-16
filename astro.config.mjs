@@ -2,6 +2,8 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
+import cloudflare from '@astrojs/cloudflare';
+
 // Fallback used for local dev/build, and before a custom domain is attached
 // in Cloudflare Pages. Update if the placeholder domain changes.
 const LOCAL_FALLBACK_SITE = 'https://cothilaptrinh.vn';
@@ -21,6 +23,9 @@ function resolveSite() {
 
 export default defineConfig({
   site: resolveSite(),
+
   // Clean, extensionless URLs: /khoa-hoc-scratch (default 'directory' format).
   integrations: [sitemap()],
+
+  adapter: cloudflare()
 });
