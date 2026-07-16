@@ -1,0 +1,41 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" font-family="DejaVu Sans, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e9f6ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="1050" y="-60" width="220" height="220" rx="44" fill="none" stroke="#d9ecdf" stroke-width="3"/>
+  <rect x="-70" y="480" width="220" height="220" rx="44" fill="none" stroke="#d9ecdf" stroke-width="3"/>
+
+  <g>
+    <rect x="70" y="58" width="38" height="38" rx="9" fill="#1f8b3f"/>
+    <rect x="114" y="58" width="38" height="38" rx="9" fill="#2e86c9"/>
+    <rect x="70" y="102" width="38" height="38" rx="9" fill="#2e86c9"/>
+    <rect x="114" y="102" width="38" height="38" rx="9" fill="#1f8b3f"/>
+    <text x="89" y="85" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">C</text>
+    <text x="133" y="85" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">T</text>
+    <text x="89" y="129" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">L</text>
+    <text x="133" y="129" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">T</text>
+  </g>
+  <text x="172" y="93" font-size="26" font-weight="bold" fill="#1f8b3f">Cô Thi <tspan fill="#2e86c9">Lập Trình</tspan></text>
+  <text x="172" y="124" font-size="17" fill="#75849a" letter-spacing="3">BLOG CHO BA MẸ</text>
+
+  <text x="70" y="262" font-size="52" font-weight="bold" fill="#1E3A63"><tspan fill="#1f8b3f">5 cách</tspan> giúp con</text>
+  <text x="70" y="328" font-size="52" font-weight="bold" fill="#1E3A63">làm quen lập trình</text>
+  <text x="70" y="394" font-size="52" font-weight="bold" fill="#1E3A63">từ sớm, <tspan fill="#1f8b3f">không ép học</tspan></text>
+  <rect x="72" y="428" width="120" height="8" rx="4" fill="#F2C13D"/>
+  <text x="70" y="476" font-size="24" fill="#5b6b82">Nhẹ nhàng mỗi ngày, bắt đầu từ trò chơi</text>
+
+  <!-- 5 steps arc -->
+  <g font-weight="bold" text-anchor="middle" font-size="34">
+    <rect x="740" y="470" width="90" height="90" rx="22" fill="#1f8b3f"/><text x="785" y="527" fill="#fff">1</text>
+    <rect x="840" y="390" width="90" height="90" rx="22" fill="#2e86c9"/><text x="885" y="447" fill="#fff">2</text>
+    <rect x="940" y="310" width="90" height="90" rx="22" fill="#F2C13D"/><text x="985" y="367" fill="#1E3A63">3</text>
+    <rect x="1040" y="230" width="90" height="90" rx="22" fill="#2e86c9"/><text x="1085" y="287" fill="#fff">4</text>
+    <rect x="990" y="120" width="90" height="90" rx="22" fill="#1E3A63"/><text x="1035" y="177" fill="#fff">5</text>
+    <path d="M 838 505 L 852 505 M 938 425 L 952 425 M 1038 345 L 1052 345" stroke="#b9c8da" stroke-width="4" stroke-dasharray="2 9" stroke-linecap="round"/>
+  </g>
+  <path d="M 900 180 l 12 28 l 28 12 l -28 12 l -12 28 l -12 -28 l -28 -12 l 28 -12 z" fill="#F2C13D"/>
+</svg>

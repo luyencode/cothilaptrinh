@@ -1,0 +1,32 @@
+<svg viewBox="0 0 1600 620" xmlns="http://www.w3.org/2000/svg" font-family="Arial, 'Helvetica Neue', sans-serif">
+  <rect width="1600" height="620" rx="28" fill="#f3f8fd"/>
+  <rect x="1420" y="-70" width="240" height="240" rx="52" fill="none" stroke="#dcebf7" stroke-width="4"/>
+
+  <text x="110" y="150" font-size="34" font-weight="bold" fill="#1E3A63">Đừng sửa lỗi ngay,</text>
+  <text x="110" y="198" font-size="34" font-weight="bold" fill="#1E3A63">để con tự tìm</text>
+  <rect x="112" y="226" width="90" height="7" rx="3.5" fill="#F2C13D"/>
+  <text x="110" y="280" font-size="22" fill="#5b6b82">Kỹ năng debug quý nhất</text>
+  <text x="110" y="312" font-size="22" fill="#5b6b82">sinh ra từ chính lỗi sai.</text>
+
+  <!-- code panel with a bug and magnifier -->
+  <rect x="680" y="120" width="620" height="380" rx="24" fill="#1E3A63"/>
+  <circle cx="716" cy="150" r="8" fill="#e0655f"/><circle cx="742" cy="150" r="8" fill="#F2C13D"/><circle cx="768" cy="150" r="8" fill="#57c07d"/>
+  <g font-family="DejaVu Sans Mono, Consolas, monospace" font-size="23">
+    <text x="720" y="215" fill="#e7eefb">khi bấm lá cờ</text>
+    <text x="720" y="260" fill="#e7eefb">  đi 10 bước</text>
+    <text x="720" y="305" fill="#F2C13D">  quay 90 độ</text>
+    <text x="720" y="350" fill="#e7eefb">  đi 10 bước</text>
+    <text x="720" y="395" fill="#75849a">  ... vì sao mèo đi vòng tròn?</text>
+  </g>
+  <!-- ladybug on the wrong line -->
+  <g transform="translate(1130 296)">
+    <ellipse rx="16" ry="19" fill="#e0655f"/>
+    <circle cy="-16" r="8" fill="#13294a"/>
+    <path d="M 0 -9 V 17" stroke="#13294a" stroke-width="3"/>
+    <circle cx="-7" cy="-2" r="3" fill="#13294a"/><circle cx="7" cy="5" r="3" fill="#13294a"/>
+  </g>
+  <!-- magnifier -->
+  <circle cx="1210" cy="330" r="90" fill="none" stroke="#F2C13D" stroke-width="14"/>
+  <path d="M 1275 395 l 70 70" stroke="#F2C13D" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="1210" cy="330" r="83" fill="#F2C13D" opacity="0.08"/>
+</svg>

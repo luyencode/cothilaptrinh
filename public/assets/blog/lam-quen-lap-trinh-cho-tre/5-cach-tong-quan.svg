@@ -1,0 +1,56 @@
+<svg viewBox="0 0 1600 700" xmlns="http://www.w3.org/2000/svg" font-family="Arial, 'Helvetica Neue', sans-serif">
+  <rect width="1600" height="700" rx="28" fill="#f6f9fc"/>
+  <text x="800" y="96" text-anchor="middle" font-size="24" font-weight="bold" fill="#75849a" letter-spacing="4">5 CÁCH GIÚP CON LÀM QUEN LẬP TRÌNH</text>
+  <rect x="740" y="116" width="120" height="7" rx="3.5" fill="#F2C13D"/>
+
+  <g text-anchor="middle">
+    <!-- 1 tro choi -->
+    <rect x="100" y="190" width="240" height="300" rx="26" fill="#ffffff" stroke="#e9ecf2" stroke-width="3"/>
+    <rect x="175" y="230" width="90" height="90" rx="22" fill="#1f8b3f"/>
+    <rect x="197" y="252" width="20" height="46" rx="6" fill="#fff"/>
+    <rect x="184" y="265" width="46" height="20" rx="6" fill="#fff"/>
+    <text x="220" y="380" font-size="24" font-weight="bold" fill="#1E3A63">Trò chơi</text>
+    <text x="220" y="414" font-size="18" fill="#75849a">không phải</text>
+    <text x="220" y="440" font-size="18" fill="#75849a">bài tập</text>
+
+    <!-- 2 ke lai -->
+    <rect x="380" y="190" width="240" height="300" rx="26" fill="#ffffff" stroke="#e9ecf2" stroke-width="3"/>
+    <rect x="455" y="230" width="90" height="90" rx="22" fill="#2e86c9"/>
+    <path d="M 478 258 h 44 a8 8 0 0 1 8 8 v 22 a8 8 0 0 1 -8 8 h -22 l -12 12 v -12 h -10 a8 8 0 0 1 -8 -8 v -22 a8 8 0 0 1 8 -8 z" fill="#fff"/>
+    <text x="500" y="380" font-size="24" font-weight="bold" fill="#1E3A63">Con kể lại</text>
+    <text x="500" y="414" font-size="18" fill="#75849a">điều mình</text>
+    <text x="500" y="440" font-size="18" fill="#75849a">vừa làm</text>
+
+    <!-- 3 doi that -->
+    <rect x="660" y="190" width="240" height="300" rx="26" fill="#ffffff" stroke="#e9ecf2" stroke-width="3"/>
+    <rect x="735" y="230" width="90" height="90" rx="22" fill="#F2C13D"/>
+    <circle cx="780" cy="253" r="10" fill="#e0655f"/>
+    <circle cx="780" cy="275" r="10" fill="#fff"/>
+    <circle cx="780" cy="297" r="10" fill="#1f8b3f"/>
+    <text x="780" y="380" font-size="24" font-weight="bold" fill="#1E3A63">Lập trình</text>
+    <text x="780" y="414" font-size="18" fill="#75849a">ở quanh</text>
+    <text x="780" y="440" font-size="18" fill="#75849a">đời thật</text>
+
+    <!-- 4 tu tim loi -->
+    <rect x="940" y="190" width="240" height="300" rx="26" fill="#ffffff" stroke="#e9ecf2" stroke-width="3"/>
+    <rect x="1015" y="230" width="90" height="90" rx="22" fill="#2e86c9"/>
+    <circle cx="1052" cy="266" r="20" fill="none" stroke="#fff" stroke-width="7"/>
+    <path d="M 1066 282 l 18 18" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+    <text x="1060" y="380" font-size="24" font-weight="bold" fill="#1E3A63">Để con</text>
+    <text x="1060" y="414" font-size="18" fill="#75849a">tự tìm lỗi</text>
+    <text x="1060" y="440" font-size="18" fill="#75849a">trước</text>
+
+    <!-- 5 deu dan -->
+    <rect x="1220" y="190" width="240" height="300" rx="26" fill="#ffffff" stroke="#e9ecf2" stroke-width="3"/>
+    <rect x="1295" y="230" width="90" height="90" rx="22" fill="#1f8b3f"/>
+    <rect x="1310" y="252" width="60" height="50" rx="8" fill="#fff"/>
+    <path d="M 1322 278 l 8 9 l 18 -20" stroke="#1f8b3f" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1340" y="380" font-size="24" font-weight="bold" fill="#1E3A63">Đều đặn</text>
+    <text x="1340" y="414" font-size="18" fill="#75849a">quan trọng hơn</text>
+    <text x="1340" y="440" font-size="18" fill="#75849a">học nhiều</text>
+  </g>
+
+  <g text-anchor="middle" font-size="22" font-weight="bold" fill="#75849a">
+    <text x="220" y="560">1</text><text x="500" y="560">2</text><text x="780" y="560">3</text><text x="1060" y="560">4</text><text x="1340" y="560">5</text>
+  </g>
+</svg>

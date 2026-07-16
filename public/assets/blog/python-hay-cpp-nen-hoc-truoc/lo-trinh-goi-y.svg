@@ -1,0 +1,36 @@
+<svg viewBox="0 0 1600 640" xmlns="http://www.w3.org/2000/svg" font-family="Arial, 'Helvetica Neue', sans-serif">
+  <rect width="1600" height="640" rx="28" fill="#f4faf6"/>
+  <text x="800" y="92" text-anchor="middle" font-size="24" font-weight="bold" fill="#75849a" letter-spacing="4">LỘ TRÌNH GỢI Ý</text>
+  <rect x="740" y="112" width="120" height="7" rx="3.5" fill="#F2C13D"/>
+
+  <!-- step 1 -->
+  <rect x="130" y="230" width="380" height="200" rx="26" fill="#1f8b3f"/>
+  <text x="320" y="300" text-anchor="middle" font-size="27" font-weight="bold" fill="#fff">1. Python</text>
+  <text x="320" y="342" text-anchor="middle" font-size="20" fill="#d9f2e2">nắm tư duy lập trình:</text>
+  <text x="320" y="372" text-anchor="middle" font-size="20" fill="#d9f2e2">biến, vòng lặp, hàm</text>
+
+  <path d="M 530 330 H 620" stroke="#9db3cc" stroke-width="5" stroke-linecap="round"/>
+  <path d="M 612 315 l 22 15 l -22 15 z" fill="#9db3cc"/>
+
+  <!-- branch node -->
+  <rect x="650" y="255" width="280" height="150" rx="26" fill="#F2C13D"/>
+  <text x="790" y="320" text-anchor="middle" font-size="24" font-weight="bold" fill="#1E3A63">Vững nền tảng?</text>
+  <text x="790" y="356" text-anchor="middle" font-size="20" fill="#8a6d1c">chọn hướng đi tiếp</text>
+
+  <path d="M 950 300 Q 1030 240 1090 220" stroke="#9db3cc" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M 1080 208 l 26 6 l -16 21 z" fill="#9db3cc"/>
+  <path d="M 950 370 Q 1030 430 1090 450" stroke="#9db3cc" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M 1080 462 l 26 -6 l -16 -21 z" fill="#9db3cc"/>
+
+  <!-- branch A -->
+  <rect x="1110" y="130" width="380" height="170" rx="26" fill="#2e86c9"/>
+  <text x="1300" y="192" text-anchor="middle" font-size="25" font-weight="bold" fill="#fff">2a. C/C++</text>
+  <text x="1300" y="230" text-anchor="middle" font-size="19" fill="#dbeefc">thi HSG, chuyên Tin,</text>
+  <text x="1300" y="258" text-anchor="middle" font-size="19" fill="#dbeefc">giải thuật chuyên sâu</text>
+
+  <!-- branch B -->
+  <rect x="1110" y="370" width="380" height="170" rx="26" fill="#1E3A63"/>
+  <text x="1300" y="432" text-anchor="middle" font-size="25" font-weight="bold" fill="#fff">2b. Python nâng cao</text>
+  <text x="1300" y="470" text-anchor="middle" font-size="19" fill="#b7c6dd">web, dữ liệu, AI,</text>
+  <text x="1300" y="498" text-anchor="middle" font-size="19" fill="#b7c6dd">sản phẩm thực tế</text>
+</svg>

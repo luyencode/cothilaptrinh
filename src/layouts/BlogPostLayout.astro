@@ -8,8 +8,9 @@ interface Props {
   tags: string[];
   accent?: string;
   cover?: string;
+  author?: string;
 }
-const { title, description, date, tags, accent = '#1E3A63', cover } = Astro.props;
+const { title, description, date, tags, accent = '#1E3A63', cover, author = 'Đặng Kim Thi' } = Astro.props;
 const formattedDate = date.toLocaleDateString('vi-VN', { day: 'numeric', month: 'long', year: 'numeric' });
 ---
 <BaseLayout
@@ -26,6 +27,7 @@ const formattedDate = date.toLocaleDateString('vi-VN', { day: 'numeric', month: 
     <h1>{title}</h1>
     <p class="lead">{description}</p>
     <div class="post-meta">
+      <span class="post-author"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> {author}</span>
       <span>{formattedDate}</span>
       {tags.length > 0 && (
         <span class="post-tags">
@@ -52,6 +54,7 @@ const formattedDate = date.toLocaleDateString('vi-VN', { day: 'numeric', month: 
 
 <style>
   .post-cover { display: block; width: 100%; height: auto; border-radius: var(--r); margin-top: 28px; box-shadow: 0 22px 48px rgba(16,30,55,.16); border: 1px solid var(--line); }
+  .post-author { display: inline-flex; align-items: center; gap: .4em; font-weight: 700; color: var(--navy); }
   .post-meta { display: flex; gap: 14px; align-items: center; margin-top: 18px; flex-wrap: wrap; color: var(--muted); font-size: .9rem; }
   .post-tags { display: flex; gap: 8px; flex-wrap: wrap; }
   .post-tag { background: color-mix(in srgb, var(--c) 12%, #fff); color: var(--navy); padding: 4px 12px; border-radius: 999px; font-weight: 600; font-size: .78rem; }
