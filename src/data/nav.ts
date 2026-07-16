@@ -20,13 +20,7 @@ export const nav: NavEntry[] = [
   { href: '/', label: 'Trang chủ' },
   { href: '/khoa-hoc', label: 'Khóa học' },
   { href: '/lo-trinh', label: 'Lộ trình' },
-  {
-    label: 'Chia sẻ',
-    children: [
-      { href: '/docs', label: 'Bài học' },
-      { href: '/blog', label: 'Blog' },
-    ],
-  },
+  { href: '/blog', label: 'Chia sẻ' },
   {
     label: 'Giới thiệu',
     children: [
