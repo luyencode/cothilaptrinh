@@ -52,6 +52,17 @@ const formattedDate = date.toLocaleDateString('vi-VN', { day: 'numeric', month: 
   </div></section>
 </BaseLayout>
 
+<script>
+  // Mo link ngoai o tab moi, giu link noi bo o tab hien tai
+  document.querySelectorAll('.post-content a').forEach((a) => {
+    const href = a.getAttribute('href') || '';
+    if (/^https?:\/\//i.test(href) && !href.includes('cothilaptrinh.vn')) {
+      a.setAttribute('target', '_blank');
+      a.setAttribute('rel', 'noopener noreferrer');
+    }
+  });
+</script>
+
 <style>
   .post-cover { display: block; width: 100%; height: auto; border-radius: var(--r); margin-top: 28px; box-shadow: 0 22px 48px rgba(16,30,55,.16); border: 1px solid var(--line); }
   .post-author { display: inline-flex; align-items: center; gap: .4em; font-weight: 700; color: var(--navy); }
