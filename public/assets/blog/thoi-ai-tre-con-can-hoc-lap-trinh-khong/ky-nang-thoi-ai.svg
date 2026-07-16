@@ -1,0 +1,42 @@
+<svg viewBox="0 0 1600 680" xmlns="http://www.w3.org/2000/svg" font-family="Arial, 'Helvetica Neue', sans-serif">
+  <rect width="1600" height="680" rx="28" fill="#f4faf6"/>
+  <text x="800" y="92" text-anchor="middle" font-size="24" font-weight="bold" fill="#75849a" letter-spacing="4">TRẺ NÊN HỌC GÌ TRONG THỜI AI?</text>
+  <rect x="740" y="112" width="120" height="7" rx="3.5" fill="#F2C13D"/>
+
+  <g text-anchor="middle">
+    <rect x="115" y="180" width="310" height="320" rx="26" fill="#ffffff" stroke="#e9ecf2" stroke-width="3"/>
+    <rect x="225" y="220" width="90" height="90" rx="22" fill="#1f8b3f"/>
+    <rect x="248" y="243" width="20" height="20" rx="5" fill="#fff"/>
+    <rect x="274" y="243" width="20" height="20" rx="5" fill="#fff" opacity=".65"/>
+    <rect x="248" y="269" width="20" height="20" rx="5" fill="#fff" opacity=".65"/>
+    <rect x="274" y="269" width="20" height="20" rx="5" fill="#fff" opacity=".35"/>
+    <text x="270" y="368" font-size="23" font-weight="bold" fill="#1E3A63">Tư duy phân rã</text>
+    <text x="270" y="410" font-size="18" fill="#75849a">chia vấn đề lớn</text>
+    <text x="270" y="436" font-size="18" fill="#75849a">thành bước nhỏ</text>
+
+    <rect x="465" y="180" width="310" height="320" rx="26" fill="#ffffff" stroke="#e9ecf2" stroke-width="3"/>
+    <rect x="575" y="220" width="90" height="90" rx="22" fill="#2e86c9"/>
+    <circle cx="612" cy="258" r="18" fill="none" stroke="#fff" stroke-width="6"/>
+    <path d="M 625 272 l 16 16" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+    <text x="620" y="368" font-size="23" font-weight="bold" fill="#1E3A63">Đọc và đánh giá</text>
+    <text x="620" y="410" font-size="18" fill="#75849a">biết code AI viết</text>
+    <text x="620" y="436" font-size="18" fill="#75849a">đúng hay sai ở đâu</text>
+
+    <rect x="815" y="180" width="310" height="320" rx="26" fill="#ffffff" stroke="#e9ecf2" stroke-width="3"/>
+    <rect x="925" y="220" width="90" height="90" rx="22" fill="#F2C13D"/>
+    <circle cx="970" cy="258" r="16" fill="none" stroke="#1E3A63" stroke-width="6"/>
+    <path d="M 970 242 v -12 M 970 274 v 12 M 954 258 h -12 M 986 258 h 12" stroke="#1E3A63" stroke-width="6" stroke-linecap="round"/>
+    <text x="970" y="368" font-size="23" font-weight="bold" fill="#1E3A63">Đặt bài toán</text>
+    <text x="970" y="410" font-size="18" fill="#75849a">mô tả rõ điều mình</text>
+    <text x="970" y="436" font-size="18" fill="#75849a">muốn máy làm</text>
+
+    <rect x="1165" y="180" width="310" height="320" rx="26" fill="#ffffff" stroke="#e9ecf2" stroke-width="3"/>
+    <rect x="1275" y="220" width="90" height="90" rx="22" fill="#1E3A63"/>
+    <ellipse cx="1320" cy="248" rx="26" ry="10" fill="none" stroke="#fff" stroke-width="5"/>
+    <path d="M 1294 248 v 34 a26 10 0 0 0 52 0 v -34" fill="none" stroke="#fff" stroke-width="5"/>
+    <text x="1320" y="368" font-size="23" font-weight="bold" fill="#1E3A63">Nền tảng dữ liệu</text>
+    <text x="1320" y="410" font-size="18" fill="#75849a">hiểu dữ liệu, xác suất,</text>
+    <text x="1320" y="436" font-size="18" fill="#75849a">cách AI vận hành</text>
+  </g>
+  <text x="800" y="590" text-anchor="middle" font-size="22" fill="#75849a">Càng dùng AI nhiều, bốn kỹ năng này càng quyết định ai làm chủ công cụ.</text>
+</svg>

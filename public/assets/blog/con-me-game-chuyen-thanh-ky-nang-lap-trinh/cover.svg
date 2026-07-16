@@ -1,0 +1,43 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" font-family="DejaVu Sans, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e9f1fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="1050" y="-60" width="220" height="220" rx="44" fill="none" stroke="#dde8f3" stroke-width="3"/>
+  <rect x="-70" y="480" width="220" height="220" rx="44" fill="none" stroke="#dde8f3" stroke-width="3"/>
+
+  <g>
+    <rect x="70" y="58" width="38" height="38" rx="9" fill="#1f8b3f"/>
+    <rect x="114" y="58" width="38" height="38" rx="9" fill="#2e86c9"/>
+    <rect x="70" y="102" width="38" height="38" rx="9" fill="#2e86c9"/>
+    <rect x="114" y="102" width="38" height="38" rx="9" fill="#1f8b3f"/>
+    <text x="89" y="85" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">C</text>
+    <text x="133" y="85" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">T</text>
+    <text x="89" y="129" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">L</text>
+    <text x="133" y="129" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">T</text>
+  </g>
+  <text x="172" y="93" font-size="26" font-weight="bold" fill="#1f8b3f">Cô Thi <tspan fill="#2e86c9">Lập Trình</tspan></text>
+  <text x="172" y="124" font-size="17" fill="#75849a" letter-spacing="3">BLOG CHO BA MẸ</text>
+
+  <text x="70" y="252" font-size="50" font-weight="bold" fill="#1E3A63">Con mê chơi game:</text>
+  <text x="70" y="316" font-size="50" font-weight="bold" fill="#1E3A63">biến đam mê thành</text>
+  <text x="70" y="380" font-size="50" font-weight="bold" fill="#1f8b3f">kỹ năng lập trình</text>
+  <rect x="72" y="414" width="120" height="8" rx="4" fill="#F2C13D"/>
+  <text x="70" y="462" font-size="24" fill="#5b6b82">Từ người chơi thành người tạo ra trò chơi</text>
+
+  <!-- gamepad -> arrow -> code window -->
+  <g>
+    <rect x="760" y="200" width="170" height="110" rx="46" fill="#2e86c9"/>
+    <path d="M 800 245 h 44 M 822 223 v 44" stroke="#fff" stroke-width="11" stroke-linecap="round"/>
+    <circle cx="890" cy="238" r="9" fill="#fff"/>
+    <circle cx="866" cy="266" r="9" fill="#F2C13D"/>
+    <path d="M 850 340 q 40 60 100 70" stroke="#F2C13D" stroke-width="7" fill="none" stroke-dasharray="2 12" stroke-linecap="round"/>
+    <path d="M 942 424 l 26 -4 l -12 24 z" fill="#F2C13D"/>
+    <rect x="960" y="410" width="180" height="130" rx="20" fill="#1E3A63"/>
+    <circle cx="984" cy="434" r="6" fill="#e0655f"/><circle cx="1004" cy="434" r="6" fill="#F2C13D"/><circle cx="1024" cy="434" r="6" fill="#57c07d"/>
+    <path d="M 985 470 h 80 M 985 494 h 110 M 985 518 h 60" stroke="#62b4ec" stroke-width="9" stroke-linecap="round"/>
+  </g>
+</svg>

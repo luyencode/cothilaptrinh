@@ -1,0 +1,32 @@
+<svg viewBox="0 0 1600 660" xmlns="http://www.w3.org/2000/svg" font-family="Arial, 'Helvetica Neue', sans-serif">
+  <rect width="1600" height="660" rx="28" fill="#f3f8fd"/>
+  <text x="800" y="92" text-anchor="middle" font-size="24" font-weight="bold" fill="#75849a" letter-spacing="4">CÙNG LÀ GAME, HAI VAI TRÒ KHÁC HẲN</text>
+  <rect x="740" y="112" width="120" height="7" rx="3.5" fill="#F2C13D"/>
+
+  <!-- left: player -->
+  <rect x="130" y="180" width="620" height="380" rx="26" fill="#ffffff" stroke="#e9ecf2" stroke-width="3"/>
+  <text x="440" y="248" text-anchor="middle" font-size="27" font-weight="bold" fill="#75849a">NGƯỜI CHƠI</text>
+  <rect x="330" y="286" width="220" height="130" rx="40" fill="#c9d5e4"/>
+  <path d="M 384 340 h 40 M 404 320 v 40" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="496" cy="332" r="9" fill="#fff"/><circle cx="474" cy="360" r="9" fill="#fff"/>
+  <g text-anchor="middle" font-size="20" fill="#75849a">
+    <text x="440" y="466">nhận nhiệm vụ có sẵn</text>
+    <text x="440" y="500">theo luật người khác đặt ra</text>
+  </g>
+
+  <!-- arrow -->
+  <path d="M 770 370 H 820" stroke="#F2C13D" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 814 352 l 30 18 l -30 18 z" fill="#F2C13D"/>
+
+  <!-- right: creator -->
+  <rect x="850" y="180" width="620" height="380" rx="26" fill="#ffffff" stroke="#d9ebde" stroke-width="3"/>
+  <text x="1160" y="248" text-anchor="middle" font-size="27" font-weight="bold" fill="#1f8b3f">NGƯỜI TẠO RA GAME</text>
+  <rect x="1010" y="286" width="130" height="130" rx="24" fill="#1f8b3f"/>
+  <path d="M 1040 351 h 70 M 1075 316 v 70" stroke="#fff" stroke-width="11" stroke-linecap="round"/>
+  <rect x="1170" y="286" width="130" height="130" rx="24" fill="#2e86c9"/>
+  <path d="M 1200 330 l 20 21 l -20 21 M 1270 330 l -20 21 l 20 21" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <g text-anchor="middle" font-size="20" fill="#3d4c60">
+    <text x="1160" y="466">tự đặt luật chơi, tự thiết kế nhân vật</text>
+    <text x="1160" y="500">gặp lỗi thì tự tìm cách sửa</text>
+  </g>
+</svg>

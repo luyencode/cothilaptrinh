@@ -1,0 +1,36 @@
+<svg viewBox="0 0 1600 620" xmlns="http://www.w3.org/2000/svg" font-family="Arial, 'Helvetica Neue', sans-serif">
+  <rect width="1600" height="620" rx="28" fill="#f4faf6"/>
+  <text x="800" y="92" text-anchor="middle" font-size="24" font-weight="bold" fill="#75849a" letter-spacing="4">LỘ TRÌNH LÀM GAME THEO TỪNG BƯỚC</text>
+  <rect x="740" y="112" width="120" height="7" rx="3.5" fill="#F2C13D"/>
+
+  <path d="M 380 350 H 560 M 900 350 H 1080" stroke="#c4d2e2" stroke-width="5" stroke-dasharray="1 14" stroke-linecap="round"/>
+  <path d="M 552 332 l 26 18 l -26 18 z M 1072 332 l 26 18 l -26 18 z" fill="#c4d2e2"/>
+
+  <g text-anchor="middle">
+    <rect x="130" y="220" width="250" height="260" rx="26" fill="#1f8b3f"/>
+    <text x="255" y="298" font-size="25" font-weight="bold" fill="#fff">1. Scratch</text>
+    <text x="255" y="340" font-size="19" fill="#d9f2e2">game đầu tiên</text>
+    <text x="255" y="368" font-size="19" fill="#d9f2e2">trong 1 buổi:</text>
+    <text x="255" y="396" font-size="19" fill="#d9f2e2">mèo đuổi chuột,</text>
+    <text x="255" y="424" font-size="19" fill="#d9f2e2">hứng táo rơi</text>
+
+    <rect x="600" y="220" width="250" height="260" rx="26" fill="#F2C13D"/>
+    <text x="725" y="298" font-size="25" font-weight="bold" fill="#1E3A63">2. Nâng cấp</text>
+    <text x="725" y="340" font-size="19" fill="#8a6d1c">thêm điểm số,</text>
+    <text x="725" y="368" font-size="19" fill="#8a6d1c">màn chơi, độ khó,</text>
+    <text x="725" y="396" font-size="19" fill="#8a6d1c">ý tưởng riêng</text>
+    <text x="725" y="424" font-size="19" fill="#8a6d1c">của con</text>
+
+    <rect x="1120" y="220" width="250" height="260" rx="26" fill="#2e86c9"/>
+    <text x="1245" y="298" font-size="25" font-weight="bold" fill="#fff">3. Python</text>
+    <text x="1245" y="340" font-size="19" fill="#dbeefc">game bằng code</text>
+    <text x="1245" y="368" font-size="19" fill="#dbeefc">thật (Pygame),</text>
+    <text x="1245" y="396" font-size="19" fill="#dbeefc">logic phức tạp,</text>
+    <text x="1245" y="424" font-size="19" fill="#dbeefc">dự án dài hơi</text>
+  </g>
+  <g text-anchor="middle" font-size="19" fill="#75849a">
+    <text x="255" y="540">7-10 tuổi</text>
+    <text x="725" y="540">9-12 tuổi</text>
+    <text x="1245" y="540">11 tuổi trở lên</text>
+  </g>
+</svg>
