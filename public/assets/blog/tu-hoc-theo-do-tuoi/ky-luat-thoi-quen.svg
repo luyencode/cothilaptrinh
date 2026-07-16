@@ -18,7 +18,7 @@
       <rect x="425" y="260" width="90" height="90" rx="22" fill="#1f8b3f"/>
       <path d="M 450 305 l 15 16 l 30 -34" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
       <rect x="565" y="260" width="90" height="90" rx="22" fill="#ffffff" stroke="#d7e2d2" stroke-width="3" stroke-dasharray="8 8"/>
-      <text x="610" y="318" font-size="26" fill="#b0bfa9">–</text>
+      <text x="610" y="318" font-size="26" fill="#b0bfa9">-</text>
       <rect x="705" y="260" width="90" height="90" rx="22" fill="#1f8b3f"/>
       <path d="M 730 305 l 15 16 l 30 -34" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
       <rect x="845" y="260" width="90" height="90" rx="22" fill="#1f8b3f"/>

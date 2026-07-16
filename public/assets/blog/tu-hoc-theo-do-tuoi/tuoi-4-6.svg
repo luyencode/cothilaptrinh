@@ -4,11 +4,11 @@
 
   <!-- age badge -->
   <rect x="90" y="90" width="190" height="76" rx="20" fill="#1f8b3f"/>
-  <text x="185" y="140" text-anchor="middle" font-size="34" font-weight="bold" fill="#fff">4–6 tuổi</text>
+  <text x="185" y="140" text-anchor="middle" font-size="34" font-weight="bold" fill="#fff">4-6 tuổi</text>
   <text x="90" y="230" font-size="34" font-weight="bold" fill="#1E3A63">Học bằng chơi,</text>
   <text x="90" y="278" font-size="34" font-weight="bold" fill="#1E3A63">học bằng cảm nhận</text>
   <rect x="92" y="306" width="90" height="7" rx="3.5" fill="#F2C13D"/>
-  <text x="90" y="360" font-size="22" fill="#5b6b82">Máy tính biết "làm theo lệnh" —</text>
+  <text x="90" y="360" font-size="22" fill="#5b6b82">Máy tính biết "làm theo lệnh",</text>
   <text x="90" y="392" font-size="22" fill="#5b6b82">với con, đó đã là một điều kỳ diệu.</text>
 
   <!-- scratch-like block stack -->
@@ -40,5 +40,4 @@
   <g fill="#62b4ec">
     <path d="M 1180 120 l 8 20 l 20 8 l -20 8 l -8 20 l -8 -20 l -20 -8 l 20 -8 z"/>
   </g>
-  <text x="800" y="560" text-anchor="middle" font-size="22" fill="#75849a">Ghép vài khối lệnh — nhân vật cử động, con cười. Vậy là đủ cho một buổi học.</text>
 </svg>

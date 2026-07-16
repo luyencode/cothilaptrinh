@@ -25,6 +25,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
       <div class="grid g3 cards">
         {posts.map((post) => (
           <a class="card" href={`/blog/${post.id}`}>
+            {post.data.cover && <img class="card-cover" src={post.data.cover} alt={post.data.title} width="1200" height="630" loading="lazy" />}
             {post.data.tags[0] && <span class="tag">{post.data.tags[0]}</span>}
             <h3>{post.data.title}</h3>
             <p>{post.data.description}</p>
@@ -35,3 +36,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
     )}
   </div></section>
 </BaseLayout>
+
+<style>
+  .card-cover { display: block; width: 100%; height: auto; aspect-ratio: 1.91 / 1; object-fit: cover; border-radius: 12px; margin-bottom: 15px; border: 1px solid var(--line); }
+</style>

@@ -35,6 +35,12 @@ const formattedDate = date.toLocaleDateString('vi-VN', { day: 'numeric', month: 
     </div>
   </div></section>
 
+  {cover && (
+    <div class="wrap narrow">
+      <img class="post-cover" src={cover} alt={title} width="1200" height="630" loading="eager" />
+    </div>
+  )}
+
   <section class="section"><div class="wrap narrow post-content">
     <slot />
   </div></section>
@@ -45,6 +51,7 @@ const formattedDate = date.toLocaleDateString('vi-VN', { day: 'numeric', month: 
 </BaseLayout>
 
 <style>
+  .post-cover { display: block; width: 100%; height: auto; border-radius: var(--r); margin-top: 28px; box-shadow: 0 22px 48px rgba(16,30,55,.16); border: 1px solid var(--line); }
   .post-meta { display: flex; gap: 14px; align-items: center; margin-top: 18px; flex-wrap: wrap; color: var(--muted); font-size: .9rem; }
   .post-tags { display: flex; gap: 8px; flex-wrap: wrap; }
   .post-tag { background: color-mix(in srgb, var(--c) 12%, #fff); color: var(--navy); padding: 4px 12px; border-radius: 999px; font-weight: 600; font-size: .78rem; }
