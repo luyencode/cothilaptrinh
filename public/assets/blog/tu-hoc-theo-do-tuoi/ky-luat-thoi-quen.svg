@@ -1,0 +1,43 @@
+<svg viewBox="0 0 1600 620" xmlns="http://www.w3.org/2000/svg" font-family="Arial, 'Helvetica Neue', sans-serif">
+  <rect width="1600" height="620" rx="28" fill="#f6f9f4"/>
+  <rect x="-70" y="-70" width="240" height="240" rx="52" fill="none" stroke="#e0ecda" stroke-width="4"/>
+
+  <text x="800" y="100" text-anchor="middle" font-size="30" font-weight="bold" fill="#1E3A63">Đều đặn nhỏ thắng dồn dập lớn</text>
+  <rect x="740" y="122" width="120" height="7" rx="3.5" fill="#F2C13D"/>
+
+  <!-- week strip -->
+  <g text-anchor="middle">
+    <g font-size="22" fill="#75849a">
+      <text x="330" y="230">T2</text><text x="470" y="230">T3</text><text x="610" y="230">T4</text>
+      <text x="750" y="230">T5</text><text x="890" y="230">T6</text><text x="1030" y="230">T7</text><text x="1170" y="230">CN</text>
+    </g>
+    <!-- days: check, check, miss, check, check, check, rest -->
+    <g>
+      <rect x="285" y="260" width="90" height="90" rx="22" fill="#1f8b3f"/>
+      <path d="M 310 305 l 15 16 l 30 -34" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="425" y="260" width="90" height="90" rx="22" fill="#1f8b3f"/>
+      <path d="M 450 305 l 15 16 l 30 -34" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="565" y="260" width="90" height="90" rx="22" fill="#ffffff" stroke="#d7e2d2" stroke-width="3" stroke-dasharray="8 8"/>
+      <text x="610" y="318" font-size="26" fill="#b0bfa9">–</text>
+      <rect x="705" y="260" width="90" height="90" rx="22" fill="#1f8b3f"/>
+      <path d="M 730 305 l 15 16 l 30 -34" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="845" y="260" width="90" height="90" rx="22" fill="#1f8b3f"/>
+      <path d="M 870 305 l 15 16 l 30 -34" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="985" y="260" width="90" height="90" rx="22" fill="#2e86c9"/>
+      <text x="1030" y="320" font-size="30" font-weight="bold" fill="#fff">45'</text>
+      <rect x="1125" y="260" width="90" height="90" rx="22" fill="#F2C13D"/>
+      <text x="1170" y="320" font-size="26" font-weight="bold" fill="#1E3A63">nghỉ</text>
+    </g>
+    <text x="610" y="410" font-size="20" fill="#75849a">bỏ lỡ một hôm?</text>
+    <text x="610" y="438" font-size="20" fill="#1f8b3f" font-weight="bold">không sao, mai học tiếp</text>
+  </g>
+
+  <!-- growing sprout -->
+  <g>
+    <path d="M 1400 350 q 0 -70 -46 -96 M 1400 350 q 0 -50 42 -72" stroke="#1f8b3f" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <path d="M 1354 254 q -44 -12 -58 -52 q 46 -6 58 52 z" fill="#1f8b3f"/>
+    <path d="M 1442 278 q 38 -16 44 -54 q -46 0 -44 54 z" fill="#57c07d"/>
+    <rect x="1362" y="350" width="76" height="60" rx="14" fill="#F2C13D"/>
+  </g>
+  <text x="800" y="540" text-anchor="middle" font-size="23" fill="#5b6b82" font-style="italic">Một buổi học ngắn nhưng đều đặn tốt hơn một buổi thật dài rồi bỏ dở.</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg viewBox="0 0 1600 680" xmlns="http://www.w3.org/2000/svg" font-family="Arial, 'Helvetica Neue', sans-serif">
+  <rect width="1600" height="680" rx="28" fill="#f4faf6"/>
+  <rect x="-70" y="-70" width="240" height="240" rx="52" fill="none" stroke="#dcefe3" stroke-width="4"/>
+
+  <!-- age badge -->
+  <rect x="90" y="90" width="190" height="76" rx="20" fill="#1f8b3f"/>
+  <text x="185" y="140" text-anchor="middle" font-size="34" font-weight="bold" fill="#fff">4–6 tuổi</text>
+  <text x="90" y="230" font-size="34" font-weight="bold" fill="#1E3A63">Học bằng chơi,</text>
+  <text x="90" y="278" font-size="34" font-weight="bold" fill="#1E3A63">học bằng cảm nhận</text>
+  <rect x="92" y="306" width="90" height="7" rx="3.5" fill="#F2C13D"/>
+  <text x="90" y="360" font-size="22" fill="#5b6b82">Máy tính biết "làm theo lệnh" —</text>
+  <text x="90" y="392" font-size="22" fill="#5b6b82">với con, đó đã là một điều kỳ diệu.</text>
+
+  <!-- scratch-like block stack -->
+  <g font-size="24" font-weight="bold">
+    <path d="M 760 140 h 340 a18 18 0 0 1 18 18 v 44 a18 18 0 0 1 -18 18 h -250 l -14 14 h -48 l -14 -14 h -14 a18 18 0 0 1 -18 -18 v -44 a18 18 0 0 1 18 -18 z" fill="#F2C13D"/>
+    <text x="790" y="192" fill="#1E3A63">khi bấm vào lá cờ</text>
+    <path d="M 742 234 h 14 l 14 14 h 48 l 14 -14 h 250 a18 18 0 0 1 18 18 v 44 a18 18 0 0 1 -18 18 h -250 l -14 14 h -48 l -14 -14 h -14 a18 18 0 0 1 -18 -18 v -44 a18 18 0 0 1 18 -18 z" fill="#2e86c9"/>
+    <text x="790" y="286" fill="#fff">nói "Xin chào!"</text>
+    <path d="M 742 328 h 14 l 14 14 h 48 l 14 -14 h 250 a18 18 0 0 1 18 18 v 44 a18 18 0 0 1 -18 18 h -320 a18 18 0 0 1 -18 -18 v -44 a18 18 0 0 1 18 -18 z" fill="#1f8b3f"/>
+    <text x="790" y="380" fill="#fff">nhảy lên 2 lần</text>
+  </g>
+
+  <!-- friendly cat -->
+  <g>
+    <circle cx="1330" cy="330" r="110" fill="#F2C13D"/>
+    <path d="M 1252 250 l -16 -62 l 58 30 z" fill="#F2C13D"/>
+    <path d="M 1408 250 l 16 -62 l -58 30 z" fill="#F2C13D"/>
+    <circle cx="1292" cy="316" r="13" fill="#1E3A63"/>
+    <circle cx="1368" cy="316" r="13" fill="#1E3A63"/>
+    <path d="M 1300 372 q 30 26 60 0" stroke="#1E3A63" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M 1216 340 h -46 M 1218 362 h -40" stroke="#e0a91f" stroke-width="6" stroke-linecap="round"/>
+    <path d="M 1444 340 h 46 M 1442 362 h 40" stroke="#e0a91f" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- sparkles -->
+  <g fill="#1f8b3f">
+    <path d="M 700 520 l 10 24 l 24 10 l -24 10 l -10 24 l -10 -24 l -24 -10 l 24 -10 z"/>
+  </g>
+  <g fill="#62b4ec">
+    <path d="M 1180 120 l 8 20 l 20 8 l -20 8 l -8 20 l -8 -20 l -20 -8 l 20 -8 z"/>
+  </g>
+  <text x="800" y="560" text-anchor="middle" font-size="22" fill="#75849a">Ghép vài khối lệnh — nhân vật cử động, con cười. Vậy là đủ cho một buổi học.</text>
+</svg>

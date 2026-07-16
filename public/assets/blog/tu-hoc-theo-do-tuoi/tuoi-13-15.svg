@@ -1,0 +1,43 @@
+<svg viewBox="0 0 1600 680" xmlns="http://www.w3.org/2000/svg" font-family="Arial, 'Helvetica Neue', sans-serif">
+  <rect width="1600" height="680" rx="28" fill="#f2f5fa"/>
+  <rect x="1420" y="480" width="240" height="240" rx="52" fill="none" stroke="#dbe4f0" stroke-width="4"/>
+
+  <!-- age badge -->
+  <rect x="90" y="90" width="220" height="76" rx="20" fill="#1E3A63"/>
+  <text x="200" y="140" text-anchor="middle" font-size="34" font-weight="bold" fill="#fff">13–15 tuổi</text>
+  <text x="90" y="230" font-size="34" font-weight="bold" fill="#1E3A63">Tự tạo sản phẩm</text>
+  <text x="90" y="278" font-size="34" font-weight="bold" fill="#1E3A63">thực tế</text>
+  <rect x="92" y="306" width="90" height="7" rx="3.5" fill="#F2C13D"/>
+  <text x="90" y="360" font-size="22" fill="#5b6b82">Python, web, dữ liệu, tự động hóa —</text>
+  <text x="90" y="392" font-size="22" fill="#5b6b82">code bắt đầu chạm vào đời thật.</text>
+
+  <!-- laptop -->
+  <g>
+    <rect x="680" y="130" width="560" height="360" rx="24" fill="#13294a"/>
+    <rect x="700" y="150" width="520" height="320" rx="14" fill="#1E3A63"/>
+    <path d="M 620 490 h 680 l 40 60 q 6 14 -12 14 h -736 q -18 0 -12 -14 z" fill="#c9d5e4"/>
+    <g font-family="DejaVu Sans Mono, Consolas, monospace" font-size="23">
+      <text x="730" y="205" fill="#62b4ec">import <tspan fill="#e7eefb">pandas</tspan></text>
+      <text x="730" y="250" fill="#57c07d"># phân tích điểm cả lớp</text>
+      <text x="730" y="295" fill="#e7eefb">diem = doc_file(<tspan fill="#F2C13D">"lop9A.csv"</tspan>)</text>
+      <text x="730" y="340" fill="#e7eefb">ve_bieu_do(diem)</text>
+      <text x="730" y="385" fill="#62b4ec">print<tspan fill="#e7eefb">(</tspan><tspan fill="#F2C13D">"Xong!"</tspan><tspan fill="#e7eefb">)</tspan></text>
+      <rect x="730" y="405" width="16" height="30" fill="#F2C13D"/>
+    </g>
+  </g>
+
+  <!-- orbiting ideas: web / AI / game -->
+  <g text-anchor="middle" font-size="21" font-weight="bold">
+    <circle cx="1340" cy="150" r="56" fill="#1f8b3f"/>
+    <text x="1340" y="143" fill="#fff">Web</text>
+    <text x="1340" y="170" fill="#c9ecd6" font-size="17" font-weight="normal">trang riêng</text>
+    <circle cx="1440" cy="330" r="56" fill="#2e86c9"/>
+    <text x="1440" y="323" fill="#fff">AI</text>
+    <text x="1440" y="350" fill="#d6ebfa" font-size="17" font-weight="normal">dữ liệu</text>
+    <circle cx="1360" cy="520" r="56" fill="#F2C13D"/>
+    <text x="1360" y="513" fill="#1E3A63">Game</text>
+    <text x="1360" y="540" fill="#8a6d1c" font-size="17" font-weight="normal">mini</text>
+    <path d="M 1288 185 Q 1240 240 1268 300 M 1425 388 Q 1410 440 1400 468" stroke="#b9c8da" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round" fill="none"/>
+  </g>
+  <text x="800" y="620" text-anchor="middle" font-size="22" fill="#75849a">Khi sản phẩm chạy được và có ích, động lực không cần ai nhắc nữa.</text>
+</svg>
