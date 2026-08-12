@@ -31,6 +31,13 @@ Every change goes through a **feature branch + pull request** — nobody
 to `main`. This keeps a Cloudflare Pages build check on every change before
 it ever reaches the live site.
 
+A PR isn't limited to one post — if you have several posts ready at once
+(e.g. a batch written in one sitting), it's fine to add/edit all of them on
+the same branch and ship them in a single pull request. Use a single-post
+branch name (`content/ten-bai-viet`) when it's just one post, or a
+descriptive batch name (e.g. `content/blog-batch-2026-08` or
+`content/3-bai-viet-moi`) when it's several.
+
 ### Option A — straight from GitHub's website (no setup needed)
 
 1. In the GitHub repo, open `src/content/blog/`.
@@ -40,18 +47,23 @@ it ever reaches the live site.
 5. Scroll down, write a short commit message (e.g. "Add blog post: ..."),
    and choose **Create a new branch for this commit and start a pull
    request** (not "Commit directly to the `main` branch").
-6. Click **Propose changes**, then **Create pull request** on the next
-   screen.
-7. Wait for the Cloudflare Pages check on the PR to go green (1-2 minutes —
-   it also gives you a preview URL to check your post before it's live),
-   then merge the PR. Merging triggers the production rebuild; your post
-   goes live shortly after. You can watch progress under **Workers & Pages
-   → this project → Deployments** in the Cloudflare dashboard.
+6. Click **Propose changes**. If you have more posts to add to the same PR,
+   switch to that new branch (top-left branch selector) and repeat steps
+   1-5, choosing "Commit directly to the `<branch-name>` branch" this time
+   (you're no longer on `main`, so this just adds to the same PR).
+7. When all posts are added, click **Create pull request**.
+8. Wait for the Cloudflare Pages check on the PR to go green (1-2 minutes —
+   it also gives you a preview URL to check your post(s) before they're
+   live), then merge the PR. Merging triggers the production rebuild; the
+   post(s) go live shortly after. You can watch progress under **Workers &
+   Pages → this project → Deployments** in the Cloudflare dashboard.
 
 ### Option B — on your own computer (if you have Node.js + the repo cloned)
 
-1. Create a branch: `git checkout -b content/ten-bai-viet`.
-2. Create the file at `src/content/blog/ten-bai-viet.md`.
+1. Create a branch: `git checkout -b content/ten-bai-viet` (or a batch name
+   if you're adding several posts at once).
+2. Create the file(s) at `src/content/blog/ten-bai-viet.md` — one file per
+   post, add as many as you like on this branch.
 3. Run `npm run dev` and open `http://localhost:4321/blog` to preview.
 4. `git add`, `git commit`, then `git push -u origin content/ten-bai-viet`.
 5. Open a pull request (GitHub will show a "Compare & pull request" button
@@ -60,22 +72,27 @@ it ever reaches the live site.
 
 ### Publishing with an AI assistant (Claude)
 
-If Claude is drafting and publishing the post on your behalf, it follows
-the same rule — a branch and a PR, never a direct commit to `main`:
+If Claude is drafting and publishing one or more posts on your behalf, it
+follows the same rule — a branch and a PR, never a direct commit to
+`main`. Multiple posts in one request become multiple files on the same
+branch and one PR, not one PR per post:
 
-1. `git checkout -b content/ten-bai-viet`
-2. Add/edit the post file, then `git add`, `git commit`.
+1. `git checkout -b content/ten-bai-viet` (or a batch-style name if writing
+   several posts in this request).
+2. Add/edit the post file(s), then `git add`, `git commit` (one commit per
+   post is fine, or one commit for the whole batch — either is OK).
 3. `git push -u origin content/ten-bai-viet`
-4. `gh pr create --title "..." --body "..."`
+4. `gh pr create --title "..." --body "..."` — list every post included in
+   the PR body.
 5. Check the Cloudflare Pages build status on the PR — e.g. `gh pr checks
    <PR>` or `gh pr view <PR> --json statusCheckRollup` — and report the
    result (pass/fail, preview URL) back to you.
 6. Claude does **not** run `gh pr merge` on its own. It only merges when
    you explicitly ask it to in that moment, even if the check is green.
 
-This applies whether Claude is adding a new post, editing an existing one,
-or fixing something across multiple files — always a branch, always a PR,
-never a direct push or force-push to `main`.
+This applies whether Claude is adding one new post, several new posts,
+editing an existing one, or fixing something across multiple files —
+always a branch, always a PR, never a direct push or force-push to `main`.
 
 ## The template
 

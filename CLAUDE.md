@@ -22,9 +22,13 @@ Follow the existing docs — read them before creating or editing content:
 ## Git workflow — hard rules
 
 - **Never commit or push directly to `main`.** Always create a branch
-  (e.g. `content/<slug>` for a post, `fix/<desc>` for a bug) and open a
+  (e.g. `content/<slug>` for a single post, `content/<batch-desc>` when
+  writing several posts at once, `fix/<desc>` for a bug) and open a
   pull request.
 - **Never force-push to `main`.**
+- A PR isn't limited to one post — if asked to write multiple blog posts
+  in one go, put them all on the same branch/commit(s) and open **one PR**
+  covering all of them (list each post in the PR body), not one PR per post.
 - Publish sequence: create branch → edit/add files → commit → `git push -u
   origin <branch>` → `gh pr create`.
 - Before considering a merge, check the Cloudflare Pages build check on the
