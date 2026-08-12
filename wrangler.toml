@@ -1,0 +1,22 @@
+# Pins the Workers runtime compatibility date for this Cloudflare Pages
+# project. Without this file, Cloudflare Pages defaults to the build
+# server's *current* date, which can occasionally be ahead of the date
+# supported by the workerd binary actually deployed on Cloudflare's
+# fleet (the runtime rollout lags by up to a day) - causing:
+#   "This Worker requires compatibility date "YYYY-MM-DD", but the
+#    newest date supported by this server binary is ...""
+# Pinning a fixed, already-rolled-out date avoids that race entirely.
+# Bump this manually (never to "today") if you need newer runtime
+# behavior - see https://developers.cloudflare.com/workers/configuration/compatibility-dates/
+compatibility_date = "2026-08-01"
+
+# This project's Cloudflare Pages deploy step runs `wrangler versions
+# upload`, which is a Workers command and only understands the
+# `assets` block below (it ignores `pages_build_output_dir`, which is
+# only read by the legacy `wrangler pages deploy` command). `name`
+# must match the existing "cothilaptrinh" Pages project so this
+# targets the right deployment instead of creating a new Worker.
+name = "cothilaptrinh"
+
+[assets]
+directory = "dist"
