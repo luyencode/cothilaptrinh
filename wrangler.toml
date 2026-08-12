@@ -10,4 +10,13 @@
 # behavior - see https://developers.cloudflare.com/workers/configuration/compatibility-dates/
 compatibility_date = "2026-08-01"
 
-pages_build_output_dir = "dist"
+# This project's Cloudflare Pages deploy step runs `wrangler versions
+# upload`, which is a Workers command and only understands the
+# `assets` block below (it ignores `pages_build_output_dir`, which is
+# only read by the legacy `wrangler pages deploy` command). `name`
+# must match the existing "cothilaptrinh" Pages project so this
+# targets the right deployment instead of creating a new Worker.
+name = "cothilaptrinh"
+
+[assets]
+directory = "dist"
