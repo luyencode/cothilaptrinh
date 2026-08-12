@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 680" font-family="'DejaVu Sans', Arial, sans-serif">
+  <rect x="0" y="0" width="1600" height="680" rx="28" fill="#f6f9fc"/>
+  <text x="800" y="86" text-anchor="middle" font-size="38" font-weight="bold" fill="#1E3A63">Công nghệ lõi: nghề không teo lại, nghề nâng chuẩn lên</text>
+
+  <!-- code window -->
+  <rect x="130" y="180" width="480" height="360" rx="26" fill="#13294a"/>
+  <circle cx="172" cy="222" r="8" fill="#F2C13D"/>
+  <circle cx="198" cy="222" r="8" fill="#1f8b3f"/>
+  <circle cx="224" cy="222" r="8" fill="#62b4ec"/>
+  <rect x="180" y="270" width="300" height="18" rx="9" fill="#62b4ec"/>
+  <rect x="180" y="308" width="360" height="18" rx="9" fill="#1f8b3f"/>
+  <rect x="220" y="346" width="280" height="18" rx="9" fill="#2e86c9"/>
+  <rect x="220" y="384" width="220" height="18" rx="9" fill="#F2C13D"/>
+  <rect x="180" y="422" width="260" height="18" rx="9" fill="#62b4ec"/>
+  <text x="370" y="500" text-anchor="middle" font-size="23" fill="#dbe7f3">phần mềm rẻ đi, nhu cầu tăng lên</text>
+
+  <!-- growth chart -->
+  <rect x="680" y="180" width="480" height="360" rx="26" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <text x="920" y="240" text-anchor="middle" font-size="25" font-weight="bold" fill="#1E3A63">Nhu cầu nhân lực đến 2030</text>
+  <polyline points="740,470 830,440 920,390 1010,330 1100,270" fill="none" stroke="#1f8b3f" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="1100" cy="270" r="14" fill="#1f8b3f"/>
+  <path d="M1084 236 L1128 246 L1100 282 Z" fill="#1f8b3f" opacity="0"/>
+  <text x="920" y="510" text-anchor="middle" font-size="21" fill="#75849a">kỹ sư AI, học máy, phát triển ứng dụng</text>
+
+  <!-- requirement card -->
+  <rect x="1230" y="180" width="260" height="360" rx="26" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="1275" y="230" width="170" height="56" rx="16" fill="#eef7f0"/>
+  <text x="1360" y="266" text-anchor="middle" font-size="21" font-weight="bold" fill="#1f8b3f">Thuật toán</text>
+  <rect x="1275" y="306" width="170" height="56" rx="16" fill="#eef4fb"/>
+  <text x="1360" y="342" text-anchor="middle" font-size="21" font-weight="bold" fill="#2e86c9">CTDL</text>
+  <rect x="1275" y="382" width="170" height="56" rx="16" fill="#fdf7e6"/>
+  <text x="1360" y="418" text-anchor="middle" font-size="21" font-weight="bold" fill="#b8860b">Dự án thật</text>
+  <text x="1360" y="500" text-anchor="middle" font-size="21" fill="#75849a">nền cần xây sớm</text>
+</svg>

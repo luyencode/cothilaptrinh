@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 680" font-family="'DejaVu Sans', Arial, sans-serif">
+  <rect x="0" y="0" width="1600" height="680" rx="28" fill="#f6f9fc"/>
+  <text x="800" y="86" text-anchor="middle" font-size="38" font-weight="bold" fill="#1E3A63">THPT: dữ liệu, AI và dự án thật</text>
+
+  <!-- data chart card -->
+  <rect x="140" y="170" width="420" height="370" rx="26" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <text x="350" y="232" text-anchor="middle" font-size="25" font-weight="bold" fill="#2e86c9">Phân tích dữ liệu</text>
+  <rect x="210" y="420" width="56" height="80" rx="10" fill="#62b4ec"/>
+  <rect x="286" y="370" width="56" height="130" rx="10" fill="#2e86c9"/>
+  <rect x="362" y="320" width="56" height="180" rx="10" fill="#1f8b3f"/>
+  <rect x="438" y="280" width="56" height="220" rx="10" fill="#1E3A63"/>
+  <line x1="200" y1="500" x2="510" y2="500" stroke="#e9ecf2" stroke-width="4"/>
+
+  <!-- AI understanding -->
+  <rect x="620" y="170" width="360" height="370" rx="26" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <text x="800" y="232" text-anchor="middle" font-size="25" font-weight="bold" fill="#1f8b3f">Hiểu cách AI vận hành</text>
+  <circle cx="800" cy="360" r="80" fill="#eef7f0" stroke="#1f8b3f" stroke-width="4"/>
+  <circle cx="770" cy="340" r="10" fill="#1f8b3f"/>
+  <circle cx="830" cy="340" r="10" fill="#1f8b3f"/>
+  <circle cx="800" cy="386" r="10" fill="#1f8b3f"/>
+  <line x1="770" y1="340" x2="830" y2="340" stroke="#1f8b3f" stroke-width="4"/>
+  <line x1="770" y1="340" x2="800" y2="386" stroke="#1f8b3f" stroke-width="4"/>
+  <line x1="830" y1="340" x2="800" y2="386" stroke="#1f8b3f" stroke-width="4"/>
+  <text x="800" y="500" text-anchor="middle" font-size="21" fill="#75849a">dùng chủ động, tỉnh táo</text>
+
+  <!-- project rocket -->
+  <rect x="1040" y="170" width="420" height="370" rx="26" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <text x="1250" y="232" text-anchor="middle" font-size="25" font-weight="bold" fill="#1E3A63">Dự án thật</text>
+  <path d="M1250 270 c40 40 52 110 24 180 h-48 c-28 -70 -16 -140 24 -180 Z" fill="#1E3A63"/>
+  <circle cx="1250" cy="360" r="20" fill="#62b4ec"/>
+  <path d="M1226 450 l-36 46 h36 Z" fill="#2e86c9"/>
+  <path d="M1274 450 l36 46 h-36 Z" fill="#2e86c9"/>
+  <path d="M1238 452 h24 l-12 44 Z" fill="#F2C13D"/>
+  <text x="1250" y="530" text-anchor="middle" font-size="21" fill="#75849a">làm trọn vẹn, chia sẻ công khai</text>
+
+  <text x="800" y="612" text-anchor="middle" font-size="24" fill="#75849a">Khám phá nghề bằng trải nghiệm, không chỉ bằng lời khuyên</text>
+</svg>

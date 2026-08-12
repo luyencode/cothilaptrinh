@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 680" font-family="'DejaVu Sans', Arial, sans-serif">
+  <rect x="0" y="0" width="1600" height="680" rx="28" fill="#f6f9fc"/>
+  <text x="800" y="86" text-anchor="middle" font-size="38" font-weight="bold" fill="#1E3A63">Nghề cũ, cách làm mới</text>
+
+  <!-- Y te so -->
+  <rect x="120" y="150" width="640" height="420" rx="26" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <text x="440" y="216" text-anchor="middle" font-size="28" font-weight="bold" fill="#2e86c9">Y tế số</text>
+  <path d="M440 330 c-40 -56 -120 -36 -120 24 c0 48 72 92 120 128 c48 -36 120 -80 120 -128 c0 -60 -80 -80 -120 -24 Z" fill="#eef4fb" stroke="#2e86c9" stroke-width="5"/>
+  <polyline points="350,376 400,376 420,340 445,410 465,376 530,376" fill="none" stroke="#1f8b3f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="440" y="530" text-anchor="middle" font-size="21" fill="#75849a">thiết bị đeo, bệnh án điện tử, AI chẩn đoán</text>
+
+  <!-- Nong nghiep -->
+  <rect x="840" y="150" width="640" height="420" rx="26" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <text x="1160" y="216" text-anchor="middle" font-size="28" font-weight="bold" fill="#1f8b3f">Nông nghiệp công nghệ cao</text>
+  <rect x="1010" y="410 " width="300" height="60" rx="16" fill="#eef7f0"/>
+  <path d="M1160 410 v-90" stroke="#1f8b3f" stroke-width="8" stroke-linecap="round"/>
+  <path d="M1160 340 c-10 -50 -60 -66 -90 -60 c6 40 44 66 90 60 Z" fill="#1f8b3f"/>
+  <path d="M1160 360 c10 -50 60 -66 90 -60 c-6 40 -44 66 -90 60 Z" fill="#2e86c9"/>
+  <circle cx="1000" cy="270" r="10" fill="#F2C13D"/>
+  <circle cx="1320" cy="250" r="10" fill="#F2C13D"/>
+  <circle cx="1270" cy="300" r="10" fill="#F2C13D"/>
+  <text x="1160" y="530" text-anchor="middle" font-size="21" fill="#75849a">cảm biến, máy bay không người lái, dữ liệu thời tiết</text>
+
+  <text x="800" y="630" text-anchor="middle" font-size="24" fill="#75849a">Công thức chung: chuyên môn ngành + nền tảng công nghệ</text>
+</svg>

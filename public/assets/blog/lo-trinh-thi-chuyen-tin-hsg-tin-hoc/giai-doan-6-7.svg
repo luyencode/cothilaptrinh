@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 680" font-family="'DejaVu Sans', Arial, sans-serif">
+  <rect x="0" y="0" width="1600" height="680" rx="28" fill="#f6f9fc"/>
+  <text x="800" y="90" text-anchor="middle" font-size="38" font-weight="bold" fill="#1E3A63">Lớp 6-7: rèn phản xạ tư duy trước</text>
+
+  <!-- Scratch-like blocks -->
+  <rect x="120" y="180" width="360" height="340" rx="26" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <text x="300" y="240" text-anchor="middle" font-size="26" font-weight="bold" fill="#1f8b3f">Khối lệnh kéo thả</text>
+  <rect x="170" y="280" width="260" height="46" rx="12" fill="#1f8b3f"/>
+  <text x="300" y="310" text-anchor="middle" font-size="20" fill="#ffffff">khi bấm cờ xanh</text>
+  <rect x="170" y="336" width="260" height="46" rx="12" fill="#2e86c9"/>
+  <text x="300" y="366" text-anchor="middle" font-size="20" fill="#ffffff">lặp lại 10 lần</text>
+  <rect x="190" y="392" width="240" height="46" rx="12" fill="#62b4ec"/>
+  <text x="310" y="422" text-anchor="middle" font-size="20" fill="#ffffff">di chuyển 10 bước</text>
+  <rect x="170" y="448" width="260" height="46" rx="12" fill="#F2C13D"/>
+  <text x="300" y="478" text-anchor="middle" font-size="20" fill="#13294a">nếu chạm cạnh thì quay</text>
+
+  <!-- Arrow -->
+  <line x1="520" y1="350" x2="590" y2="350" stroke="#75849a" stroke-width="6" stroke-linecap="round"/>
+  <path d="M590 334 L620 350 L590 366 Z" fill="#75849a"/>
+
+  <!-- Code card -->
+  <rect x="650" y="180" width="420" height="340" rx="26" fill="#13294a"/>
+  <circle cx="692" cy="222" r="8" fill="#F2C13D"/>
+  <circle cx="718" cy="222" r="8" fill="#1f8b3f"/>
+  <circle cx="744" cy="222" r="8" fill="#62b4ec"/>
+  <text x="860" y="280" text-anchor="middle" font-size="24" font-weight="bold" fill="#62b4ec">Ngôn ngữ dạng chữ</text>
+  <rect x="700" y="310" width="240" height="18" rx="9" fill="#2e86c9"/>
+  <rect x="700" y="346" width="300" height="18" rx="9" fill="#1f8b3f"/>
+  <rect x="730" y="382" width="230" height="18" rx="9" fill="#62b4ec"/>
+  <rect x="730" y="418" width="180" height="18" rx="9" fill="#F2C13D"/>
+  <rect x="700" y="454" width="140" height="18" rx="9" fill="#2e86c9"/>
+
+  <!-- Arrow -->
+  <line x1="1110" y1="350" x2="1180" y2="350" stroke="#75849a" stroke-width="6" stroke-linecap="round"/>
+  <path d="M1180 334 L1210 350 L1180 366 Z" fill="#75849a"/>
+
+  <!-- Thinking / math -->
+  <rect x="1240" y="180" width="240" height="340" rx="26" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <circle cx="1360" cy="300" r="70" fill="#eef7f0" stroke="#1f8b3f" stroke-width="4"/>
+  <text x="1360" y="316" text-anchor="middle" font-size="44" font-weight="bold" fill="#1f8b3f">?!</text>
+  <text x="1360" y="430" text-anchor="middle" font-size="24" font-weight="bold" fill="#1E3A63">Toán tư duy</text>
+  <text x="1360" y="466" text-anchor="middle" font-size="22" fill="#75849a">song hành</text>
+
+  <text x="800" y="600" text-anchor="middle" font-size="24" fill="#75849a">Tuần tự, điều kiện, vòng lặp và thói quen tự tìm lỗi</text>
+</svg>
