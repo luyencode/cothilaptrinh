@@ -113,14 +113,14 @@ A new sidebar group titled "Nâng cao: Cấu trúc dữ liệu" appears automati
 
 ## Publishing a tutorial
 
-Same two options as blog posts (see
-[HOW-TO-BLOG.md](./HOW-TO-BLOG.md#the-two-easiest-ways-to-add-a-post) for
-details):
-
-- **Option A**: create the file directly on GitHub's website, commit to
-  `main`, wait ~1-2 minutes for it to go live.
-- **Option B**: create it locally, preview with `npm run dev` at
-  `http://localhost:4321/docs`, then `git push`.
+Same branch + pull request workflow as blog posts — see
+[HOW-TO-BLOG.md](./HOW-TO-BLOG.md#publishing-a-post) for full details on
+all three ways to do it (GitHub's website, local git, or an AI assistant).
+Nobody commits or pushes directly to `main`; every change gets a
+Cloudflare Pages build check on its PR before merging. For a tutorial page,
+just create/edit the file under `src/content/docs/...` instead of
+`src/content/blog/...`, and preview with `npm run dev` at
+`http://localhost:4321/docs`.
 
 ## Markdown basics
 
