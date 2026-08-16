@@ -24,7 +24,19 @@ numbers, and hyphens only (no spaces, no Vietnamese diacritics). For example
 https://<your-domain>/blog/5-cach-lam-quen-lap-trinh/
 ```
 
-## The two easiest ways to add a post
+## Publishing a post
+
+Every change goes through a **feature branch + pull request** — nobody
+(human or AI) commits or pushes directly to `main`, and nobody force-pushes
+to `main`. This keeps a Cloudflare Pages build check on every change before
+it ever reaches the live site.
+
+A PR isn't limited to one post — if you have several posts ready at once
+(e.g. a batch written in one sitting), it's fine to add/edit all of them on
+the same branch and ship them in a single pull request. Use a single-post
+branch name (`content/ten-bai-viet`) when it's just one post, or a
+descriptive batch name (e.g. `content/blog-batch-2026-08` or
+`content/3-bai-viet-moi`) when it's several.
 
 ### Option A — straight from GitHub's website (no setup needed)
 
@@ -33,16 +45,54 @@ https://<your-domain>/blog/5-cach-lam-quen-lap-trinh/
 3. Name it `ten-bai-viet.md` (see naming rule above).
 4. Paste the template below, fill it in, and write your post underneath.
 5. Scroll down, write a short commit message (e.g. "Add blog post: ..."),
-   and click **Commit changes directly to the `main` branch**.
-6. Wait 1-2 minutes — Cloudflare Pages rebuilds the site automatically and
-   your post goes live. You can watch progress under **Workers & Pages →
-   this project → Deployments** in the Cloudflare dashboard.
+   and choose **Create a new branch for this commit and start a pull
+   request** (not "Commit directly to the `main` branch").
+6. Click **Propose changes**. If you have more posts to add to the same PR,
+   switch to that new branch (top-left branch selector) and repeat steps
+   1-5, choosing "Commit directly to the `<branch-name>` branch" this time
+   (you're no longer on `main`, so this just adds to the same PR).
+7. When all posts are added, click **Create pull request**.
+8. Wait for the Cloudflare Pages check on the PR to go green (1-2 minutes —
+   it also gives you a preview URL to check your post(s) before they're
+   live), then merge the PR. Merging triggers the production rebuild; the
+   post(s) go live shortly after. You can watch progress under **Workers &
+   Pages → this project → Deployments** in the Cloudflare dashboard.
 
 ### Option B — on your own computer (if you have Node.js + the repo cloned)
 
-1. Create the file at `src/content/blog/ten-bai-viet.md`.
-2. Run `npm run dev` and open `http://localhost:4321/blog` to preview.
-3. `git add`, `git commit`, `git push` to `main` when you're happy with it.
+1. Create a branch: `git checkout -b content/ten-bai-viet` (or a batch name
+   if you're adding several posts at once).
+2. Create the file(s) at `src/content/blog/ten-bai-viet.md` — one file per
+   post, add as many as you like on this branch.
+3. Run `npm run dev` and open `http://localhost:4321/blog` to preview.
+4. `git add`, `git commit`, then `git push -u origin content/ten-bai-viet`.
+5. Open a pull request (GitHub will show a "Compare & pull request" button
+   after the push, or run `gh pr create`).
+6. Wait for the Cloudflare Pages check to pass, then merge the PR.
+
+### Publishing with an AI assistant (Claude)
+
+If Claude is drafting and publishing one or more posts on your behalf, it
+follows the same rule — a branch and a PR, never a direct commit to
+`main`. Multiple posts in one request become multiple files on the same
+branch and one PR, not one PR per post:
+
+1. `git checkout -b content/ten-bai-viet` (or a batch-style name if writing
+   several posts in this request).
+2. Add/edit the post file(s), then `git add`, `git commit` (one commit per
+   post is fine, or one commit for the whole batch — either is OK).
+3. `git push -u origin content/ten-bai-viet`
+4. `gh pr create --title "..." --body "..."` — list every post included in
+   the PR body.
+5. Check the Cloudflare Pages build status on the PR — e.g. `gh pr checks
+   <PR>` or `gh pr view <PR> --json statusCheckRollup` — and report the
+   result (pass/fail, preview URL) back to you.
+6. Claude does **not** run `gh pr merge` on its own. It only merges when
+   you explicitly ask it to in that moment, even if the check is green.
+
+This applies whether Claude is adding one new post, several new posts,
+editing an existing one, or fixing something across multiple files —
+always a branch, always a PR, never a direct push or force-push to `main`.
 
 ## The template
 
@@ -119,10 +169,11 @@ Xem thêm khóa học [Scratch cho thiếu nhi](/khoa-hoc-scratch).
 
 ## FAQ specific to blogging
 
-- **Can I edit a post after publishing?** Yes — just edit the same file and
-  commit again. The site rebuilds automatically.
-- **Can I delete a post?** Delete the file and commit — it disappears from
-  the site after the next rebuild.
+- **Can I edit a post after publishing?** Yes — same process: branch, edit
+  the file, commit, open a PR, merge once the check passes. The site
+  rebuilds automatically after the merge.
+- **Can I delete a post?** Same process — delete the file on a branch, PR,
+  merge — it disappears from the site after the next rebuild.
 - **How do I un-publish a post temporarily?** Add `draft: true` to the
   frontmatter and commit. Set it back to `false` (or remove it) to republish.
 - **Where do images go?** Put image files under `public/assets/` and

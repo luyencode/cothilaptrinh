@@ -15,19 +15,45 @@ tutorials; that's exactly what the two how-to guides are for.
 
 ## How does a change actually get published?
 
-1. A change is committed and pushed to the `main` branch (either directly
-   through GitHub's web editor, or via `git push` from a local clone).
-2. That push triggers **Cloudflare Pages**, which is connected directly to
-   this GitHub repo. Cloudflare pulls the new commit, runs `npm run build`,
-   and publishes the `dist/` output.
-3. The whole process takes roughly 1-2 minutes. You can watch it (and see
-   the build log if something goes wrong) in the Cloudflare dashboard,
-   under **Workers & Pages → this project → Deployments**.
+Every change — content or code, human or AI-authored — goes through a
+branch and a pull request. Nobody commits or pushes directly to `main`,
+and nobody force-pushes to `main`.
+
+1. A change is made on a feature/content branch (via GitHub's web editor's
+   "Create a new branch and start a pull request" option, or via
+   `git push` of a local branch), and a pull request is opened.
+2. **Cloudflare Pages**, connected directly to this GitHub repo, builds a
+   preview deployment for that PR — running `npm run build` and giving you
+   a preview URL plus a build check on the PR.
+3. Once the check is green (and the preview looks right), the PR is
+   merged into `main`.
+4. Merging to `main` triggers the production build/publish. The whole
+   process (build to live) takes roughly 1-2 minutes. You can watch it
+   (and see the build log if something goes wrong) in the Cloudflare
+   dashboard, under **Workers & Pages → this project → Deployments**.
+
+If Claude is making the change, it follows the same flow using `gh` (branch,
+commit, push, `gh pr create`, check the build via `gh pr checks`) and will
+only merge the PR when you explicitly tell it to — never automatically,
+even once the check passes. See
+[HOW-TO-BLOG.md](./HOW-TO-BLOG.md#publishing-with-an-ai-assistant-claude)
+for the exact command sequence.
+
+> Note: as of now, `main` has no GitHub-enforced branch protection (no
+> required checks, force-push not technically blocked) — this branch+PR
+> flow is a team process rule, not yet backed by a GitHub setting. If you
+> want it enforced at the repo level too, add a branch protection rule (or
+> ruleset) on `main` requiring the Cloudflare Pages check and disallowing
+> force-pushes.
 
 ## Can I preview a change before it goes live to everyone?
 
-Yes, two ways:
+Yes:
 
+- **The PR preview**: every pull request gets its own Cloudflare Pages
+  preview deployment — a full build of the real site with your change,
+  at a unique preview URL, linked from the PR's checks/status. This is the
+  main way to check a change before merging.
 - **Locally** (needs [Node.js](https://nodejs.org) installed and the repo
   cloned): run `npm install` once, then `npm run dev`, and open
   `http://localhost:4321`. Changes to files show up instantly in the
@@ -35,10 +61,6 @@ Yes, two ways:
 - **On GitHub**: when creating/editing a Markdown file in GitHub's web
   editor, use the **Preview** tab to check formatting before committing.
   This doesn't preview the full site design, just the Markdown rendering.
-
-There's no automatic "staging" preview link for full pages before merging —
-if that becomes important later, ask a developer about adding GitHub's pull
-request preview deployments.
 
 ## How do I set up the custom domain later?
 
