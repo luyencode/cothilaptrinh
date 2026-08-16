@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 680" font-family="'DejaVu Sans', Arial, sans-serif">
+  <rect x="0" y="0" width="1600" height="680" rx="28" fill="#f6f9fc"/>
+  <text x="800" y="90" text-anchor="middle" font-size="38" font-weight="bold" fill="#1E3A63">Nhóm lỗi đọc dữ liệu vào</text>
+  <rect x="110" y="160" width="640" height="390" rx="26" fill="#13294a"/>
+  <circle cx="152" cy="202" r="8" fill="#F2C13D"/>
+  <circle cx="178" cy="202" r="8" fill="#1f8b3f"/>
+  <circle cx="204" cy="202" r="8" fill="#62b4ec"/>
+  <text x="430" y="275" text-anchor="middle" font-size="27" fill="#ffffff">cin &gt;&gt; s;</text>
+  <text x="430" y="325" text-anchor="middle" font-size="24" fill="#d64545">chỉ nhận được một từ</text>
+  <rect x="180" y="360" width="500" height="4" rx="2" fill="#2a4570"/>
+  <text x="430" y="425" text-anchor="middle" font-size="27" fill="#ffffff">getline(cin, s);</text>
+  <text x="430" y="475" text-anchor="middle" font-size="24" fill="#F2C13D">nhận trọn cả dòng</text>
+  <rect x="810" y="160" width="680" height="390" rx="26" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <text x="1150" y="225" text-anchor="middle" font-size="28" font-weight="bold" fill="#1E3A63">Dữ liệu vào thật sự trông thế nào</text>
+  <rect x="870" y="265" width="560" height="70" rx="16" fill="#f6f9fc" stroke="#e9ecf2" stroke-width="2"/>
+  <text x="1150" y="310" text-anchor="middle" font-size="26" fill="#1E3A63">Ha Noi mua thu</text>
+  <text x="1150" y="378" text-anchor="middle" font-size="24" fill="#75849a">có dấu cách ở giữa</text>
+  <rect x="870" y="410" width="560" height="70" rx="16" fill="#f6f9fc" stroke="#e9ecf2" stroke-width="2"/>
+  <text x="1150" y="455" text-anchor="middle" font-size="26" fill="#1E3A63">5</text>
+  <text x="1150" y="520" text-anchor="middle" font-size="24" fill="#75849a">số ở dòng trên, xâu ở dòng dưới</text>
+  <text x="800" y="620" text-anchor="middle" font-size="24" fill="#75849a">Kiểm tra bằng cách in lại ngay thứ vừa đọc được</text>
+</svg>

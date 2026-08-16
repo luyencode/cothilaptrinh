@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 680" font-family="'DejaVu Sans', Arial, sans-serif">
+  <rect x="0" y="0" width="1600" height="680" rx="28" fill="#f6f9fc"/>
+  <text x="800" y="90" text-anchor="middle" font-size="38" font-weight="bold" fill="#1E3A63">Nhóm lỗi in kết quả ra</text>
+  <rect x="110" y="160" width="660" height="390" rx="26" fill="#ffffff" stroke="#d64545" stroke-width="3"/>
+  <text x="440" y="220" text-anchor="middle" font-size="28" font-weight="bold" fill="#d64545">Bài in ra</text>
+  <rect x="170" y="258" width="540" height="64" rx="16" fill="#fdecec"/>
+  <text x="440" y="298" text-anchor="middle" font-size="26" fill="#1E3A63">Ket qua la: 42</text>
+  <rect x="170" y="346" width="540" height="64" rx="16" fill="#fdecec"/>
+  <text x="440" y="386" text-anchor="middle" font-size="26" fill="#1E3A63">Dien tich = 3.5</text>
+  <rect x="170" y="434" width="540" height="64" rx="16" fill="#fdecec"/>
+  <text x="440" y="474" text-anchor="middle" font-size="26" fill="#1E3A63">Nhap n = </text>
+  <rect x="830" y="160" width="660" height="390" rx="26" fill="#ffffff" stroke="#1f8b3f" stroke-width="3"/>
+  <text x="1160" y="220" text-anchor="middle" font-size="28" font-weight="bold" fill="#1f8b3f">Đáp án cần</text>
+  <rect x="890" y="258" width="540" height="64" rx="16" fill="#eef7f1"/>
+  <text x="1160" y="298" text-anchor="middle" font-size="26" fill="#1E3A63">42</text>
+  <rect x="890" y="346" width="540" height="64" rx="16" fill="#eef7f1"/>
+  <text x="1160" y="386" text-anchor="middle" font-size="26" fill="#1E3A63">3.50</text>
+  <rect x="890" y="434" width="540" height="64" rx="16" fill="#eef7f1"/>
+  <text x="1160" y="474" text-anchor="middle" font-size="26" fill="#1E3A63">(không in gì)</text>
+  <text x="800" y="620" text-anchor="middle" font-size="24" fill="#75849a">Máy chấm so từng ký tự, thừa một chữ cũng tính là sai</text>
+</svg>

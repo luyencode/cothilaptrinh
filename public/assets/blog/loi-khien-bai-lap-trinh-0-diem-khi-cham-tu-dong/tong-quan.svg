@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 680" font-family="'DejaVu Sans', Arial, sans-serif">
+  <rect x="0" y="0" width="1600" height="680" rx="28" fill="#f6f9fc"/>
+  <text x="800" y="90" text-anchor="middle" font-size="38" font-weight="bold" fill="#1E3A63">Bài nộp đi qua đâu trước khi ra điểm</text>
+  <rect x="150" y="230" width="200" height="140" rx="24" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="150" y="230" width="200" height="14" rx="7" fill="#62b4ec"/>
+  <text x="250" y="315" text-anchor="middle" font-size="27" font-weight="bold" fill="#1E3A63">Đọc dữ liệu</text>
+  <path d="M 365 300 L 415 300" stroke="#75849a" stroke-width="5" stroke-linecap="round"/>
+  <path d="M 400 288 L 416 300 L 400 312" fill="none" stroke="#75849a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="430" y="230" width="200" height="140" rx="24" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="430" y="230" width="200" height="14" rx="7" fill="#1f8b3f"/>
+  <text x="530" y="315" text-anchor="middle" font-size="27" font-weight="bold" fill="#1E3A63">Tính toán</text>
+  <path d="M 645 300 L 695 300" stroke="#75849a" stroke-width="5" stroke-linecap="round"/>
+  <path d="M 680 288 L 696 300 L 680 312" fill="none" stroke="#75849a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="710" y="230" width="200" height="140" rx="24" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="710" y="230" width="200" height="14" rx="7" fill="#2e86c9"/>
+  <text x="810" y="315" text-anchor="middle" font-size="27" font-weight="bold" fill="#1E3A63">In kết quả</text>
+  <path d="M 925 300 L 975 300" stroke="#75849a" stroke-width="5" stroke-linecap="round"/>
+  <path d="M 960 288 L 976 300 L 960 312" fill="none" stroke="#75849a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="990" y="230" width="200" height="140" rx="24" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="990" y="230" width="200" height="14" rx="7" fill="#F2C13D"/>
+  <text x="1090" y="315" text-anchor="middle" font-size="27" font-weight="bold" fill="#1E3A63">Bộ test</text>
+  <path d="M 1205 300 L 1255 300" stroke="#75849a" stroke-width="5" stroke-linecap="round"/>
+  <path d="M 1240 288 L 1256 300 L 1240 312" fill="none" stroke="#75849a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1270" y="230" width="200" height="140" rx="24" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="1270" y="230" width="200" height="14" rx="7" fill="#1E3A63"/>
+  <text x="1370" y="315" text-anchor="middle" font-size="27" font-weight="bold" fill="#1E3A63">Điểm</text>
+  <circle cx="250" cy="450" r="44" fill="#fdecec" stroke="#d64545" stroke-width="3"/>
+  <text x="250" y="460" text-anchor="middle" font-size="26" font-weight="bold" fill="#d64545">3 lỗi</text>
+  <circle cx="810" cy="450" r="44" fill="#fdecec" stroke="#d64545" stroke-width="3"/>
+  <text x="810" y="460" text-anchor="middle" font-size="26" font-weight="bold" fill="#d64545">3 lỗi</text>
+  <circle cx="1090" cy="450" r="44" fill="#fdecec" stroke="#d64545" stroke-width="3"/>
+  <text x="1090" y="460" text-anchor="middle" font-size="26" font-weight="bold" fill="#d64545">4 lỗi</text>
+  <text x="800" y="545" text-anchor="middle" font-size="26" fill="#1E3A63">Mười chỗ mất điểm nằm rải khắp ba chặng, phần lớn không phải lỗi thuật toán</text>
+  <text x="800" y="620" text-anchor="middle" font-size="24" fill="#75849a">Thuật toán đúng chỉ chiếm một chặng trong năm chặng</text>
+</svg>
