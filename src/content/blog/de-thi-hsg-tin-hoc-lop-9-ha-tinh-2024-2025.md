@@ -17,18 +17,52 @@ Nguồn đề: Kỳ thi chọn học sinh giỏi tỉnh lớp 9, môn Tin học,
 
 **https://code.cothilaptrinh.vn/contest/hsg_tinh_ha_tinh_2024_2025/**
 
+<div style="margin:24px 0;border:1px solid #e9ecf2;border-left:6px solid #1f8b3f;border-radius:16px;padding:20px 28px;background:#f6f9fc;">
+  <p style="margin:0 0 10px;font-weight:700;letter-spacing:1px;color:#1E3A63;">NỘI DUNG BÀI VIẾT</p>
+  <ol style="margin:0;padding-left:22px;color:#1E3A63;line-height:2;">
+    <li><a href="#tong-quan">Tổng quan đề thi</a></li>
+    <li><a href="#bai-1-findk">Bài 1 FINDK: Số nguyên dương k (4 điểm)</a></li>
+    <li><a href="#bai-2-fish">Bài 2 FISH: Nuôi cá cảnh (6 điểm)</a></li>
+    <li><a href="#bai-3-mpri">Bài 3 MPRI: Số nguyên tố (6 điểm)</a></li>
+    <li><a href="#bai-4-subl">Bài 4 SUBL: Dãy con (4 điểm)</a></li>
+    <li><a href="#huong-dan-giai">Hướng dẫn giải và phiếu chữa đề</a></li>
+    <li><a href="#cach-tu-luyen">Cách dùng đề này để tự luyện</a></li>
+    <li><a href="#faq">Câu hỏi thường gặp</a></li>
+  </ol>
+</div>
+
+<a id="tong-quan"></a>
+
+## Tổng quan đề thi
+
 ![Tổng quan đề thi HSG Tin học lớp 9 Hà Tĩnh 2024-2025: 4 bài FINDK, FISH, MPRI, SUBL, tổng 20 điểm, 120 phút](/assets/blog/de-thi-hsg-tin-hoc-lop-9-ha-tinh-2024-2025/tong-quan-de.svg)
 
-Tổng quan đề thi (chép theo đề gốc):
+Bảng tổng quan chép theo đề gốc:
 
-| Bài | Tiêu đề | Tệp chương trình | Tệp dữ liệu | Tệp kết quả | Điểm |
-|---|---|---|---|---|---|
-| Bài 1 | Số nguyên dương k | FINDK.* | FINDK.INP | FINDK.OUT | 4 |
-| Bài 2 | Nuôi cá cảnh | FISH.* | FISH.INP | FISH.OUT | 6 |
-| Bài 3 | Số nguyên tố | MPRI.* | MPRI.INP | MPRI.OUT | 6 |
-| Bài 4 | Dãy con | SUBL.* | SUBL.INP | SUBL.OUT | 4 |
+<div style="margin:16px 0 8px;border:1px solid #e9ecf2;border-radius:14px;overflow:hidden;">
+<table style="width:100%;border-collapse:collapse;font-size:.95rem;margin:0;">
+  <thead>
+    <tr style="background:#1f8b3f;color:#ffffff;text-align:left;">
+      <th style="padding:11px 14px;">Bài</th>
+      <th style="padding:11px 14px;">Tiêu đề</th>
+      <th style="padding:11px 14px;">Tệp chương trình</th>
+      <th style="padding:11px 14px;">Tệp dữ liệu</th>
+      <th style="padding:11px 14px;">Tệp kết quả</th>
+      <th style="padding:11px 14px;">Điểm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background:#ffffff;"><td style="padding:10px 14px;">Bài 1</td><td style="padding:10px 14px;">Số nguyên dương k</td><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;">FINDK.*</td><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;">FINDK.INP</td><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;">FINDK.OUT</td><td style="padding:10px 14px;font-weight:700;color:#1f8b3f;">4</td></tr>
+    <tr style="background:#f6f9fc;"><td style="padding:10px 14px;">Bài 2</td><td style="padding:10px 14px;">Nuôi cá cảnh</td><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;">FISH.*</td><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;">FISH.INP</td><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;">FISH.OUT</td><td style="padding:10px 14px;font-weight:700;color:#2e86c9;">6</td></tr>
+    <tr style="background:#ffffff;"><td style="padding:10px 14px;">Bài 3</td><td style="padding:10px 14px;">Số nguyên tố</td><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;">MPRI.*</td><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;">MPRI.INP</td><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;">MPRI.OUT</td><td style="padding:10px 14px;font-weight:700;color:#2e86c9;">6</td></tr>
+    <tr style="background:#f6f9fc;"><td style="padding:10px 14px;">Bài 4</td><td style="padding:10px 14px;">Dãy con</td><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;">SUBL.*</td><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;">SUBL.INP</td><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;">SUBL.OUT</td><td style="padding:10px 14px;font-weight:700;color:#1f8b3f;">4</td></tr>
+  </tbody>
+</table>
+</div>
 
 Dấu * được thay thế bởi cpp hoặc py của ngôn ngữ lập trình được sử dụng tương ứng là C++ hoặc Python.
+
+<a id="bai-1-findk"></a>
 
 ## Bài 1 FINDK: Số nguyên dương k (4 điểm)
 
@@ -45,10 +79,21 @@ Cho một số nguyên dương n (n ≤ 10<sup>18</sup>).
 - Có 80% số test ứng với 80% số điểm của bài thỏa mãn: n ≤ 10<sup>6</sup>.
 - 20% số test còn lại ứng với 20% số điểm của bài thỏa mãn: 10<sup>6</sup> < n ≤ 10<sup>18</sup>.
 
-| FINDK.INP | FINDK.OUT | Giải thích |
-|---|---|---|
-| 5 | 2 | Với n = 5 thì giá trị k = 2 là lớn nhất thỏa mãn 1 + 2 ≤ 5 |
-| 6 | 3 | Với n = 6 thì giá trị k = 3 là lớn nhất thỏa mãn 1 + 2 + 3 ≤ 6 |
+<div style="margin:16px 0;border:1px solid #e9ecf2;border-radius:14px;overflow:hidden;">
+<table style="width:100%;border-collapse:collapse;font-size:.95rem;margin:0;">
+  <thead>
+    <tr style="background:#1E3A63;color:#ffffff;text-align:left;">
+      <th style="padding:11px 14px;width:130px;">FINDK.INP</th>
+      <th style="padding:11px 14px;width:130px;">FINDK.OUT</th>
+      <th style="padding:11px 14px;">Giải thích</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background:#ffffff;"><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;white-space:pre-line;">5</td><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;white-space:pre-line;">2</td><td style="padding:10px 14px;">Với n = 5 thì giá trị k = 2 là lớn nhất thỏa mãn 1 + 2 ≤ 5</td></tr>
+    <tr style="background:#f6f9fc;"><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;white-space:pre-line;">6</td><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;white-space:pre-line;">3</td><td style="padding:10px 14px;">Với n = 6 thì giá trị k = 3 là lớn nhất thỏa mãn 1 + 2 + 3 ≤ 6</td></tr>
+  </tbody>
+</table>
+</div>
 
 <div style="margin:20px 0 30px;border-radius:20px;overflow:hidden;border:1px solid #dcebe0;box-shadow:0 6px 18px rgba(31,139,63,.10);">
   <div style="padding:14px 24px;background:linear-gradient(135deg,#1f8b3f,#14672d);">
@@ -59,6 +104,8 @@ Cho một số nguyên dương n (n ≤ 10<sup>18</sup>).
     <a class="btn btn-gold" href="https://code.cothilaptrinh.vn/contest/hsg_tinh_ha_tinh_2024_2025/" style="text-decoration:none;white-space:nowrap;">Vào contest nộp bài</a>
   </div>
 </div>
+
+<a id="bai-2-fish"></a>
 
 ## Bài 2 FISH: Nuôi cá cảnh (6 điểm)
 
@@ -79,11 +126,25 @@ BigZero có một bể cá với đàn cá nhiều màu sắc. Hằng ngày sau 
 - Có 30% số test khác ứng với 30% số điểm của bài thỏa mãn: a<sub>1</sub> ≥ a<sub>2</sub> ≥ ... ≥ a<sub>n</sub>.
 - 40% số test còn lại ứng với 40% số điểm của bài không có ràng buộc gì thêm.
 
-| FISH.INP | FISH.OUT | Giải thích |
-|---|---|---|
-| 3<br>2 3 5 | 18 | Kế hoạch mua thức ăn là: ngày 1 mua 9 gói với giá là 2, ngày 2, 3 không mua gói nào. Số tiền tối thiểu để mua thức ăn là: **9 × 2 + 0 × 3 + 0 × 5 = 18**. |
-| 3<br>5 3 2 | 30 | Kế hoạch mua thức ăn là: ngày 1 mua 3 gói với giá là 5, ngày 2 mua 3 gói với giá là 3, ngày 3 mua 3 gói với giá là 2. Số tiền tối thiểu để mua thức ăn là: **3 × 5 + 3 × 3 + 3 × 2 = 30**. |
-| 3<br>5 2 3 | 27 | Kế hoạch mua thức ăn là: ngày 1 mua 3 gói với giá là 5, ngày 2 mua 6 gói với giá là 2, ngày 3 không mua gói nào. Số tiền tối thiểu để mua thức ăn là: **3 × 5 + 6 × 2 + 0 × 3 = 27**. |
+<div style="margin:16px 0;border:1px solid #e9ecf2;border-radius:14px;overflow:hidden;">
+<table style="width:100%;border-collapse:collapse;font-size:.95rem;margin:0;">
+  <thead>
+    <tr style="background:#1E3A63;color:#ffffff;text-align:left;">
+      <th style="padding:11px 14px;width:130px;">FISH.INP</th>
+      <th style="padding:11px 14px;width:130px;">FISH.OUT</th>
+      <th style="padding:11px 14px;">Giải thích</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background:#ffffff;"><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;white-space:pre-line;">3
+2 3 5</td><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;white-space:pre-line;">18</td><td style="padding:10px 14px;">Kế hoạch mua thức ăn là: ngày 1 mua 9 gói với giá là 2, ngày 2, 3 không mua gói nào. Số tiền tối thiểu để mua thức ăn là: <strong>9 × 2 + 0 × 3 + 0 × 5 = 18</strong>.</td></tr>
+    <tr style="background:#f6f9fc;"><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;white-space:pre-line;">3
+5 3 2</td><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;white-space:pre-line;">30</td><td style="padding:10px 14px;">Kế hoạch mua thức ăn là: ngày 1 mua 3 gói với giá là 5, ngày 2 mua 3 gói với giá là 3, ngày 3 mua 3 gói với giá là 2. Số tiền tối thiểu để mua thức ăn là: <strong>3 × 5 + 3 × 3 + 3 × 2 = 30</strong>.</td></tr>
+    <tr style="background:#ffffff;"><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;white-space:pre-line;">3
+5 2 3</td><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;white-space:pre-line;">27</td><td style="padding:10px 14px;">Kế hoạch mua thức ăn là: ngày 1 mua 3 gói với giá là 5, ngày 2 mua 6 gói với giá là 2, ngày 3 không mua gói nào. Số tiền tối thiểu để mua thức ăn là: <strong>3 × 5 + 6 × 2 + 0 × 3 = 27</strong>.</td></tr>
+  </tbody>
+</table>
+</div>
 
 <div style="margin:20px 0 30px;border-radius:20px;overflow:hidden;border:1px solid #d8e8f5;box-shadow:0 6px 18px rgba(46,134,201,.10);">
   <div style="padding:14px 24px;background:linear-gradient(135deg,#2e86c9,#1d5f96);">
@@ -94,6 +155,8 @@ BigZero có một bể cá với đàn cá nhiều màu sắc. Hằng ngày sau 
     <a class="btn btn-gold" href="https://code.cothilaptrinh.vn/contest/hsg_tinh_ha_tinh_2024_2025/" style="text-decoration:none;white-space:nowrap;">Vào contest nộp bài</a>
   </div>
 </div>
+
+<a id="bai-3-mpri"></a>
 
 ## Bài 3 MPRI: Số nguyên tố (6 điểm)
 
@@ -116,9 +179,23 @@ Số nguyên tố là số tự nhiên lớn hơn 1 và chỉ có đúng hai ư�
 - Có 40% số test khác ứng với 40% số điểm của bài thỏa mãn: Q ≤ 10<sup>2</sup>; n ≤ 10<sup>9</sup>.
 - 30% số test còn lại ứng với 30% số điểm của bài thỏa mãn: Q ≤ 10<sup>6</sup>; n ≤ 10<sup>6</sup>.
 
-| MPRI.INP | MPRI.OUT | Giải thích |
-|---|---|---|
-| 2<br>5<br>8 | 5<br>11 | Với n = 5, số nguyên tố nhỏ nhất p ≥ n là 5.<br>Với n = 8, số nguyên tố nhỏ nhất p ≥ n là 11. |
+<div style="margin:16px 0;border:1px solid #e9ecf2;border-radius:14px;overflow:hidden;">
+<table style="width:100%;border-collapse:collapse;font-size:.95rem;margin:0;">
+  <thead>
+    <tr style="background:#1E3A63;color:#ffffff;text-align:left;">
+      <th style="padding:11px 14px;width:130px;">MPRI.INP</th>
+      <th style="padding:11px 14px;width:130px;">MPRI.OUT</th>
+      <th style="padding:11px 14px;">Giải thích</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background:#ffffff;"><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;white-space:pre-line;">2
+5
+8</td><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;white-space:pre-line;">5
+11</td><td style="padding:10px 14px;">Với n = 5, số nguyên tố nhỏ nhất p ≥ n là 5.<br>Với n = 8, số nguyên tố nhỏ nhất p ≥ n là 11.</td></tr>
+  </tbody>
+</table>
+</div>
 
 <div style="margin:20px 0 30px;border-radius:20px;overflow:hidden;border:1px solid #dcebe0;box-shadow:0 6px 18px rgba(31,139,63,.10);">
   <div style="padding:14px 24px;background:linear-gradient(135deg,#1f8b3f,#14672d);">
@@ -129,6 +206,8 @@ Số nguyên tố là số tự nhiên lớn hơn 1 và chỉ có đúng hai ư�
     <a class="btn btn-gold" href="https://code.cothilaptrinh.vn/contest/hsg_tinh_ha_tinh_2024_2025/" style="text-decoration:none;white-space:nowrap;">Vào contest nộp bài</a>
   </div>
 </div>
+
+<a id="bai-4-subl"></a>
 
 ## Bài 4 SUBL: Dãy con (4 điểm)
 
@@ -149,10 +228,22 @@ Cho một dãy A gồm n số nguyên dương a<sub>1</sub>, a<sub>2</sub>, ...,
 - Có 40% số test khác ứng với 40% số điểm của bài thỏa mãn: n ≤ 10<sup>3</sup>.
 - 30% số test còn lại ứng với 30% số điểm của bài không có ràng buộc gì thêm.
 
-| SUBL.INP | SUBL.OUT |
-|---|---|
-| 5 6<br>3 2 1 4 5 | 3 |
-| 4 16<br>7 1 2 5 | -1 |
+<div style="margin:16px 0;border:1px solid #e9ecf2;border-radius:14px;overflow:hidden;">
+<table style="width:100%;border-collapse:collapse;font-size:.95rem;margin:0;">
+  <thead>
+    <tr style="background:#1E3A63;color:#ffffff;text-align:left;">
+      <th style="padding:11px 14px;width:50%;">SUBL.INP</th>
+      <th style="padding:11px 14px;">SUBL.OUT</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background:#ffffff;"><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;white-space:pre-line;">5 6
+3 2 1 4 5</td><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;white-space:pre-line;">3</td></tr>
+    <tr style="background:#f6f9fc;"><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;white-space:pre-line;">4 16
+7 1 2 5</td><td style="padding:10px 14px;font-family:ui-monospace,Consolas,monospace;white-space:pre-line;">-1</td></tr>
+  </tbody>
+</table>
+</div>
 
 <div style="margin:20px 0 30px;border-radius:20px;overflow:hidden;border:1px solid #d8e8f5;box-shadow:0 6px 18px rgba(46,134,201,.10);">
   <div style="padding:14px 24px;background:linear-gradient(135deg,#2e86c9,#1d5f96);">
@@ -164,25 +255,37 @@ Cho một dãy A gồm n số nguyên dương a<sub>1</sub>, a<sub>2</sub>, ...,
   </div>
 </div>
 
+<a id="huong-dan-giai"></a>
+
 ## Hướng dẫn giải và phiếu chữa đề
 
 Bài viết này giữ đúng vai trò lưu trữ đề: toàn bộ phần phân tích thuật toán, lời giải mẫu cùng các lỗi thường gặp của từng bài được biên soạn riêng trong [bài hướng dẫn giải đề HSG Tin học lớp 9 Hà Tĩnh 2024-2025](/blog/huong-dan-giai-de-thi-hsg-tin-hoc-lop-9-ha-tinh-2024-2025), để bạn đọc không vô tình đọc trước lời giải khi chưa tự làm:
 
 **cothilaptrinh.vn/blog/huong-dan-giai-de-thi-hsg-tin-hoc-lop-9-ha-tinh-2024-2025**
 
-Phiếu chữa đề bản PDF được gửi qua nhóm Zalo Tài liệu và Đề thi Tin học:
+Tham gia nhóm Zalo Tài liệu và Đề thi Tin học để không bỏ lỡ tin tức quan trọng và các đề thi mới:
 
 **https://zalo.me/g/bv7ry9tw8luzrh1bsqha**
 
+<a id="cach-tu-luyen"></a>
+
 ## Cách dùng đề này để tự luyện
 
-Phương pháp được khuyến nghị là làm bài trong điều kiện sát với kỳ thi: đặt đồng hồ 120 phút, hoàn thành cả bốn bài trên contest, sau đó mới đối chiếu với bài hướng dẫn giải. Sau buổi làm bài, thông tin đáng phân tích không phải tổng điểm mà là phân bố điểm theo nhóm test của từng bài, vì mỗi nhóm ràng buộc kiểm tra một năng lực riêng. Học sinh cần lộ trình ôn tập có hệ thống theo dạng bài có thể tham khảo [khóa học luyện thi HSG Tin học và chuyên Tin](/khoa-hoc-hsg-chuyen-tin) hoặc [lộ trình học lập trình cho học sinh](/lo-trinh).
+Phương pháp được khuyến nghị là làm bài trong điều kiện sát với kỳ thi:
+
+- Đặt đồng hồ đúng 120 phút và hoàn thành cả bốn bài trên contest.
+- Nộp bài xong mới đối chiếu với bài hướng dẫn giải, không xem trước.
+- Phân tích phân bố điểm theo nhóm test của từng bài thay vì chỉ nhìn tổng điểm, vì mỗi nhóm ràng buộc kiểm tra một năng lực riêng.
+
+Học sinh cần lộ trình ôn tập có hệ thống theo dạng bài có thể tham khảo [khóa học luyện thi HSG Tin học và chuyên Tin](/khoa-hoc-hsg-chuyen-tin) hoặc [lộ trình học lập trình cho học sinh](/lo-trinh).
 
 > Một đề được làm nghiêm túc trong 120 phút rồi chữa kỹ mang lại nhiều thông tin về năng lực hiện tại hơn nhiều đề làm nhanh chỉ để xem đáp án.
 
 Địa chỉ nộp bài, nhắc lại để bạn đọc không phải cuộn ngược:
 
 **https://code.cothilaptrinh.vn/contest/hsg_tinh_ha_tinh_2024_2025/**
+
+<a id="faq"></a>
 
 ## Câu hỏi thường gặp về đề thi HSG Tin học lớp 9
 
@@ -210,8 +313,8 @@ Cả bốn bài của đề này nằm trong contest tại https://code.cothilap
     <a class="btn btn-light" href="/khoa-hoc-hsg-chuyen-tin" style="text-decoration:none;">Khóa luyện thi HSG và chuyên Tin</a>
     <a class="btn" href="https://zalo.me/0985188655" style="text-decoration:none;background:#1f8b3f;color:#fff;box-shadow:0 10px 24px rgba(31,139,63,.35);">Tư vấn Zalo: 0985 188 655</a>
   </p>
-  <p style="margin:0;font-size:.92rem;color:#b7c6dd;">Vào nhóm Zalo
+  <p style="margin:0;font-size:.92rem;color:#b7c6dd;">Tham gia nhóm Zalo
     <a href="https://zalo.me/g/bv7ry9tw8luzrh1bsqha" style="color:#fff;">Tài liệu và Đề thi Tin học</a>
-    để nhận đề mới và phiếu chữa đề hàng tuần.
+    để không bỏ lỡ tin tức quan trọng và các đề thi mới.
   </p>
 </div>

@@ -13,6 +13,20 @@ Trước khi đọc tiếp, bạn đọc nên có trong tay hai địa chỉ sau
 
 **https://code.cothilaptrinh.vn/contest/hsg_tinh_ha_tinh_2024_2025/**
 
+<div style="margin:24px 0;border:1px solid #e9ecf2;border-left:6px solid #2e86c9;border-radius:16px;padding:20px 28px;background:#f6f9fc;">
+  <p style="margin:0 0 10px;font-weight:700;letter-spacing:1px;color:#1E3A63;">NỘI DUNG BÀI VIẾT</p>
+  <ol style="margin:0;padding-left:22px;color:#1E3A63;line-height:2;">
+    <li><a href="#cach-dung">Cách dùng bài hướng dẫn này</a></li>
+    <li><a href="#tom-tat">Tóm tắt bốn bài và kỹ thuật trọng tâm</a></li>
+    <li><a href="#hd-findk">Bài 1 FINDK: Số nguyên dương k</a></li>
+    <li><a href="#hd-fish">Bài 2 FISH: Nuôi cá cảnh</a></li>
+    <li><a href="#hd-mpri">Bài 3 MPRI: Số nguyên tố</a></li>
+    <li><a href="#hd-subl">Bài 4 SUBL: Dãy con</a></li>
+  </ol>
+</div>
+
+<a id="cach-dung"></a>
+
 ## Cách dùng bài hướng dẫn này
 
 ![Sơ đồ bốn bước tự luyện với bài hướng dẫn giải: tự làm, nộp contest, đọc hướng dẫn, tự viết lại](/assets/blog/huong-dan-giai-de-thi-hsg-tin-hoc-lop-9-ha-tinh-2024-2025/bon-buoc-tu-luyen.svg)
@@ -24,6 +38,8 @@ Bước thứ tư là bước quyết định. Kiến thức thuật toán chỉ
 > Hướng dẫn giải là tài liệu tham khảo, không phải đáp án để chép. Người học tiến bộ ở bước tự viết lại, không phải ở bước đọc hiểu code của người khác.
 
 Phần hướng dẫn chi tiết được đặt ở cuối bài, sau mục lục tóm tắt, để bạn đọc chủ động quyết định thời điểm đọc.
+
+<a id="tom-tat"></a>
 
 ## Tóm tắt bốn bài và kỹ thuật trọng tâm
 
@@ -40,6 +56,8 @@ Toàn bộ lời giải dưới đây đã được kiểm chứng đạt điể
 
 Phần này dành cho bạn đọc đã hoàn thành ít nhất một lượt làm bài trên contest. Mỗi bài gồm bốn phần: hướng suy nghĩ, các bước làm, lời giải C++ và các lỗi hay gặp.
 
+<a id="hd-findk"></a>
+
 ### Bài 1 FINDK: Số nguyên dương k (4 điểm)
 
 Yêu cầu của bài (đề nguyên văn ở [bài đề](/blog/de-thi-hsg-tin-hoc-lop-9-ha-tinh-2024-2025)): tìm k lớn nhất thỏa mãn 1 + 2 + ... + k <= n, với n tới 10^18.
@@ -53,6 +71,8 @@ Yêu cầu của bài (đề nguyên văn ở [bài đề](/blog/de-thi-hsg-tin-
 **Lỗi hay gặp.** Thứ nhất, cộng dồn 1 + 2 + ... bằng vòng lặp: với n cỡ 10^18 vòng lặp không thể kết thúc trong giới hạn thời gian. Thứ hai, dùng kiểu int: phép nhân k(k+1) với k cỡ 1,4 tỉ vượt phạm vi biểu diễn và cho kết quả sai. Thứ ba, trả về ngay giá trị ước lượng từ hàm sqrt: sai số một đơn vị của phép căn số thực làm sai đáp án ở nhiều test lớn.
 
 **Độ phức tạp:** thời gian O(1), bộ nhớ O(1).
+
+<a id="hd-fish"></a>
 
 ### Bài 2 FISH: Nuôi cá cảnh (6 điểm)
 
@@ -68,6 +88,8 @@ Yêu cầu của bài: mỗi ngày đàn cá ăn đúng 3 gói, biết trước 
 
 **Độ phức tạp:** thời gian O(n), bộ nhớ O(1) do không cần lưu cả dãy.
 
+<a id="hd-mpri"></a>
+
 ### Bài 3 MPRI: Số nguyên tố (6 điểm)
 
 Yêu cầu của bài: với mỗi số n trong Q truy vấn, tìm số nguyên tố p nhỏ nhất thỏa mãn p >= n; Q tới 10^6, n tới 10^9.
@@ -81,6 +103,8 @@ Yêu cầu của bài: với mỗi số n trong Q truy vấn, tìm số nguyên 
 **Lỗi hay gặp.** Thứ nhất, đặt lời gọi sàng bên trong vòng lặp truy vấn: một triệu lần sàng vượt xa giới hạn thời gian. Thứ hai, kiểm tra nguyên tố bằng phép chia thử tới n: riêng một truy vấn n cỡ 10^9 đã cần một tỉ phép chia. Thứ ba, quên hai giá trị n = 0 và n = 1, nơi đáp án đúng là 2.
 
 **Độ phức tạp:** sàng O(N log log N) với N cỡ 10^6; truy vấn nhỏ O(1); truy vấn lớn bằng khoảng cách tới số nguyên tố kế tiếp nhân chi phí một lần Miller-Rabin.
+
+<a id="hd-subl"></a>
 
 ### Bài 4 SUBL: Dãy con (4 điểm)
 
