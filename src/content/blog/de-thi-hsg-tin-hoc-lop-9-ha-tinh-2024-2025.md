@@ -19,22 +19,36 @@ Nguồn đề: Kỳ thi chọn học sinh giỏi tỉnh lớp 9, môn Tin học,
 
 ![Tổng quan đề thi HSG Tin học lớp 9 Hà Tĩnh 2024-2025: 4 bài FINDK, FISH, MPRI, SUBL, tổng 20 điểm, 120 phút](/assets/blog/de-thi-hsg-tin-hoc-lop-9-ha-tinh-2024-2025/tong-quan-de.svg)
 
+Tổng quan đề thi (chép theo đề gốc):
+
+| Bài | Tiêu đề | Tệp chương trình | Tệp dữ liệu | Tệp kết quả | Điểm |
+|---|---|---|---|---|---|
+| Bài 1 | Số nguyên dương k | FINDK.* | FINDK.INP | FINDK.OUT | 4 |
+| Bài 2 | Nuôi cá cảnh | FISH.* | FISH.INP | FISH.OUT | 6 |
+| Bài 3 | Số nguyên tố | MPRI.* | MPRI.INP | MPRI.OUT | 6 |
+| Bài 4 | Dãy con | SUBL.* | SUBL.INP | SUBL.OUT | 4 |
+
+Dấu * được thay thế bởi cpp hoặc py của ngôn ngữ lập trình được sử dụng tương ứng là C++ hoặc Python.
+
 ## Bài 1 FINDK: Số nguyên dương k (4 điểm)
 
-Cho một số nguyên dương n (n <= 10^18).
+Cho một số nguyên dương n (n ≤ 10<sup>18</sup>).
 
-**Yêu cầu:** tìm số nguyên dương k lớn nhất thỏa mãn điều kiện: 1 + 2 + 3 + ... + k <= n.
+**Yêu cầu:** Hãy tìm số nguyên dương k lớn nhất thỏa mãn điều kiện: 1 + 2 + 3 + ... + k ≤ n.
 
-**Dữ liệu vào:** tệp văn bản FINDK.INP gồm một dòng duy nhất chứa số nguyên dương n.
+**Dữ liệu:** Vào từ tệp văn bản FINDK.INP một dòng duy nhất chứa một số nguyên dương n.
 
-**Kết quả:** ghi ra tệp văn bản FINDK.OUT một số nguyên dương k thỏa mãn yêu cầu bài toán.
+**Kết quả:** Ghi ra tệp văn bản FINDK.OUT một số nguyên dương k thỏa mãn yêu cầu bài toán.
 
-**Ràng buộc:** 80% số test ứng với 80% số điểm có n <= 10^6; 20% số test còn lại có 10^6 < n <= 10^18.
+**Ràng buộc:**
+
+- Có 80% số test ứng với 80% số điểm của bài thỏa mãn: n ≤ 10<sup>6</sup>.
+- 20% số test còn lại ứng với 20% số điểm của bài thỏa mãn: 10<sup>6</sup> < n ≤ 10<sup>18</sup>.
 
 | FINDK.INP | FINDK.OUT | Giải thích |
 |---|---|---|
-| 5 | 2 | k = 2 là lớn nhất thỏa mãn 1 + 2 <= 5 |
-| 6 | 3 | k = 3 là lớn nhất thỏa mãn 1 + 2 + 3 <= 6 |
+| 5 | 2 | Với n = 5 thì giá trị k = 2 là lớn nhất thỏa mãn 1 + 2 ≤ 5 |
+| 6 | 3 | Với n = 6 thì giá trị k = 3 là lớn nhất thỏa mãn 1 + 2 + 3 ≤ 6 |
 
 <div style="margin:20px 0 30px;border-radius:20px;overflow:hidden;border:1px solid #dcebe0;box-shadow:0 6px 18px rgba(31,139,63,.10);">
   <div style="padding:14px 24px;background:linear-gradient(135deg,#1f8b3f,#14672d);">
@@ -48,21 +62,28 @@ Cho một số nguyên dương n (n <= 10^18).
 
 ## Bài 2 FISH: Nuôi cá cảnh (6 điểm)
 
-BigZero có một bể cá với đàn cá nhiều màu sắc. Thức ăn của cá được đựng trong các gói đóng sẵn. Mỗi ngày đàn cá ăn hết đúng 3 gói, giá bán thức ăn thường xuyên biến động. Cửa hàng cho biết trước giá bán trong n ngày lần lượt là a1, a2, ..., an, mỗi ngày được mua nhiều gói với giá bán của ngày đó, thức ăn thừa có thể được dùng cho các ngày tiếp theo. BigZero đang lên kế hoạch để mua thức ăn cho đàn cá trong n ngày sao cho tiết kiệm nhất.
+BigZero có một bể cá với đàn cá nhiều màu sắc. Hằng ngày sau những giờ học bài, cậu thường ngồi ngắm đàn cá và cho chúng ăn. Thức ăn của cá được đựng trong các gói đóng sẵn. Mỗi ngày đàn cá ăn hết đúng 3 gói, giá bán thức ăn thường xuyên biến động. Cửa hàng cho biết trước giá bán trong n ngày lần lượt là a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub>, mỗi ngày được mua nhiều gói với giá bán của ngày đó, thức ăn thừa có thể được dùng cho các ngày tiếp theo. BigZero đang lên kế hoạch để mua thức ăn cho đàn cá trong n ngày sao cho tiết kiệm nhất.
 
-**Yêu cầu:** cho số nguyên dương n và các số nguyên dương a1, a2, ..., an, trong đó ai là giá bán một gói thức ăn trong ngày thứ i (1 <= i <= n <= 10^6; ai <= 10^9). Hãy xác định số tiền tối thiểu để mua thức ăn cho đàn cá trong n ngày.
+**Yêu cầu:** Cho số nguyên dương n và các số nguyên dương a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub>, trong đó a<sub>i</sub> là giá bán một gói thức ăn trong ngày thứ i (1 ≤ i ≤ n ≤ 10<sup>6</sup>; a<sub>i</sub> ≤ 10<sup>9</sup>). Hãy xác định số tiền tối thiểu để mua thức ăn cho đàn cá trong n ngày.
 
-**Dữ liệu vào:** tệp văn bản FISH.INP gồm dòng thứ nhất chứa số nguyên dương n; dòng thứ hai chứa n số nguyên dương a1, a2, ..., an.
+**Dữ liệu:** Vào từ tệp văn bản FISH.INP:
 
-**Kết quả:** ghi ra tệp văn bản FISH.OUT một số nguyên duy nhất là số tiền tối thiểu để mua thức ăn cho đàn cá trong n ngày.
+- Dòng thứ nhất chứa một số nguyên dương n (1 ≤ n ≤ 10<sup>6</sup>).
+- Dòng thứ hai chứa n số nguyên dương a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub> (1 ≤ i ≤ n; a<sub>i</sub> ≤ 10<sup>9</sup>).
 
-**Ràng buộc:** 30% số test có dãy giá không giảm; 30% số test khác có dãy giá không tăng; 40% còn lại không có ràng buộc gì thêm.
+**Kết quả:** Ghi ra tệp văn bản FISH.OUT một số nguyên duy nhất là số tiền tối thiểu để mua thức ăn cho đàn cá trong n ngày.
+
+**Ràng buộc:**
+
+- Có 30% số test ứng với 30% số điểm của bài thỏa mãn: a<sub>1</sub> ≤ a<sub>2</sub> ≤ ... ≤ a<sub>n</sub>.
+- Có 30% số test khác ứng với 30% số điểm của bài thỏa mãn: a<sub>1</sub> ≥ a<sub>2</sub> ≥ ... ≥ a<sub>n</sub>.
+- 40% số test còn lại ứng với 40% số điểm của bài không có ràng buộc gì thêm.
 
 | FISH.INP | FISH.OUT | Giải thích |
 |---|---|---|
-| 3<br>2 3 5 | 18 | Ngày 1 mua 9 gói giá 2: 9 x 2 = 18 |
-| 3<br>5 3 2 | 30 | Mỗi ngày mua 3 gói: 3 x 5 + 3 x 3 + 3 x 2 = 30 |
-| 3<br>5 2 3 | 27 | Ngày 1 mua 3 gói, ngày 2 mua 6 gói: 15 + 12 = 27 |
+| 3<br>2 3 5 | 18 | Kế hoạch mua thức ăn là: ngày 1 mua 9 gói với giá là 2, ngày 2, 3 không mua gói nào. Số tiền tối thiểu để mua thức ăn là: **9 × 2 + 0 × 3 + 0 × 5 = 18**. |
+| 3<br>5 3 2 | 30 | Kế hoạch mua thức ăn là: ngày 1 mua 3 gói với giá là 5, ngày 2 mua 3 gói với giá là 3, ngày 3 mua 3 gói với giá là 2. Số tiền tối thiểu để mua thức ăn là: **3 × 5 + 3 × 3 + 3 × 2 = 30**. |
+| 3<br>5 2 3 | 27 | Kế hoạch mua thức ăn là: ngày 1 mua 3 gói với giá là 5, ngày 2 mua 6 gói với giá là 2, ngày 3 không mua gói nào. Số tiền tối thiểu để mua thức ăn là: **3 × 5 + 6 × 2 + 0 × 3 = 27**. |
 
 <div style="margin:20px 0 30px;border-radius:20px;overflow:hidden;border:1px solid #d8e8f5;box-shadow:0 6px 18px rgba(46,134,201,.10);">
   <div style="padding:14px 24px;background:linear-gradient(135deg,#2e86c9,#1d5f96);">
@@ -78,17 +99,26 @@ BigZero có một bể cá với đàn cá nhiều màu sắc. Thức ăn của 
 
 Số nguyên tố là số tự nhiên lớn hơn 1 và chỉ có đúng hai ước là 1 và chính nó. Ví dụ các số tự nhiên 2, 3, 5, 7, 11, 13, 17, 19, 23, ... là các số nguyên tố.
 
-**Yêu cầu:** cho số tự nhiên n, hãy tìm số tự nhiên p thỏa mãn điều kiện: p là số nguyên tố nhỏ nhất và p >= n.
+**Yêu cầu:** Cho số tự nhiên n, hãy tìm số tự nhiên p thỏa mãn điều kiện: p là số nguyên tố nhỏ nhất và p ≥ n.
 
-**Dữ liệu vào:** tệp văn bản MPRI.INP gồm dòng thứ nhất chứa số nguyên dương Q (Q <= 10^6) là số bộ test; Q dòng tiếp theo, mỗi dòng chứa một số tự nhiên n (n <= 10^9).
+**Dữ liệu:** Vào từ tệp văn bản MPRI.INP:
 
-**Kết quả:** ghi ra tệp văn bản MPRI.OUT gồm Q dòng, mỗi dòng ghi một số nguyên tố tìm được tương ứng với dữ liệu vào.
+- Dòng thứ nhất chứa số nguyên dương Q (Q ≤ 10<sup>6</sup>) là số bộ test.
+- Q dòng tiếp theo, mỗi dòng chứa một số tự nhiên n (n ≤ 10<sup>9</sup>).
 
-**Ràng buộc:** 30% số test có Q = 1 và n <= 10^3; 40% số test khác có Q <= 10^2 và n <= 10^9; 30% còn lại có Q <= 10^6 và n <= 10^6.
+**Kết quả:** Ghi ra tệp văn bản MPRI.OUT:
+
+- Gồm Q dòng, mỗi dòng ghi một số nguyên tố tìm được tương ứng với dữ liệu vào.
+
+**Ràng buộc:**
+
+- Có 30% số test ứng với 30% số điểm của bài thỏa mãn: Q = 1; n ≤ 10<sup>3</sup>.
+- Có 40% số test khác ứng với 40% số điểm của bài thỏa mãn: Q ≤ 10<sup>2</sup>; n ≤ 10<sup>9</sup>.
+- 30% số test còn lại ứng với 30% số điểm của bài thỏa mãn: Q ≤ 10<sup>6</sup>; n ≤ 10<sup>6</sup>.
 
 | MPRI.INP | MPRI.OUT | Giải thích |
 |---|---|---|
-| 2<br>5<br>8 | 5<br>11 | Với n = 5 thì p = 5; với n = 8 thì p = 11 |
+| 2<br>5<br>8 | 5<br>11 | Với n = 5, số nguyên tố nhỏ nhất p ≥ n là 5.<br>Với n = 8, số nguyên tố nhỏ nhất p ≥ n là 11. |
 
 <div style="margin:20px 0 30px;border-radius:20px;overflow:hidden;border:1px solid #dcebe0;box-shadow:0 6px 18px rgba(31,139,63,.10);">
   <div style="padding:14px 24px;background:linear-gradient(135deg,#1f8b3f,#14672d);">
@@ -102,15 +132,22 @@ Số nguyên tố là số tự nhiên lớn hơn 1 và chỉ có đúng hai ư�
 
 ## Bài 4 SUBL: Dãy con (4 điểm)
 
-Cho một dãy A gồm n số nguyên dương a1, a2, ..., an và một số nguyên dương m.
+Cho một dãy A gồm n số nguyên dương a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub> và một số nguyên dương m.
 
-**Yêu cầu:** hãy tìm số nguyên dương L nhỏ nhất sao cho tất cả các dãy con gồm L phần tử liên tiếp của dãy A đều có tổng lớn hơn hoặc bằng m. Nếu không tìm được giá trị thỏa mãn thì ghi -1.
+**Yêu cầu:** Hãy tìm số nguyên dương L nhỏ nhất sao cho tất cả các dãy con gồm L phần tử liên tiếp của dãy A đều có tổng lớn hơn hoặc bằng m.
 
-**Dữ liệu vào:** tệp văn bản SUBL.INP gồm dòng thứ nhất chứa hai số nguyên dương n và m (1 <= n <= 10^5; m <= 10^18); dòng tiếp theo chứa n số nguyên dương a1, a2, ..., an (ai <= 10^9).
+**Dữ liệu:** Vào từ tệp văn bản SUBL.INP:
 
-**Kết quả:** ghi ra tệp văn bản SUBL.OUT một số nguyên dương L nhỏ nhất tìm được thỏa mãn yêu cầu bài toán, hoặc -1.
+- Dòng thứ nhất chứa hai số nguyên dương n và m (1 ≤ n ≤ 10<sup>5</sup>; m ≤ 10<sup>18</sup>).
+- Dòng tiếp theo chứa n số nguyên dương a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub> (1 ≤ i ≤ n; a<sub>i</sub> ≤ 10<sup>9</sup>).
 
-**Ràng buộc:** 30% số test có dãy không giảm; 40% số test khác có n <= 10^3; 30% còn lại không có ràng buộc gì thêm.
+**Kết quả:** Ghi ra tệp văn bản SUBL.OUT một số nguyên dương L nhỏ nhất tìm được thỏa mãn yêu cầu bài toán. Nếu không tìm được giá trị thỏa mãn thì ghi -1.
+
+**Ràng buộc:**
+
+- Có 30% số test ứng với 30% số điểm của bài thỏa mãn: a<sub>1</sub> ≤ a<sub>2</sub> ≤ ... ≤ a<sub>n</sub>.
+- Có 40% số test khác ứng với 40% số điểm của bài thỏa mãn: n ≤ 10<sup>3</sup>.
+- 30% số test còn lại ứng với 30% số điểm của bài không có ràng buộc gì thêm.
 
 | SUBL.INP | SUBL.OUT |
 |---|---|
@@ -139,7 +176,7 @@ Phiếu chữa đề bản PDF được gửi qua nhóm Zalo Tài liệu và Đ�
 
 ## Cách dùng đề này để tự luyện
 
-Phương pháp được khuyến nghị là làm bài trong điều kiện sát với kỳ thi: đặt đồng hồ 120 phút, hoàn thành cả bốn bài trên contest, sau đó mới đối chiếu với phiếu chữa đề. Sau buổi làm bài, thông tin đáng phân tích không phải tổng điểm mà là phân bố điểm theo nhóm test của từng bài, vì mỗi nhóm ràng buộc kiểm tra một năng lực riêng. Học sinh cần lộ trình ôn tập có hệ thống theo dạng bài có thể tham khảo [khóa học luyện thi HSG Tin học và chuyên Tin](/khoa-hoc-hsg-chuyen-tin) hoặc [lộ trình học lập trình cho học sinh](/lo-trinh).
+Phương pháp được khuyến nghị là làm bài trong điều kiện sát với kỳ thi: đặt đồng hồ 120 phút, hoàn thành cả bốn bài trên contest, sau đó mới đối chiếu với bài hướng dẫn giải. Sau buổi làm bài, thông tin đáng phân tích không phải tổng điểm mà là phân bố điểm theo nhóm test của từng bài, vì mỗi nhóm ràng buộc kiểm tra một năng lực riêng. Học sinh cần lộ trình ôn tập có hệ thống theo dạng bài có thể tham khảo [khóa học luyện thi HSG Tin học và chuyên Tin](/khoa-hoc-hsg-chuyen-tin) hoặc [lộ trình học lập trình cho học sinh](/lo-trinh).
 
 > Một đề được làm nghiêm túc trong 120 phút rồi chữa kỹ mang lại nhiều thông tin về năng lực hiện tại hơn nhiều đề làm nhanh chỉ để xem đáp án.
 
