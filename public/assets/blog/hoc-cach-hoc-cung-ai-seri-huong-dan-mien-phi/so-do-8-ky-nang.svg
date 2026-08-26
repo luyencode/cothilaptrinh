@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 680" width="1600" height="680" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif">
+  <rect width="1600" height="680" rx="28" fill="#f6f9fc"/>
+  <rect x="1" y="1" width="1598" height="678" rx="28" fill="none" stroke="#e9ecf2" stroke-width="2"/>
+  <text x="800" y="80" text-anchor="middle" font-size="40" font-weight="bold" fill="#1E3A63">8 kỹ năng học tập trong seri Học cách học cùng AI</text>
+  <text x="800" y="126" text-anchor="middle" font-size="25" fill="#75849a">Mỗi tuần một kỹ năng, mỗi kỹ năng một bài tập thực hành</text>
+  <rect x="90" y="186" width="320" height="182" rx="34" fill="#1f8b3f"/>
+  <text x="250" y="248" text-anchor="middle" font-size="44" font-weight="bold" fill="#ffffff">1</text>
+  <text x="250" y="300" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff">Não bộ</text>
+  <text x="250" y="336" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff">và học tập</text>
+  <rect x="440" y="186" width="320" height="182" rx="34" fill="#2e86c9"/>
+  <text x="600" y="248" text-anchor="middle" font-size="44" font-weight="bold" fill="#ffffff">2</text>
+  <text x="600" y="300" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff">Ghi nhớ</text>
+  <text x="600" y="336" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff">khoa học</text>
+  <rect x="790" y="186" width="320" height="182" rx="34" fill="#1f8b3f"/>
+  <text x="950" y="248" text-anchor="middle" font-size="44" font-weight="bold" fill="#ffffff">3</text>
+  <text x="950" y="300" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff">Đọc chủ động</text>
+  <text x="950" y="336" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff">và ghi chú</text>
+  <rect x="1140" y="186" width="320" height="182" rx="34" fill="#2e86c9"/>
+  <text x="1300" y="248" text-anchor="middle" font-size="44" font-weight="bold" fill="#ffffff">4</text>
+  <text x="1300" y="300" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff">Quản lý</text>
+  <text x="1300" y="336" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff">thời gian</text>
+  <rect x="90" y="404" width="320" height="182" rx="34" fill="#2e86c9"/>
+  <text x="250" y="466" text-anchor="middle" font-size="44" font-weight="bold" fill="#ffffff">5</text>
+  <text x="250" y="518" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff">Kỹ thuật</text>
+  <text x="250" y="554" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff">Feynman</text>
+  <rect x="440" y="404" width="320" height="182" rx="34" fill="#1f8b3f"/>
+  <text x="600" y="466" text-anchor="middle" font-size="44" font-weight="bold" fill="#ffffff">6</text>
+  <text x="600" y="518" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff">Viết và tư duy</text>
+  <text x="600" y="554" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff">phân tích</text>
+  <rect x="790" y="404" width="320" height="182" rx="34" fill="#2e86c9"/>
+  <text x="950" y="466" text-anchor="middle" font-size="44" font-weight="bold" fill="#ffffff">7</text>
+  <text x="950" y="518" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff">Hỏi AI</text>
+  <text x="950" y="554" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff">đúng cách</text>
+  <rect x="1140" y="404" width="320" height="182" rx="34" fill="#1f8b3f"/>
+  <text x="1300" y="466" text-anchor="middle" font-size="44" font-weight="bold" fill="#ffffff">8</text>
+  <text x="1300" y="518" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff">Portfolio</text>
+  <text x="1300" y="554" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff">học tập</text>
+  <text x="800" y="650" text-anchor="middle" font-size="23" fill="#75849a">Cô Thi Lập Trình  |  cothilaptrinh.vn</text>
+</svg>
