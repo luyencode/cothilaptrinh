@@ -74,6 +74,30 @@ Năm việc không nên làm:
 
 Trong bài số 8 của seri, phần đạo đức và ranh giới này sẽ được bàn kỹ hơn, kèm cách viết một bản cam kết dùng AI cho riêng mình. Còn ở thời điểm bắt đầu, chỉ cần đọc lại mười dòng trên mỗi khi định mở AI ra là đủ.
 
+## Luyện tập: chỗ AI dừng lại và việc của mình bắt đầu
+
+![Vòng lặp luyện tập có phản hồi: viết lời giải, nộp bài, biết ngay đúng sai, sửa lại và nộp lại](/assets/blog/hoc-cach-hoc-cung-ai-seri-huong-dan-mien-phi/vong-lap-luyen-tap.svg)
+
+Trong ba việc AI không làm thay được, việc luyện là việc dễ bị bỏ qua nhất. Đọc lời giải thấy hiểu, xem AI trình bày thấy rõ ràng, và cảm giác đó bị nhầm thành đã làm được. Chỉ tới lúc ngồi trước tờ giấy trắng mới lộ ra khoảng cách.
+
+Một vòng luyện tập có hiệu quả cần đủ ba thứ, thiếu một thứ là hỏng:
+
+- Có bài để làm, đủ nhiều và tăng dần độ khó
+- Có phản hồi ngay sau khi làm xong, không phải đợi vài ngày
+- Biết cụ thể sai ở đâu, chứ không chỉ biết là sai
+
+AI cho được thứ nhất rất tốt, và cho được một phần thứ ba. Nhưng phản hồi ngay và khách quan thì cần một hệ thống chấm thật sự. Với môn Tin học và lập trình, thứ đó đã có sẵn và miễn phí: hệ thống chấm tự động [luyện code tại code.cothilaptrinh.vn](https://code.cothilaptrinh.vn/). Nộp bài xong biết điểm ngay, sai ở nhóm test nào cũng hiện ra rõ, nên vòng lặp bốn bước ở trên khép lại chỉ trong vài phút thay vì vài ngày.
+
+> Học mà không có ai chấm thì rất dễ nhầm cảm giác làm được với thực sự làm đúng.
+
+Với các môn chưa có hệ thống chấm, nguyên tắc vẫn giữ nguyên: sau mỗi lần học phải có một lần tự kiểm tra cho ra kết quả đúng sai rõ ràng, không phải cảm giác. Bài số 3 của seri sẽ hướng dẫn cách tự dựng vòng lặp đó bằng flashcard, và bài số 5 dựng nó bằng cách giải thích lại cho AI nghe.
+
+<div style="margin:26px 0;border-radius:22px;padding:18px 24px;background:linear-gradient(135deg,rgba(31,139,63,.09),rgba(46,134,201,.09));border:1px solid rgba(31,139,63,.24);display:flex;flex-wrap:wrap;align-items:center;gap:14px;">
+  <span style="display:inline-block;width:34px;height:34px;border-radius:11px;background:#1f8b3f;flex:0 0 auto;"></span>
+  <p style="margin:0;flex:1 1 300px;color:#1E3A63;font-weight:600;">Nhóm Zalo <strong>Chia sẻ về AI, Lập trình, Cách học</strong>: nơi đăng bài mới của seri và trao đổi thêm.</p>
+  <a href="https://zalo.me/g/bv7ry9tw8luzrh1bsqha" style="text-decoration:none;white-space:nowrap;background:#1f8b3f;color:#fff;font-weight:700;padding:11px 22px;border-radius:999px;box-shadow:0 10px 22px rgba(31,139,63,.3);">Vào nhóm Zalo</a>
+</div>
+
 ## Cách dùng seri: mỗi tuần một kỹ năng, không đọc dồn
 
 ![Lộ trình 10 tuần của seri Học cách học cùng AI, mỗi tuần một bài và một bài tập thực hành](/assets/blog/hoc-cach-hoc-cung-ai-seri-huong-dan-mien-phi/lo-trinh-10-tuan.svg)
@@ -89,6 +113,20 @@ Cách dùng hiệu quả gồm ba bước lặp lại mỗi tuần:
 > Học một kỹ năng mỗi tuần trong 10 tuần thì cả 8 kỹ năng đều ở lại. Học 10 kỹ năng trong một tối thì không kỹ năng nào ở lại.
 
 Với học sinh đang trong giai đoạn ôn thi gấp, có thể rút xuống hai bài một tuần, nhưng không nên nhanh hơn nữa. Phần quyết định nằm ở khoảng thời gian giữa hai bài, chứ không nằm ở lúc đọc.
+
+<div style="margin:30px 0;border-radius:26px;overflow:hidden;border:1px solid #e9ecf2;box-shadow:0 16px 38px -26px rgba(30,58,99,.5);background:#fff;">
+  <div style="height:8px;background:linear-gradient(90deg,#1f8b3f 0%,#1f8b3f 50%,#2e86c9 50%,#2e86c9 100%);"></div>
+  <div style="display:flex;flex-wrap:wrap;gap:26px;padding:26px clamp(20px,4vw,34px);align-items:center;">
+    <img src="/assets/blog/hoc-cach-hoc-cung-ai-seri-huong-dan-mien-phi/qr-nhom-zalo.png" alt="Ma QR nhom Zalo Chia se ve AI, Lap trinh, Cach hoc cua Co Thi Lap Trinh" style="width:216px;flex:0 0 auto;border-radius:16px;border:1px solid #e9ecf2;" />
+    <div style="flex:1 1 300px;min-width:260px;">
+      <p style="margin:0;font-size:.8rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#1f8b3f;">Nhóm Zalo</p>
+      <p style="margin:8px 0 6px;font-size:1.28rem;font-weight:800;line-height:1.3;color:#1E3A63;">Chia sẻ về AI, Lập trình, Cách học</p>
+      <p style="margin:0 0 18px;color:#4a5b71;">Bài mới của seri đăng ở đây trước. Trong nhóm còn có đề luyện, tài liệu miễn phí và chỗ hỏi khi làm bài tập bị vướng.</p>
+      <a href="https://zalo.me/g/bv7ry9tw8luzrh1bsqha" style="text-decoration:none;display:inline-block;background:#1f8b3f;color:#fff;font-weight:700;padding:12px 26px;border-radius:999px;box-shadow:0 12px 26px rgba(31,139,63,.32);">Tham gia nhóm Zalo</a>
+      <p style="margin:14px 0 0;font-size:.88rem;color:#75849a;">Quét mã QR bên cạnh, hoặc bấm nút để vào thẳng nhóm.</p>
+    </div>
+  </div>
+</div>
 
 ## Chuẩn bị gì trước khi bắt đầu
 
@@ -108,20 +146,79 @@ Bài tập của tuần này không cần AI. Việc cần làm là chấm trung
 
 Chép bảng dưới đây vào vở, tự cho điểm từng dòng theo thang 1 đến 10, trong đó 1 nghĩa là chưa bao giờ làm và 10 nghĩa là đã thành thói quen hằng ngày.
 
-| Kỹ năng | Câu tự hỏi | Điểm 1-10 |
-|---|---|---|
-| Tập trung | Khi học, mình có để điện thoại ngoài tầm với không? | |
-| Ghi nhớ | Mình ôn bài bằng cách tự kiểm tra hay bằng cách đọc lại? | |
-| Đọc chủ động | Trước khi đọc một bài, mình có đặt câu hỏi cho bài đó không? | |
-| Ghi chú | Ghi chú của mình đọc lại sau một tháng còn hiểu không? | |
-| Thời gian | Mình có biết mỗi ngày mất bao nhiêu phút cho việc lướt điện thoại? | |
-| Kiểm tra hiểu | Mình có thể giảng lại bài vừa học cho người khác nghe không? | |
-| Viết lập luận | Khi viết, mình có đưa bằng chứng cho mỗi ý mình nêu không? | |
-| Hỏi AI | Câu hỏi mình gõ cho AI có đủ bối cảnh để nó trả lời trúng không? | |
+<div style="margin:26px 0;border-radius:22px;overflow:hidden;border:1px solid #e9ecf2;box-shadow:0 14px 34px -24px rgba(30,58,99,.45);">
+  <div style="display:flex;align-items:center;gap:12px;padding:16px 22px;background:linear-gradient(135deg,#1E3A63,#13294a);">
+    <span style="display:inline-block;width:14px;height:14px;border-radius:4px;background:#F2C13D;"></span>
+    <span style="color:#fff;font-weight:800;font-size:1.02rem;">Bảng tự chấm 8 kỹ năng học tập</span>
+    <span style="margin-left:auto;color:#b7c6dd;font-size:.86rem;">Thang 1 đến 10</span>
+  </div>
+  <div style="overflow-x:auto;background:#fff;">
+    <table style="border-collapse:collapse;width:100%;min-width:560px;margin:0;font-size:.97rem;">
+      <thead>
+        <tr style="background:#f6f9fc;">
+          <th style="text-align:left;padding:12px 22px;color:#75849a;font-size:.78rem;letter-spacing:1.2px;text-transform:uppercase;border-bottom:1px solid #e9ecf2;white-space:nowrap;">Kỹ năng</th>
+          <th style="text-align:left;padding:12px 16px;color:#75849a;font-size:.78rem;letter-spacing:1.2px;text-transform:uppercase;border-bottom:1px solid #e9ecf2;">Câu tự hỏi</th>
+          <th style="text-align:center;padding:12px 22px;color:#75849a;font-size:.78rem;letter-spacing:1.2px;text-transform:uppercase;border-bottom:1px solid #e9ecf2;white-space:nowrap;">Điểm</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:14px 22px;border-bottom:1px solid #eef2f7;font-weight:700;color:#1E3A63;white-space:nowrap;"><span style="display:inline-block;width:9px;height:9px;border-radius:3px;background:#1f8b3f;margin-right:9px;"></span>Tập trung</td>
+          <td style="padding:14px 16px;border-bottom:1px solid #eef2f7;color:#2b3a4f;">Khi học, mình có để điện thoại ngoài tầm với không?</td>
+          <td style="padding:14px 22px;border-bottom:1px solid #eef2f7;text-align:center;"><span style="display:inline-block;width:52px;height:30px;border:2px dashed #cbd6e4;border-radius:9px;"></span></td>
+        </tr>
+        <tr style="background:#fbfcfe;">
+          <td style="padding:14px 22px;border-bottom:1px solid #eef2f7;font-weight:700;color:#1E3A63;white-space:nowrap;"><span style="display:inline-block;width:9px;height:9px;border-radius:3px;background:#2e86c9;margin-right:9px;"></span>Ghi nhớ</td>
+          <td style="padding:14px 16px;border-bottom:1px solid #eef2f7;color:#2b3a4f;">Mình ôn bài bằng cách tự kiểm tra hay bằng cách đọc lại?</td>
+          <td style="padding:14px 22px;border-bottom:1px solid #eef2f7;text-align:center;"><span style="display:inline-block;width:52px;height:30px;border:2px dashed #cbd6e4;border-radius:9px;"></span></td>
+        </tr>
+        <tr>
+          <td style="padding:14px 22px;border-bottom:1px solid #eef2f7;font-weight:700;color:#1E3A63;white-space:nowrap;"><span style="display:inline-block;width:9px;height:9px;border-radius:3px;background:#1f8b3f;margin-right:9px;"></span>Đọc chủ động</td>
+          <td style="padding:14px 16px;border-bottom:1px solid #eef2f7;color:#2b3a4f;">Trước khi đọc một bài, mình có đặt câu hỏi cho bài đó không?</td>
+          <td style="padding:14px 22px;border-bottom:1px solid #eef2f7;text-align:center;"><span style="display:inline-block;width:52px;height:30px;border:2px dashed #cbd6e4;border-radius:9px;"></span></td>
+        </tr>
+        <tr style="background:#fbfcfe;">
+          <td style="padding:14px 22px;border-bottom:1px solid #eef2f7;font-weight:700;color:#1E3A63;white-space:nowrap;"><span style="display:inline-block;width:9px;height:9px;border-radius:3px;background:#2e86c9;margin-right:9px;"></span>Ghi chú</td>
+          <td style="padding:14px 16px;border-bottom:1px solid #eef2f7;color:#2b3a4f;">Ghi chú của mình đọc lại sau một tháng còn hiểu không?</td>
+          <td style="padding:14px 22px;border-bottom:1px solid #eef2f7;text-align:center;"><span style="display:inline-block;width:52px;height:30px;border:2px dashed #cbd6e4;border-radius:9px;"></span></td>
+        </tr>
+        <tr>
+          <td style="padding:14px 22px;border-bottom:1px solid #eef2f7;font-weight:700;color:#1E3A63;white-space:nowrap;"><span style="display:inline-block;width:9px;height:9px;border-radius:3px;background:#1f8b3f;margin-right:9px;"></span>Thời gian</td>
+          <td style="padding:14px 16px;border-bottom:1px solid #eef2f7;color:#2b3a4f;">Mình có biết mỗi ngày mất bao nhiêu phút cho việc lướt điện thoại?</td>
+          <td style="padding:14px 22px;border-bottom:1px solid #eef2f7;text-align:center;"><span style="display:inline-block;width:52px;height:30px;border:2px dashed #cbd6e4;border-radius:9px;"></span></td>
+        </tr>
+        <tr style="background:#fbfcfe;">
+          <td style="padding:14px 22px;border-bottom:1px solid #eef2f7;font-weight:700;color:#1E3A63;white-space:nowrap;"><span style="display:inline-block;width:9px;height:9px;border-radius:3px;background:#2e86c9;margin-right:9px;"></span>Kiểm tra hiểu</td>
+          <td style="padding:14px 16px;border-bottom:1px solid #eef2f7;color:#2b3a4f;">Mình có thể giảng lại bài vừa học cho người khác nghe không?</td>
+          <td style="padding:14px 22px;border-bottom:1px solid #eef2f7;text-align:center;"><span style="display:inline-block;width:52px;height:30px;border:2px dashed #cbd6e4;border-radius:9px;"></span></td>
+        </tr>
+        <tr>
+          <td style="padding:14px 22px;border-bottom:1px solid #eef2f7;font-weight:700;color:#1E3A63;white-space:nowrap;"><span style="display:inline-block;width:9px;height:9px;border-radius:3px;background:#1f8b3f;margin-right:9px;"></span>Viết lập luận</td>
+          <td style="padding:14px 16px;border-bottom:1px solid #eef2f7;color:#2b3a4f;">Khi viết, mình có đưa bằng chứng cho mỗi ý mình nêu không?</td>
+          <td style="padding:14px 22px;border-bottom:1px solid #eef2f7;text-align:center;"><span style="display:inline-block;width:52px;height:30px;border:2px dashed #cbd6e4;border-radius:9px;"></span></td>
+        </tr>
+        <tr style="background:#fbfcfe;">
+          <td style="padding:14px 22px;font-weight:700;color:#1E3A63;white-space:nowrap;"><span style="display:inline-block;width:9px;height:9px;border-radius:3px;background:#2e86c9;margin-right:9px;"></span>Hỏi AI</td>
+          <td style="padding:14px 16px;color:#2b3a4f;">Câu hỏi mình gõ cho AI có đủ bối cảnh để nó trả lời trúng không?</td>
+          <td style="padding:14px 22px;text-align:center;"><span style="display:inline-block;width:52px;height:30px;border:2px dashed #cbd6e4;border-radius:9px;"></span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="padding:14px 22px;background:#f6f9fc;border-top:1px solid #e9ecf2;color:#4a5b71;font-size:.92rem;">
+    Khoanh tròn hai dòng điểm thấp nhất. Bài số 9 sẽ yêu cầu chấm lại đúng bảng này để so sánh.
+  </div>
+</div>
 
-Chấm xong, khoanh tròn hai dòng có điểm thấp nhất. Đó là hai kỹ năng cần chú ý nhất khi các bài tương ứng trong seri được đăng. Giữ lại trang này, vì bài số 9 sẽ yêu cầu chấm lại đúng bảng đó và so sánh.
+Hai dòng điểm thấp nhất chính là hai kỹ năng cần chú ý nhất khi các bài tương ứng trong seri được đăng. Chấm càng thật thì lần chấm lại ở bài số 9 càng có ý nghĩa.
 
 **Dành cho ba mẹ:** seri này viết để con tự đọc và tự làm, ba mẹ không cần dạy lại. Việc hiệu quả nhất ba mẹ có thể làm chỉ gồm hai điều: giúp con lập một tài khoản AI để con dùng hợp lệ và ba mẹ nắm được, và mỗi tuần hỏi con đúng một câu, tuần này con áp dụng được điều gì. Một câu hỏi đều đặn có sức nặng hơn nhiều một buổi nhắc nhở dài.
+
+<div style="margin:26px 0;border-radius:22px;padding:18px 24px;background:linear-gradient(135deg,rgba(31,139,63,.09),rgba(46,134,201,.09));border:1px solid rgba(31,139,63,.24);display:flex;flex-wrap:wrap;align-items:center;gap:14px;">
+  <span style="display:inline-block;width:34px;height:34px;border-radius:11px;background:#2e86c9;flex:0 0 auto;"></span>
+  <p style="margin:0;flex:1 1 300px;color:#1E3A63;font-weight:600;">Chấm xong bảng rồi thì vào nhóm Zalo <strong>Chia sẻ về AI, Lập trình, Cách học</strong> để nhận bài tiếp theo ngay khi đăng.</p>
+  <a href="https://zalo.me/g/bv7ry9tw8luzrh1bsqha" style="text-decoration:none;white-space:nowrap;background:#1f8b3f;color:#fff;font-weight:700;padding:11px 22px;border-radius:999px;box-shadow:0 10px 22px rgba(31,139,63,.3);">Vào nhóm Zalo</a>
+</div>
 
 ## Câu hỏi thường gặp về việc học sinh THCS học cùng AI
 
@@ -135,7 +232,10 @@ Nội dung được thiết kế cho học sinh lớp 6 đến lớp 9. Học si
 Không. Toàn bộ 10 bài đăng công khai trên blog, không cần đăng ký tài khoản, không cần để lại số điện thoại. Các công cụ được nhắc tới trong seri cũng đều dùng bản miễn phí.
 
 **Con đang ôn thi học sinh giỏi thì có nên học seri này không?**
-Nên, và nên học sớm. Học sinh ôn thi chuyên hoặc thi học sinh giỏi là nhóm chịu áp lực thời gian nặng nhất, nên hai kỹ năng ghi nhớ khoa học và quản lý thời gian mang lại hiệu quả rõ nhất. Với riêng môn Tin học, có thể tham khảo thêm [lộ trình học lập trình cho học sinh](/lo-trinh) để biết cần chuẩn bị gì cho từng giai đoạn.
+Nên, và nên học sớm. Học sinh ôn thi chuyên hoặc thi học sinh giỏi là nhóm chịu áp lực thời gian nặng nhất, nên hai kỹ năng ghi nhớ khoa học và quản lý thời gian mang lại hiệu quả rõ nhất. Với riêng môn Tin học, phần luyện đề nên đi kèm chấm tự động để biết ngay lời giải sống sót được bao nhiêu điểm: kho đề và contest miễn phí ở [code.cothilaptrinh.vn](https://code.cothilaptrinh.vn/), còn [lộ trình học lập trình cho học sinh](/lo-trinh) cho biết từng giai đoạn cần chuẩn bị gì.
+
+**Học sinh tự luyện code ở nhà thì lấy đề ở đâu và làm sao biết mình đúng hay sai?**
+Đây đúng là chỗ tự học hay bị tắc, vì làm xong mà không ai chấm thì không biết mình sai ở đâu. Hệ thống [chấm tự động code.cothilaptrinh.vn](https://code.cothilaptrinh.vn/) mở miễn phí, có sẵn đề theo chủ đề và đề thi các tỉnh, nộp bài là biết điểm ngay và thấy rõ hỏng ở nhóm test nào. Cách dùng hiệu quả nhất là mỗi buổi luyện làm ít bài thôi nhưng bài nào cũng nộp cho tới khi đạt, thay vì làm nhiều mà không nộp bài nào.
 
 ## Kết luận
 
@@ -146,11 +246,22 @@ Bài tiếp theo trong seri sẽ bắt đầu từ nền móng: não bộ thực
 <div style="margin-top:36px;border-radius:26px;padding:38px clamp(22px,5vw,48px);color:#fff;background:radial-gradient(circle at 88% -30%,rgba(242,193,61,.38),transparent 42%),linear-gradient(135deg,#1E3A63,#13294a);">
   <p style="margin:0;font-size:.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#F2C13D;">Học cách học cùng AI</p>
   <p style="margin:10px 0 6px;font-size:1.45rem;font-weight:800;line-height:1.3;color:#fff;">Seri 10 bài, đăng mỗi tuần, hoàn toàn miễn phí</p>
-  <p style="margin:0 0 22px;color:#dbe7f3;">Nếu con muốn học sâu hơn về lập trình và tư duy thuật toán, có lộ trình bài bản với giáo viên đồng hành.</p>
+  <p style="margin:0 0 22px;color:#dbe7f3;">Bài mới đăng trong nhóm Zalo trước. Muốn luyện code có chấm điểm ngay thì hệ thống chấm tự động mở miễn phí cho mọi học sinh.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:26px;align-items:center;margin:0 0 20px;">
+    <img src="/assets/blog/hoc-cach-hoc-cung-ai-seri-huong-dan-mien-phi/qr-nhom-zalo.png" alt="Ma QR nhom Zalo Chia se ve AI, Lap trinh, Cach hoc" style="width:180px;flex:0 0 auto;border-radius:16px;background:#fff;padding:6px;" />
+    <div style="flex:1 1 280px;min-width:250px;">
+      <p style="margin:0 0 6px;font-size:.8rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#F2C13D;">Nhóm Zalo</p>
+      <p style="margin:0 0 16px;font-size:1.12rem;font-weight:700;color:#fff;">Chia sẻ về AI, Lập trình, Cách học</p>
+      <p style="display:flex;flex-wrap:wrap;gap:12px;margin:0;">
+        <a class="btn" href="https://zalo.me/g/bv7ry9tw8luzrh1bsqha" style="text-decoration:none;background:#1f8b3f;color:#fff;box-shadow:0 10px 24px rgba(31,139,63,.35);">Tham gia nhóm Zalo</a>
+        <a class="btn btn-gold" href="https://code.cothilaptrinh.vn/" style="text-decoration:none;">Luyện code chấm tự động</a>
+      </p>
+    </div>
+  </div>
   <p style="display:flex;flex-wrap:wrap;gap:12px;margin:0 0 18px;">
-    <a class="btn btn-gold" href="/lo-trinh" style="text-decoration:none;">Xem lộ trình học lập trình</a>
+    <a class="btn btn-light" href="/lo-trinh" style="text-decoration:none;">Xem lộ trình học lập trình</a>
     <a class="btn btn-light" href="/khoa-hoc" style="text-decoration:none;">Các khóa học lập trình</a>
-    <a class="btn" href="https://zalo.me/0985188655" style="text-decoration:none;background:#1f8b3f;color:#fff;box-shadow:0 10px 24px rgba(31,139,63,.35);">Tư vấn Zalo: 0985 188 655</a>
+    <a class="btn" href="https://zalo.me/0985188655" style="text-decoration:none;background:#2e86c9;color:#fff;box-shadow:0 10px 24px rgba(46,134,201,.35);">Tư vấn Zalo: 0985 188 655</a>
   </p>
   <p style="margin:0;font-size:.92rem;color:#b7c6dd;">Công cụ miễn phí dùng trong seri:
     <a href="https://chatgpt.com/" style="color:#fff;">ChatGPT</a>,

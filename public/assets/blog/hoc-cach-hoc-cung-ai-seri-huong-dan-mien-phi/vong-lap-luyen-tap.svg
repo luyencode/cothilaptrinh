@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif">
+  <rect width="1600" height="700" rx="28" fill="#f6f9fc"/>
+  <rect x="1" y="1" width="1598" height="698" rx="28" fill="none" stroke="#e9ecf2" stroke-width="2"/>
+  <text x="800" y="80" text-anchor="middle" font-size="40" font-weight="bold" fill="#1E3A63">Vòng lặp luyện tập có phản hồi</text>
+  <text x="800" y="126" text-anchor="middle" font-size="25" fill="#75849a">Điều làm nên tiến bộ không phải số bài đã làm, mà số lần biết mình sai ở đâu</text>
+  <rect x="105" y="200" width="310" height="230" rx="30" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <circle cx="260" cy="258" r="32" fill="#1f8b3f"/>
+  <text x="260" y="270" text-anchor="middle" font-size="30" font-weight="bold" fill="#ffffff">1</text>
+  <text x="260" y="342" text-anchor="middle" font-size="26" font-weight="bold" fill="#1E3A63">Viết lời giải</text>
+  <text x="260" y="380" text-anchor="middle" font-size="23" fill="#75849a">của chính mình</text>
+  <path d="M 423 315 L 453 315" stroke="#e9ecf2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 445 305 L 457 315 L 445 325" fill="none" stroke="#75849a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="465" y="200" width="310" height="230" rx="30" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <circle cx="620" cy="258" r="32" fill="#2e86c9"/>
+  <text x="620" y="270" text-anchor="middle" font-size="30" font-weight="bold" fill="#ffffff">2</text>
+  <text x="620" y="342" text-anchor="middle" font-size="26" font-weight="bold" fill="#1E3A63">Nộp bài</text>
+  <text x="620" y="380" text-anchor="middle" font-size="23" fill="#75849a">lên hệ thống chấm</text>
+  <path d="M 783 315 L 813 315" stroke="#e9ecf2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 805 305 L 817 315 L 805 325" fill="none" stroke="#75849a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="825" y="200" width="310" height="230" rx="30" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <circle cx="980" cy="258" r="32" fill="#1f8b3f"/>
+  <text x="980" y="270" text-anchor="middle" font-size="30" font-weight="bold" fill="#ffffff">3</text>
+  <text x="980" y="342" text-anchor="middle" font-size="26" font-weight="bold" fill="#1E3A63">Biết ngay đúng sai</text>
+  <text x="980" y="380" text-anchor="middle" font-size="23" fill="#75849a">sai ở nhóm test nào</text>
+  <path d="M 1143 315 L 1173 315" stroke="#e9ecf2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 1165 305 L 1177 315 L 1165 325" fill="none" stroke="#75849a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1185" y="200" width="310" height="230" rx="30" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <circle cx="1340" cy="258" r="32" fill="#2e86c9"/>
+  <text x="1340" y="270" text-anchor="middle" font-size="30" font-weight="bold" fill="#ffffff">4</text>
+  <text x="1340" y="342" text-anchor="middle" font-size="26" font-weight="bold" fill="#1E3A63">Sửa lại và nộp lại</text>
+  <text x="1340" y="380" text-anchor="middle" font-size="23" fill="#75849a">cho tới khi đạt</text>
+  <path d="M 1455 450 C 1455 530, 145 530, 145 450" fill="none" stroke="#F2C13D" stroke-width="6" stroke-linecap="round" stroke-dasharray="14 12"/>
+  <path d="M 133 466 L 145 448 L 157 466" fill="none" stroke="#F2C13D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="800" y="552" text-anchor="middle" font-size="25" font-weight="bold" fill="#1E3A63">Lặp lại vòng này mới là luyện, làm một lần rồi thôi thì chưa</text>
+  <text x="800" y="670" text-anchor="middle" font-size="23" fill="#75849a">Cô Thi Lập Trình  |  code.cothilaptrinh.vn</text>
+</svg>
