@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 680" width="1600" height="680" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="1600" height="680" rx="28" fill="#f6f9fc"/>
+<rect x="70" y="54" width="16" height="16" rx="4" fill="#1f8b3f"/>
+<rect x="91" y="54" width="16" height="16" rx="4" fill="#2e86c9"/>
+<rect x="70" y="75" width="16" height="16" rx="4" fill="#2e86c9"/>
+<rect x="91" y="75" width="16" height="16" rx="4" fill="#1f8b3f"/>
+<text x="135" y="82" font-size="24" fill="#1E3A63" font-weight="700" text-anchor="start">Cô Thi Lập Trình</text>
+<text x="70" y="150" font-size="40" fill="#1E3A63" font-weight="800" text-anchor="start">Lộ trình đọc 20 cuốn sách kinh điển cho dân IT</text>
+<text x="70" y="194" font-size="24" fill="#75849a" font-weight="400" text-anchor="start">Bốn giai đoạn, mỗi giai đoạn năm cuốn, bạn đọc theo thứ tự từ nền móng lên</text>
+<rect x="70" y="250" width="350" height="330" rx="26" fill="#ffffff" stroke="#e9ecf2"/>
+<rect x="98" y="280" width="64" height="10" rx="5" fill="#1f8b3f"/>
+<text x="98" y="358" font-size="46" fill="#1f8b3f" font-weight="800" text-anchor="start">01</text>
+<text x="98" y="408" font-size="25" fill="#1E3A63" font-weight="700" text-anchor="start">Nền móng</text>
+<text x="98" y="452" font-size="21" fill="#75849a" font-weight="400" text-anchor="start">Máy tính chạy thế nào,</text>
+<text x="98" y="482" font-size="21" fill="#75849a" font-weight="400" text-anchor="start">thuật toán hoạt động ra sao</text>
+<rect x="98" y="508" width="150" height="46" rx="14" fill="#1f8b3f" opacity="0.12"/>
+<text x="173" y="538" font-size="20" fill="#1f8b3f" font-weight="700" text-anchor="middle">5 cuốn sách</text>
+<path d="M 422 405 l 14 10 l -14 10" fill="none" stroke="#75849a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="440" y="250" width="350" height="330" rx="26" fill="#ffffff" stroke="#e9ecf2"/>
+<rect x="468" y="280" width="64" height="10" rx="5" fill="#2e86c9"/>
+<text x="468" y="358" font-size="46" fill="#2e86c9" font-weight="800" text-anchor="start">02</text>
+<text x="468" y="408" font-size="25" fill="#1E3A63" font-weight="700" text-anchor="start">Viết code sạch</text>
+<text x="468" y="452" font-size="21" fill="#75849a" font-weight="400" text-anchor="start">Người khác đọc được,</text>
+<text x="468" y="482" font-size="21" fill="#75849a" font-weight="400" text-anchor="start">sửa được, tin được</text>
+<rect x="468" y="508" width="150" height="46" rx="14" fill="#2e86c9" opacity="0.12"/>
+<text x="543" y="538" font-size="20" fill="#2e86c9" font-weight="700" text-anchor="middle">5 cuốn sách</text>
+<path d="M 792 405 l 14 10 l -14 10" fill="none" stroke="#75849a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="810" y="250" width="350" height="330" rx="26" fill="#ffffff" stroke="#e9ecf2"/>
+<rect x="838" y="280" width="64" height="10" rx="5" fill="#1E3A63"/>
+<text x="838" y="358" font-size="46" fill="#1E3A63" font-weight="800" text-anchor="start">03</text>
+<text x="838" y="408" font-size="25" fill="#1E3A63" font-weight="700" text-anchor="start">Thiết kế hệ thống</text>
+<text x="838" y="452" font-size="21" fill="#75849a" font-weight="400" text-anchor="start">Kiến trúc, mẫu thiết kế,</text>
+<text x="838" y="482" font-size="21" fill="#75849a" font-weight="400" text-anchor="start">hệ thống nhiều dữ liệu</text>
+<rect x="838" y="508" width="150" height="46" rx="14" fill="#1E3A63" opacity="0.12"/>
+<text x="913" y="538" font-size="20" fill="#1E3A63" font-weight="700" text-anchor="middle">5 cuốn sách</text>
+<path d="M 1162 405 l 14 10 l -14 10" fill="none" stroke="#75849a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1180" y="250" width="350" height="330" rx="26" fill="#ffffff" stroke="#e9ecf2"/>
+<rect x="1208" y="280" width="64" height="10" rx="5" fill="#F2C13D"/>
+<text x="1208" y="358" font-size="46" fill="#F2C13D" font-weight="800" text-anchor="start">04</text>
+<text x="1208" y="408" font-size="25" fill="#1E3A63" font-weight="700" text-anchor="start">Làm nghề trong đội</text>
+<text x="1208" y="452" font-size="21" fill="#75849a" font-weight="400" text-anchor="start">Ước lượng, phối hợp,</text>
+<text x="1208" y="482" font-size="21" fill="#75849a" font-weight="400" text-anchor="start">vận hành sản phẩm thật</text>
+<rect x="1208" y="508" width="150" height="46" rx="14" fill="#F2C13D" opacity="0.12"/>
+<text x="1283" y="538" font-size="20" fill="#F2C13D" font-weight="700" text-anchor="middle">5 cuốn sách</text>
+<text x="70" y="640" font-size="20" fill="#75849a" font-weight="400" text-anchor="start">Nguồn: tổng hợp các đầu sách được giới lập trình đọc lại qua nhiều thế hệ</text>
+</svg>

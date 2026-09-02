@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="1600" height="700" rx="28" fill="#f6f9fc"/>
+<rect x="70" y="54" width="16" height="16" rx="4" fill="#1f8b3f"/>
+<rect x="91" y="54" width="16" height="16" rx="4" fill="#2e86c9"/>
+<rect x="70" y="75" width="16" height="16" rx="4" fill="#2e86c9"/>
+<rect x="91" y="75" width="16" height="16" rx="4" fill="#1f8b3f"/>
+<text x="135" y="82" font-size="24" fill="#1E3A63" font-weight="700" text-anchor="start">Cô Thi Lập Trình</text>
+<rect x="70" y="120" width="210" height="44" rx="14" fill="#1f8b3f" opacity="0.14"/>
+<text x="175" y="149" font-size="22" fill="#1f8b3f" font-weight="800" text-anchor="middle" letter-spacing="1.5">Giai đoạn 01</text>
+<text x="70" y="216" font-size="38" fill="#1E3A63" font-weight="800" text-anchor="start">Nền móng khoa học máy tính</text>
+<text x="70" y="256" font-size="23" fill="#75849a" font-weight="400" text-anchor="start">Năm cuốn giúp bạn hiểu máy tính chạy thế nào trước khi bạn viết phần mềm chạy trên nó</text>
+<rect x="68" y="306" width="280" height="320" rx="24" fill="#ffffff" stroke="#e9ecf2"/>
+<rect x="90" y="336" width="8" height="58" rx="4" fill="#1f8b3f"/>
+<text x="114" y="378" font-size="34" fill="#1f8b3f" font-weight="800" text-anchor="start">01</text>
+<text x="90" y="434" font-size="22" fill="#1E3A63" font-weight="700" text-anchor="start">Code: The Hidden</text>
+<text x="90" y="462" font-size="22" fill="#1E3A63" font-weight="700" text-anchor="start">Language</text>
+<text x="90" y="500" font-size="19" fill="#2e86c9" font-weight="600" text-anchor="start">Charles Petzold</text>
+<text x="90" y="538" font-size="18" fill="#75849a" font-weight="400" text-anchor="start">Từ bóng đèn và công tắc</text>
+<text x="90" y="562" font-size="18" fill="#75849a" font-weight="400" text-anchor="start">đến bộ vi xử lý</text>
+<rect x="364" y="306" width="280" height="320" rx="24" fill="#ffffff" stroke="#e9ecf2"/>
+<rect x="386" y="336" width="8" height="58" rx="4" fill="#1f8b3f"/>
+<text x="410" y="378" font-size="34" fill="#1f8b3f" font-weight="800" text-anchor="start">02</text>
+<text x="386" y="434" font-size="22" fill="#1E3A63" font-weight="700" text-anchor="start">Structure and</text>
+<text x="386" y="462" font-size="22" fill="#1E3A63" font-weight="700" text-anchor="start">Interpretation</text>
+<text x="386" y="500" font-size="19" fill="#2e86c9" font-weight="600" text-anchor="start">Abelson, Sussman</text>
+<text x="386" y="538" font-size="18" fill="#75849a" font-weight="400" text-anchor="start">Trừu tượng hóa, cách nghĩ</text>
+<text x="386" y="562" font-size="18" fill="#75849a" font-weight="400" text-anchor="start">nền tảng</text>
+<rect x="660" y="306" width="280" height="320" rx="24" fill="#ffffff" stroke="#e9ecf2"/>
+<rect x="682" y="336" width="8" height="58" rx="4" fill="#1f8b3f"/>
+<text x="706" y="378" font-size="34" fill="#1f8b3f" font-weight="800" text-anchor="start">03</text>
+<text x="682" y="434" font-size="22" fill="#1E3A63" font-weight="700" text-anchor="start">Computer Systems:</text>
+<text x="682" y="462" font-size="22" fill="#1E3A63" font-weight="700" text-anchor="start">A Programmer's</text>
+<text x="682" y="490" font-size="22" fill="#1E3A63" font-weight="700" text-anchor="start">Perspective</text>
+<text x="682" y="528" font-size="19" fill="#2e86c9" font-weight="600" text-anchor="start">Bryant, O'Hallaron</text>
+<text x="682" y="566" font-size="18" fill="#75849a" font-weight="400" text-anchor="start">Bộ nhớ, cache, liên kết,</text>
+<text x="682" y="590" font-size="18" fill="#75849a" font-weight="400" text-anchor="start">tiến trình</text>
+<rect x="956" y="306" width="280" height="320" rx="24" fill="#ffffff" stroke="#e9ecf2"/>
+<rect x="978" y="336" width="8" height="58" rx="4" fill="#1f8b3f"/>
+<text x="1002" y="378" font-size="34" fill="#1f8b3f" font-weight="800" text-anchor="start">04</text>
+<text x="978" y="434" font-size="22" fill="#1E3A63" font-weight="700" text-anchor="start">Introduction to</text>
+<text x="978" y="462" font-size="22" fill="#1E3A63" font-weight="700" text-anchor="start">Algorithms</text>
+<text x="978" y="500" font-size="19" fill="#2e86c9" font-weight="600" text-anchor="start">Cormen và cộng sự</text>
+<text x="978" y="538" font-size="18" fill="#75849a" font-weight="400" text-anchor="start">Sách tra cứu thuật toán</text>
+<text x="978" y="562" font-size="18" fill="#75849a" font-weight="400" text-anchor="start">chuẩn mực</text>
+<rect x="1252" y="306" width="280" height="320" rx="24" fill="#ffffff" stroke="#e9ecf2"/>
+<rect x="1274" y="336" width="8" height="58" rx="4" fill="#1f8b3f"/>
+<text x="1298" y="378" font-size="34" fill="#1f8b3f" font-weight="800" text-anchor="start">05</text>
+<text x="1274" y="434" font-size="22" fill="#1E3A63" font-weight="700" text-anchor="start">The Algorithm</text>
+<text x="1274" y="462" font-size="22" fill="#1E3A63" font-weight="700" text-anchor="start">Design Manual</text>
+<text x="1274" y="500" font-size="19" fill="#2e86c9" font-weight="600" text-anchor="start">Steven Skiena</text>
+<text x="1274" y="538" font-size="18" fill="#75849a" font-weight="400" text-anchor="start">Chọn thuật toán cho</text>
+<text x="1274" y="562" font-size="18" fill="#75849a" font-weight="400" text-anchor="start">bài toán thật</text>
+</svg>
