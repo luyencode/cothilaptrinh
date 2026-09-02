@@ -34,4 +34,5 @@
 <text x="1202" y="451" font-size="18" fill="#75849a" font-weight="400" text-anchor="start">hoặc sửa một chỗ trong dự án</text>
 <path d="M 1500 508 q 40 60 -20 60 L 130 568 q -60 0 -20 -60" fill="none" stroke="#75849a" stroke-width="3" stroke-dasharray="8 8"/>
 <text x="800" y="560" font-size="20" fill="#75849a" font-weight="600" text-anchor="middle">Bạn quay lại với chương tiếp theo</text>
+<text x="1560" y="588" font-size="19" fill="#75849a" font-weight="700" text-anchor="end" opacity="0.55">cothilaptrinh.vn</text>
 </svg>

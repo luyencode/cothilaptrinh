@@ -7,9 +7,9 @@ author: "Đặng Kim Thi"
 cover: "/assets/blog/top-20-sach-kinh-dien-cho-dan-it/cover.png"
 ---
 
-Một sinh viên công nghệ thông tin có thể học xong bốn năm, làm được đồ án, vượt qua nhiều môn thi, rồi vẫn loay hoay trong tháng đầu tiên đi làm: code chạy được nhưng người khác đọc không ra, sửa một chỗ thì vỡ ba chỗ khác, và không ai giải thích được vì sao dự án luôn trễ hạn. Khoảng trống đó hiếm khi nằm ở ngôn ngữ lập trình. Nó nằm ở phần nền tảng nghề nghiệp mà trường ít khi dạy thành một môn riêng. Bài viết này tổng hợp 20 cuốn sách kinh điển của nghề phần mềm, chia theo bốn giai đoạn đọc, kèm nguồn đọc hợp pháp cho từng cuốn: bản Kindle, bản miễn phí do chính tác giả hay nhà xuất bản phát hành, và bản tiếng Việt nếu có.
+Một sinh viên công nghệ thông tin có thể học xong bốn năm, làm được đồ án, vượt qua nhiều môn thi, rồi vẫn thấy hụt hẫng trong tháng đầu tiên đi làm: code chạy được nhưng đồng nghiệp đọc chưa ra ý, sửa một chỗ lại vỡ chỗ khác, và bản thân cũng chưa hình dung được vì sao dự án hay trễ hạn. Khoảng trống đó thường không nằm ở ngôn ngữ lập trình. Nó nằm ở phần nghề nghiệp mà phần lớn người đi làm học dần qua công việc chứ ít khi học thành một môn riêng. Bài viết này tổng hợp 20 cuốn sách kinh điển của nghề phần mềm, chia theo bốn giai đoạn đọc, kèm nguồn đọc hợp pháp cho từng cuốn: bản Kindle, bản miễn phí do chính tác giả hay nhà xuất bản phát hành, và bản tiếng Việt nếu có.
 
-Sách kinh điển có một đặc điểm dễ gây nản: cuốn nào cũng được khen hay, nhưng bạn đọc sai thời điểm thì chỉ nhớ được vài câu trích dẫn. Cuốn Design Patterns nếu bạn đọc khi chưa từng bảo trì một hệ thống nào chỉ là mấy trăm trang mẫu khó nhớ. Cũng cuốn đó, nếu bạn đọc sau khi đã vật lộn với một đoạn code rối, nó thành một cuốn sổ tay bạn mở lại hàng tuần. Vì vậy danh sách dưới đây được xếp theo thứ tự đọc chứ không xếp theo mức độ nổi tiếng.
+Sách kinh điển có một đặc điểm dễ gây nản: cuốn nào cũng được khen hay, nhưng bạn đọc sai thời điểm thì chỉ nhớ được vài câu trích dẫn. Cuốn Design Patterns nếu bạn đọc khi chưa từng bảo trì một hệ thống nào chỉ là mấy trăm trang mẫu khó nhớ. Cũng cuốn đó, nếu bạn đọc sau khi đã vật lộn với một đoạn code rối, nó thành một cuốn sổ tay bạn mở lại hàng tuần. Vì vậy danh sách dưới đây được xếp theo thứ tự đọc chứ không xếp theo mức độ nổi tiếng. Đây là một gợi ý chứ không phải bảng xếp hạng, và bạn hoàn toàn có thể đổi thứ tự cho hợp với việc mình đang làm.
 
 > Sách kinh điển không cũ đi, nhưng người đọc thì thay đổi. Cùng một cuốn sách, bạn đọc trước và sau khi đi làm sẽ rút ra hai thứ hoàn toàn khác nhau.
 
@@ -44,9 +44,9 @@ Sách kinh điển có một đặc điểm dễ gây nản: cuốn nào cũng �
 
 ![Năm cuốn sách nền móng khoa học máy tính cho sinh viên công nghệ thông tin](/assets/blog/top-20-sach-kinh-dien-cho-dan-it/giai-doan-1-nen-mong.svg)
 
-Giai đoạn này trả lời một câu hỏi mà rất nhiều người đi làm vài năm vẫn né tránh: cái máy đang chạy code của bạn thực ra làm gì. Bạn không cần trả lời câu đó để viết một trang web, nhưng bạn cần nó khi chương trình chậm bất thường, khi bộ nhớ phình lên, khi một truy vấn mất mười giây thay vì mười mili giây.
+Giai đoạn này trả lời một câu hỏi mà nhiều người đi làm vài năm vẫn chưa có dịp ngồi xuống trả lời: cái máy đang chạy code của bạn thực ra làm gì. Bạn không cần trả lời câu đó để viết một trang web, nhưng bạn cần nó khi chương trình chậm bất thường, khi bộ nhớ phình lên, khi một truy vấn mất mười giây thay vì mười mili giây.
 
-Bạn nên bắt đầu bằng **[Code](https://www.amazon.com/dp/B0B123P5GV)** của Charles Petzold. Cuốn này dựng lại cả một máy tính từ bóng đèn, dây điện và công tắc. Phần đầu nhẹ tới mức học sinh cấp ba cũng theo được, còn từ chương về mạch logic trở đi thì bạn cần đọc chậm lại. Sau đó bạn đọc **[Structure and Interpretation of Computer Programs](https://www.amazon.com/dp/B094X8316F)**, cuốn giáo trình huyền thoại của MIT dạy bạn cách nghĩ về trừu tượng hóa; bản Kindle là ấn bản JavaScript, dễ tiếp cận hơn bản Scheme gốc, còn toàn văn thì bạn đọc miễn phí tại sicp.sourceacademy.org.
+Bạn nên bắt đầu bằng **[Code: The Hidden Language](https://www.amazon.com/dp/B0B123P5GV)** của Charles Petzold. Cuốn này dựng lại cả một máy tính từ bóng đèn, dây điện và công tắc. Phần đầu nhẹ tới mức học sinh cấp ba cũng theo được, còn từ chương về mạch logic trở đi thì bạn cần đọc chậm lại. Sau đó bạn đọc **[Structure and Interpretation of Computer Programs](https://www.amazon.com/dp/B094X8316F)**, cuốn giáo trình huyền thoại của MIT dạy bạn cách nghĩ về trừu tượng hóa; bản Kindle là ấn bản JavaScript, dễ tiếp cận hơn bản Scheme gốc, còn toàn văn thì bạn đọc miễn phí tại sicp.sourceacademy.org.
 
 Ba cuốn còn lại đi vào phần cứng và thuật toán. **[Computer Systems: A Programmer's Perspective](https://www.amazon.com/dp/B07V71PHR7)** giải thích bộ nhớ, cache và tiến trình theo góc nhìn của người viết code chứ không phải người thiết kế chip; bản Kindle là ấn bản Global Edition nên số hiệu bài tập lệch so với bản Mỹ. **[Introduction to Algorithms](https://www.amazon.com/dp/B094WZNKP2)** là sách tra cứu chuẩn mực, bạn nên dùng nó như từ điển hơn là đọc từ đầu tới cuối. **[The Algorithm Design Manual](https://www.amazon.com/dp/B08L5JZRHD)** của Steven Skiena thì ngược lại, nó dạy bạn cách nhận ra bài toán trước mặt thuộc dạng nào, nên đây là cuốn hợp hơn cho người mới.
 
@@ -66,7 +66,7 @@ Hai cuốn còn lại nói về việc sửa lại thứ đã viết. **[Refacto
 
 > Code chạy đúng chỉ là điều kiện tối thiểu. Người đọc code của bạn nhiều nhất là đồng nghiệp trong lần review tới, và là chính bạn sáu tháng sau đó.
 
-Bạn hãy chọn một dự án cũ của mình, mỗi tối đọc một phép biến đổi trong danh mục của Refactoring và áp dụng đúng phép đó vào dự án. Bạn sẽ nhớ lâu hơn hẳn so với việc đọc liền ba cuốn trong một tuần.
+Bạn hãy chọn một dự án cũ của mình, mỗi tối đọc một phép biến đổi trong danh mục của Refactoring và áp dụng đúng phép đó vào dự án. Bạn sẽ nhớ lâu hơn so với việc đọc liền ba cuốn trong một tuần.
 
 <div style="margin:30px 0;border-radius:22px;padding:24px 26px;background:#f6f9fc;border:1px solid #e9ecf2;">
   <p style="margin:0 0 8px;font-size:.78rem;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:#1f8b3f;">Nhóm Zalo</p>
@@ -79,13 +79,13 @@ Bạn hãy chọn một dự án cũ của mình, mỗi tối đọc một phép
 
 ![Năm cuốn sách kinh điển về thiết kế phần mềm và kiến trúc hệ thống](/assets/blog/top-20-sach-kinh-dien-cho-dan-it/giai-doan-3-thiet-ke.svg)
 
-Bạn bước vào giai đoạn ba khi câu hỏi khó nhất trong ngày không còn là viết hàm này thế nào, mà là đặt hàm này ở đâu. Đây cũng là lúc các cuốn sách trước đó bắt đầu có nghĩa, vì bạn đã có đủ vết thương để hiểu tác giả đang nói về chuyện gì.
+Bạn bước vào giai đoạn ba khi câu hỏi khó nhất trong ngày không còn là viết hàm này thế nào, mà là đặt hàm này ở đâu. Đây cũng là lúc các cuốn sách trước đó bắt đầu có nghĩa, vì bạn đã có đủ trải nghiệm để hiểu tác giả đang nói về chuyện gì.
 
 **[Design Patterns](https://www.amazon.com/dp/B000SEIBB8)** của nhóm Gang of Four đặt tên cho hai mươi ba tình huống thiết kế lặp đi lặp lại. Giá trị lớn nhất của cuốn này với người mới không phải là các mẫu, mà là bộ từ vựng chung để bạn trao đổi trong đội. **[Clean Architecture](https://www.amazon.com/dp/B075LRM681)** nói về ranh giới giữa các tầng và hướng của phụ thuộc, đây là cuốn dễ đọc nhất trong nhóm này. **[Domain-Driven Design](https://www.amazon.com/dp/B00794TAUG)** của Eric Evans nặng hơn nhiều và chỉ thực sự có ích khi bạn đang làm một hệ thống nghiệp vụ phức tạp.
 
-**[Designing Data-Intensive Applications](https://www.amazon.com/dp/B0GNTX59CY)** là cuốn được nhắc tới nhiều nhất gần mười năm nay khi nói về hệ thống nhiều dữ liệu, và nó gần như bắt buộc nếu bạn muốn làm backend hay dữ liệu; liên kết ở trên trỏ tới ấn bản thứ hai, bản đã cập nhật nhiều phần so với bản năm 2017. **[Working Effectively with Legacy Code](https://www.amazon.com/dp/B005OYHF0A)** thì giải quyết đúng tình huống bạn gặp trong tháng đầu đi làm: một hệ thống chạy được, không ai dám sửa, và không có lấy một bài test.
+**[Designing Data-Intensive Applications](https://www.amazon.com/dp/B0GNTX59CY)** là cuốn được nhắc tới nhiều nhất gần mười năm nay khi nói về hệ thống nhiều dữ liệu, và bạn rất nên đọc nếu định theo hướng backend hay dữ liệu; liên kết ở trên trỏ tới ấn bản thứ hai, bản đã cập nhật nhiều phần so với bản năm 2017. **[Working Effectively with Legacy Code](https://www.amazon.com/dp/B005OYHF0A)** thì giải quyết đúng tình huống bạn gặp trong tháng đầu đi làm: một hệ thống chạy được, không ai dám sửa, và không có lấy một bài test.
 
-> Phần lớn thời gian đi làm của bạn không dành cho việc viết code mới. Nó dành cho việc hiểu code người khác đã viết và thay đổi code đó mà không làm hỏng thứ đang chạy.
+> Ở nhiều công việc, thời gian bạn bỏ ra không nằm ở phần viết code mới. Nó nằm ở phần hiểu code người khác đã viết và thay đổi code đó mà không làm hỏng thứ đang chạy.
 
 Bạn nên đọc nhóm này theo dự án chứ không theo lịch. Mỗi khi bạn nhận một hệ thống mới, bạn chọn cuốn gần với vấn đề của hệ thống đó và đọc phần liên quan trước.
 
@@ -95,11 +95,11 @@ Bạn nên đọc nhóm này theo dự án chứ không theo lịch. Mỗi khi b
 
 Nghề lập trình có một phần mà trình biên dịch không bao giờ báo lỗi cho bạn: ước lượng thời gian, phối hợp với người khác, và giữ cho hệ thống sống được sau khi phát hành. Năm cuốn cuối cùng nói về phần đó.
 
-**[The Mythical Man-Month](https://www.amazon.com/dp/B00B8USS14)** viết từ năm 1975 và vẫn đúng tới mức khó chịu: thêm người vào một dự án đang trễ thì dự án trễ thêm. **[Peopleware](https://www.amazon.com/dp/B00DY5A8X2)** đưa ra một luận điểm gốc: phần lớn vấn đề của một dự án phần mềm không phải vấn đề công nghệ mà là vấn đề con người và môi trường làm việc. **[The Phoenix Project](https://www.amazon.com/dp/B09JWVXFNG)** kể chuyện dưới dạng tiểu thuyết, nên bạn đọc nó như đọc truyện trong vài buổi tối.
+**[The Mythical Man-Month](https://www.amazon.com/dp/B00B8USS14)** viết từ năm 1975, và luận điểm nổi tiếng nhất của nó vẫn hay được nhắc lại: thêm người vào một dự án đang trễ thường làm dự án trễ thêm. **[Peopleware](https://www.amazon.com/dp/B00DY5A8X2)** đưa ra một luận điểm gốc: phần lớn vấn đề của một dự án phần mềm không phải vấn đề công nghệ mà là vấn đề con người và môi trường làm việc. **[The Phoenix Project](https://www.amazon.com/dp/B09JWVXFNG)** kể chuyện dưới dạng tiểu thuyết, nên bạn đọc nó như đọc truyện trong vài buổi tối.
 
 Hai cuốn cuối thiên về dữ liệu. **[Accelerate](https://www.amazon.com/dp/B09JWS32W1)** trình bày kết quả nghiên cứu trên hàng nghìn tổ chức và rút ra bốn chỉ số đo sức khỏe của một đội phần mềm. **[Site Reliability Engineering](https://www.amazon.com/dp/B01DCPXKZ6)** ghi lại cách Google vận hành hệ thống thật, với các khái niệm như ngân sách lỗi mà bạn sẽ gặp lại ở nhiều công ty.
 
-> Người mới thường nghĩ nghề lập trình là nghề làm việc với máy. Sau vài năm, phần lớn người đi làm nhận ra đây là nghề làm việc với người, thông qua máy.
+> Lúc mới vào nghề, bạn dễ nghĩ lập trình là nghề làm việc với máy. Sau vài năm, nhiều người nhận ra phần khó nhất lại nằm ở chỗ làm việc với người, thông qua máy.
 
 Nếu bạn còn là sinh viên, bạn chưa cần đọc hết năm cuốn này. Bạn hãy đọc The Phoenix Project trước để có bức tranh chung, rồi để dành bốn cuốn kia cho năm đầu tiên đi làm.
 
@@ -107,7 +107,7 @@ Nếu bạn còn là sinh viên, bạn chưa cần đọc hết năm cuốn này
 
 ![Vòng lặp bốn bước để đọc một chương sách kỹ thuật hiệu quả](/assets/blog/top-20-sach-kinh-dien-cho-dan-it/vong-lap-doc-sach.svg)
 
-Danh sách hai mươi cuốn ở trên vô dụng nếu bạn dừng ở trang bốn mươi của cuốn thứ nhất. Sách kỹ thuật khác tiểu thuyết ở một điểm: bạn không nhớ nó bằng cách đọc, bạn nhớ nó bằng cách làm lại thứ vừa đọc.
+Danh sách hai mươi cuốn ở trên không giúp được gì nhiều nếu bạn dừng ở trang bốn mươi của cuốn thứ nhất. Sách kỹ thuật khác tiểu thuyết ở một điểm: bạn không nhớ nó bằng cách đọc, bạn nhớ nó bằng cách làm lại thứ vừa đọc.
 
 Bạn có thể dùng một vòng lặp bốn bước cho mỗi chương. Bạn đọc liền một chương mà chưa ghi chép gì. Bạn gấp sách lại và viết năm dòng tóm tắt bằng lời của mình. Sau đó bạn tự làm lại một lần: sách có code như Clean Code, Refactoring hay Introduction to Algorithms thì bạn gõ lại ví dụ thay vì sao chép, còn sách không có dòng code nào như The Mythical Man-Month hay Peopleware thì bạn soi ý vừa đọc vào một dự án hoặc một nhóm bạn từng tham gia và chỉ ra chỗ đúng, chỗ lệch. Bước cuối là kiểm chứng: bạn nộp một bài tập có chấm điểm với nhóm sách kỹ thuật, hoặc bạn thay đổi một điểm cụ thể trong cách làm việc của mình với nhóm sách còn lại.
 
@@ -231,22 +231,22 @@ Bản Kindle tiện cho người muốn mua nhanh, nhưng nó không phải lự
   </div>
 </div>
 
-Mười hai cuốn còn lại chưa có bản đọc miễn phí hợp pháp nào. Với những cuốn đó, bạn có ba đường: mua bản in hoặc bản điện tử, mượn ở thư viện trường đại học, hoặc dùng tài khoản thư viện số mà nhiều trường đã mua sẵn cho sinh viên. Bạn nên hỏi thư viện trường mình trước khi mua, vì nhiều trường kỹ thuật ở Việt Nam có sẵn phần lớn danh sách này trên giá.
+Mười hai cuốn còn lại chưa có bản đọc miễn phí hợp pháp nào. Với những cuốn đó, bạn có ba đường: mua bản in hoặc bản điện tử, mượn ở thư viện trường đại học, hoặc dùng tài khoản thư viện số mà nhiều trường đã mua sẵn cho sinh viên. Bạn nên hỏi thư viện trường mình trước khi mua, vì một số trường kỹ thuật có sẵn khá nhiều cuốn trong danh sách này trên giá.
 
-> Bạn tôn trọng bản quyền của một cuốn sách cũng là tôn trọng nghề mình đang học. Người viết phần mềm sống bằng chất xám, và tác giả sách kỹ thuật cũng vậy.
+> Bạn tôn trọng bản quyền của một cuốn sách cũng là tôn trọng nghề mình đang theo. Người viết phần mềm sống bằng chất xám, và người viết sách kỹ thuật cũng vậy.
 
-Các bản PDF trôi nổi trên mạng thường là bản quét lậu, thiếu chương, sai hình và không được cập nhật khi sách ra ấn bản mới. Bạn mất thời gian đọc một bản sai còn tốn hơn số tiền bạn tiết kiệm được.
+Các bản PDF trôi nổi trên mạng thường là bản quét lậu, thiếu chương, sai hình và không được cập nhật khi sách ra ấn bản mới. Thời gian bạn mất khi đọc phải một bản sai nhiều khi còn lớn hơn khoản tiền bạn tiết kiệm được.
 
 ## Câu hỏi thường gặp về sách lập trình kinh điển
 
 **Người mới học lập trình nên đọc cuốn nào đầu tiên?**
-Bạn nên bắt đầu bằng Code của Charles Petzold nếu bạn muốn hiểu máy tính từ gốc, hoặc Clean Code nếu bạn đã viết được vài chương trình và muốn viết gọn hơn. Bạn không nên mở đầu bằng Introduction to Algorithms hay Domain-Driven Design, vì hai cuốn đó cần một lượng trải nghiệm nhất định thì mới đọc trôi. Nếu bạn chưa vững phần lập trình cơ bản, bạn có thể xem trước [các khóa học lập trình](/khoa-hoc) để lấp phần nền rồi mới quay lại sách.
+Bạn nên bắt đầu bằng Code: The Hidden Language của Charles Petzold nếu bạn muốn hiểu máy tính từ gốc, hoặc Clean Code nếu bạn đã viết được vài chương trình và muốn viết gọn hơn. Bạn không nên mở đầu bằng Introduction to Algorithms hay Domain-Driven Design, vì hai cuốn đó cần một lượng trải nghiệm nhất định thì mới đọc trôi. Nếu bạn chưa vững phần lập trình cơ bản, bạn có thể xem trước [các khóa học lập trình](/khoa-hoc) để lấp phần nền rồi mới quay lại sách.
 
 **Bạn có bắt buộc phải đọc bản tiếng Anh không?**
-Bạn không bắt buộc, nhưng bạn nên tập dần. Bạn tìm được bản dịch tiếng Việt phát hành chính thức cho một số ít cuốn, trong đó có Clean Code, còn phần lớn danh sách này chỉ có bản tiếng Anh. Bạn nên tránh các bản dịch trôi nổi trên mạng, vì phần lớn là dịch không xin phép và chất lượng thuật ngữ rất lệch. Tài liệu kỹ thuật bạn gặp khi đi làm cũng gần như đều bằng tiếng Anh, nên đọc sách là cách luyện tự nhiên nhất. Bạn có thể bắt đầu bằng những cuốn viết đơn giản như Code hay The Phoenix Project trước khi bước vào các cuốn hàn lâm hơn.
+Bạn không bắt buộc, nhưng bạn nên tập dần. Bạn tìm được bản dịch tiếng Việt phát hành chính thức cho một số ít cuốn, trong đó có Clean Code, còn phần lớn danh sách này chỉ có bản tiếng Anh. Bạn nên tránh các bản dịch trôi nổi trên mạng, vì phần lớn là dịch không xin phép và chất lượng thuật ngữ rất lệch. Tài liệu kỹ thuật bạn gặp khi đi làm cũng gần như đều bằng tiếng Anh, nên đọc sách là cách luyện tự nhiên nhất. Bạn có thể bắt đầu bằng những cuốn viết đơn giản như Code: The Hidden Language hay The Phoenix Project trước khi bước vào các cuốn hàn lâm hơn.
 
 **Sách viết từ những năm 1970, 1990 có còn đúng trong thời AI không?**
-Phần công cụ trong sách thì cũ, nhưng phần nguyên lý thì gần như không đổi. Công cụ AI ngày nay sinh ra code rất nhanh, và chính vì vậy khả năng đọc hiểu, đánh giá và sửa code lại càng quan trọng hơn trước. Người biết vì sao một thiết kế tốt sẽ dùng công cụ AI hiệu quả hơn hẳn người chỉ biết dán câu lệnh.
+Phần công cụ trong sách thì cũ, nhưng phần nguyên lý thì gần như không đổi. Công cụ AI ngày nay sinh ra code rất nhanh, và chính vì vậy khả năng đọc hiểu, đánh giá và sửa code lại càng quan trọng hơn trước. Người hiểu vì sao một thiết kế là tốt thường tận dụng công cụ AI thoải mái hơn, đơn giản vì họ đánh giá được đoạn code mà công cụ vừa sinh ra.
 
 **Bạn mua sách trên Amazon Kindle từ Việt Nam bằng cách nào?**
 Bạn tạo tài khoản Amazon, thêm một thẻ thanh toán quốc tế, rồi mua trực tiếp từ trang sách. Bạn không cần máy đọc Kindle vì ứng dụng Kindle chạy được trên điện thoại, máy tính bảng và trình duyệt. Bạn nên kiểm tra giá vào các đợt giảm của nhà xuất bản, vì nhiều cuốn trong danh sách này thường xuyên có mức giảm sâu.
@@ -263,9 +263,9 @@ Bốn cuốn đọc kỹ có giá trị hơn hai mươi cuốn đọc lướt. B
 
 ## Kết luận
 
-**Hai mươi cuốn sách này không biến bạn thành lập trình viên giỏi, nhưng chúng rút ngắn quãng đường bạn phải tự mò mẫm.** Mỗi cuốn là kinh nghiệm mấy chục năm của một người đã đi qua đúng vấn đề bạn sắp gặp, và bạn mua được kinh nghiệm đó với giá một cuốn ebook.
+**Hai mươi cuốn sách này không biến bạn thành lập trình viên giỏi, nhưng chúng rút ngắn quãng đường bạn phải tự mò mẫm.** Mỗi cuốn là kinh nghiệm nhiều năm của những người đã đi qua các vấn đề tương tự, và bạn tiếp cận được kinh nghiệm đó với chi phí của một cuốn sách.
 
-Bạn không cần đọc cả hai mươi cuốn trong năm nay. Bạn chọn một cuốn hợp với chỗ bạn đang đứng, đọc một chương mỗi tuần và tự làm lại thứ vừa đọc, dù đó là gõ lại đoạn code hay soi một ý vào dự án của mình. Sau một năm, bạn sẽ thấy mình đọc code của người khác dễ hơn hẳn, và đó là dấu hiệu rõ nhất cho thấy nghề đã bắt đầu ngấm.
+Bạn không cần đọc cả hai mươi cuốn trong năm nay. Bạn chọn một cuốn hợp với chỗ bạn đang đứng, đọc một chương mỗi tuần và tự làm lại thứ vừa đọc, dù đó là gõ lại đoạn code hay soi một ý vào dự án của mình. Sau một năm, bạn sẽ thấy mình đọc code của người khác dễ hơn trước, và đó là một dấu hiệu cho thấy nghề đã bắt đầu ngấm.
 
 <div style="margin-top:36px;border-radius:26px;padding:38px clamp(22px,5vw,48px);color:#fff;background:radial-gradient(circle at 88% -30%,rgba(242,193,61,.38),transparent 42%),linear-gradient(135deg,#1E3A63,#13294a);">
   <p style="margin:0;font-size:.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#F2C13D;">Học nền tảng để đọc sách dễ hơn</p>
