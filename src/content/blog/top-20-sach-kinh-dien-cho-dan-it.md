@@ -109,11 +109,11 @@ Nếu bạn còn là sinh viên, bạn chưa cần đọc hết năm cuốn này
 
 Danh sách hai mươi cuốn ở trên vô dụng nếu bạn dừng ở trang bốn mươi của cuốn thứ nhất. Sách kỹ thuật khác tiểu thuyết ở một điểm: bạn không nhớ nó bằng cách đọc, bạn nhớ nó bằng cách làm lại thứ vừa đọc.
 
-Bạn có thể dùng một vòng lặp bốn bước cho mỗi chương. Bạn đọc liền một chương mà chưa ghi chép gì. Bạn gấp sách lại và viết năm dòng tóm tắt bằng lời của mình. Bạn tự gõ lại ví dụ trong sách thay vì sao chép. Cuối cùng bạn làm một bài tập nhỏ có chấm điểm để biết mình hiểu đúng hay hiểu nhầm.
+Bạn có thể dùng một vòng lặp bốn bước cho mỗi chương. Bạn đọc liền một chương mà chưa ghi chép gì. Bạn gấp sách lại và viết năm dòng tóm tắt bằng lời của mình. Sau đó bạn tự làm lại một lần: sách có code như Clean Code, Refactoring hay Introduction to Algorithms thì bạn gõ lại ví dụ thay vì sao chép, còn sách không có dòng code nào như The Mythical Man-Month hay Peopleware thì bạn soi ý vừa đọc vào một dự án hoặc một nhóm bạn từng tham gia và chỉ ra chỗ đúng, chỗ lệch. Bước cuối là kiểm chứng: bạn nộp một bài tập có chấm điểm với nhóm sách kỹ thuật, hoặc bạn thay đổi một điểm cụ thể trong cách làm việc của mình với nhóm sách còn lại.
 
-Bước cuối là bước hay bị bỏ nhất và cũng là bước đáng giá nhất. Cảm giác hiểu bài trong lúc đọc và khả năng viết ra code chạy đúng là hai chuyện khác nhau, và chỉ có phản hồi từ bên ngoài mới phân biệt được hai chuyện đó. Nếu bạn cần nguồn bài tập có phản hồi ngay, [hệ thống chấm bài tự động của Cô Thi Lập Trình](https://code.cothilaptrinh.vn/) luôn mở: bạn nộp code xong là biết bài đúng hay sai và sai ở bộ dữ liệu nào.
+Bước cuối là bước hay bị bỏ nhất và cũng là bước đáng giá nhất. Cảm giác hiểu bài trong lúc đọc và khả năng làm ra một thứ chạy đúng là hai chuyện khác nhau, và chỉ có phản hồi từ bên ngoài mới phân biệt được hai chuyện đó. Nếu bạn cần nguồn bài tập có phản hồi ngay, [hệ thống chấm bài tự động của Cô Thi Lập Trình](https://code.cothilaptrinh.vn/) luôn mở: bạn nộp code xong là biết bài đúng hay sai và sai ở bộ dữ liệu nào.
 
-> Một chương sách bạn đọc rồi làm bài tập ngay sau đó có giá trị hơn ba cuốn sách bạn đọc hết mà không gõ lấy một dòng code.
+> Một chương sách bạn đọc rồi thử lại ngay có giá trị hơn ba cuốn sách bạn đọc hết mà không đụng tay vào việc gì.
 
 ### Bạn đang ở đâu thì nên đọc cuốn nào trước
 
