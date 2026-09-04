@@ -73,12 +73,6 @@ Một lưu ý chung cho cả hai phần mềm: bạn nên lưu file vào một t
 
 > Bạn cài một trong hai phần mềm là đủ. Cài cả hai không giúp học nhanh hơn, chỉ làm máy nặng thêm và làm bạn phân vân mỗi lần mở bài.
 
-<div style="margin:26px 0;border-radius:22px;padding:18px 24px;background:linear-gradient(135deg,rgba(31,139,63,.09),rgba(46,134,201,.09));border:1px solid rgba(31,139,63,.24);display:flex;flex-wrap:wrap;align-items:center;gap:14px;">
-  <span style="display:inline-block;width:34px;height:34px;border-radius:11px;background:#1f8b3f;flex:0 0 auto;"></span>
-  <p style="margin:0;flex:1 1 300px;color:#1E3A63;font-weight:600;">Nhóm Zalo <strong>Chia sẻ về AI, Lập trình, Cách học</strong> là nơi bạn cập nhật cách học hiệu quả, cách dùng AI đúng và tài liệu luyện thi Tin học.</p>
-  <a href="https://zalo.me/g/bv7ry9tw8luzrh1bsqha" style="text-decoration:none;white-space:nowrap;background:#1f8b3f;color:#fff;font-weight:700;padding:11px 22px;border-radius:999px;box-shadow:0 10px 22px rgba(31,139,63,.3);">Vào nhóm Zalo</a>
-</div>
-
 ## Cách 3: cài VS Code với MinGW-w64 để dùng lâu dài
 
 Visual Studio Code là trình soạn thảo được dùng rộng rãi trong công việc thật, và nó dùng chung cho C++, Python, web và nhiều ngôn ngữ khác. Điểm khác biệt so với hai cách trên là VS Code không kèm trình biên dịch, nên bạn phải cài thêm MinGW-w64, tức là bộ GCC dành cho Windows.
@@ -182,12 +176,6 @@ Chặng cuối quan trọng hơn vẻ ngoài của nó. Khi tự chạy trên m�
 
 > Chương trình chạy đúng trên máy của bạn và chương trình đúng là hai chuyện khác nhau. Bộ dữ liệu thử của người viết thường dễ hơn bộ dữ liệu thật.
 
-<div style="margin:26px 0;border-radius:22px;padding:18px 24px;background:linear-gradient(135deg,rgba(46,134,201,.09),rgba(242,193,61,.12));border:1px solid rgba(46,134,201,.24);display:flex;flex-wrap:wrap;align-items:center;gap:14px;">
-  <span style="display:inline-block;width:34px;height:34px;border-radius:11px;background:#2e86c9;flex:0 0 auto;"></span>
-  <p style="margin:0;flex:1 1 300px;color:#1E3A63;font-weight:600;">Bạn gặp lỗi lạ lúc cài đặt và chưa biết hỏi ai? Nhóm Zalo <strong>Chia sẻ về AI, Lập trình, Cách học</strong> là nơi cập nhật cách học hiệu quả, cách dùng AI đúng và tài liệu luyện thi Tin học.</p>
-  <a href="https://zalo.me/g/bv7ry9tw8luzrh1bsqha" style="text-decoration:none;white-space:nowrap;background:#1f8b3f;color:#fff;font-weight:700;padding:11px 22px;border-radius:999px;box-shadow:0 10px 22px rgba(31,139,63,.3);">Vào nhóm Zalo</a>
-</div>
-
 ## Câu hỏi thường gặp về cài đặt C++ trên Windows
 
 **Máy tính cấu hình yếu có cài được C++ không?**
@@ -214,19 +202,11 @@ Và khi dòng chữ đầu tiên hiện ra trên màn hình, phần khó nhất 
 <div style="margin-top:36px;border-radius:26px;padding:38px clamp(22px,5vw,48px);color:#fff;background:radial-gradient(circle at 88% -30%,rgba(242,193,61,.38),transparent 42%),linear-gradient(135deg,#1E3A63,#13294a);">
   <p style="margin:0;font-size:.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#F2C13D;">Bắt đầu với C++</p>
   <p style="margin:10px 0 6px;font-size:1.45rem;font-weight:800;line-height:1.3;color:#fff;">Chạy được Hello World rồi, bạn luyện tiếp ở đâu?</p>
-  <p style="margin:0 0 22px;color:#dbe7f3;">Nhóm Zalo là nơi bạn cập nhật cách học hiệu quả, cách dùng AI đúng và tài liệu luyện thi Tin học. Bạn nào muốn luyện code có chấm điểm ngay thì hệ thống chấm tự động luôn mở.</p>
-  <div style="display:flex;flex-wrap:wrap;gap:26px;align-items:center;margin:0 0 20px;">
-    <img src="/assets/blog/huong-dan-cai-dat-cpp-tren-windows-chay-hello-world/qr-nhom-zalo.png" alt="Ma QR nhom Zalo Chia se ve AI, Lap trinh, Cach hoc" style="width:180px;flex:0 0 auto;border-radius:16px;background:#fff;padding:6px;" />
-    <div style="flex:1 1 280px;min-width:250px;">
-      <p style="margin:0 0 6px;font-size:.8rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#F2C13D;">Nhóm Zalo</p>
-      <p style="margin:0 0 16px;font-size:1.12rem;font-weight:700;color:#fff;">Chia sẻ về AI, Lập trình, Cách học</p>
-      <p style="display:flex;flex-wrap:wrap;gap:12px;margin:0;">
-        <a class="btn" href="https://zalo.me/g/bv7ry9tw8luzrh1bsqha" style="text-decoration:none;background:#1f8b3f;color:#fff;box-shadow:0 10px 24px rgba(31,139,63,.35);">Tham gia nhóm Zalo</a>
-        <a class="btn btn-gold" href="/khoa-hoc-c-cpp-web" style="text-decoration:none;">Khóa học C/C++ từ cơ bản</a>
-        <a class="btn btn-light" href="https://code.cothilaptrinh.vn/" style="text-decoration:none;">Luyện code chấm tự động</a>
-      </p>
-    </div>
-  </div>
+  <p style="margin:0 0 22px;color:#dbe7f3;">Bạn nào muốn luyện code có chấm điểm ngay thì hệ thống chấm tự động luôn mở.</p>
+  <p style="display:flex;flex-wrap:wrap;gap:12px;margin:0 0 18px;">
+    <a class="btn btn-gold" href="/khoa-hoc-c-cpp-web" style="text-decoration:none;">Khóa học C/C++ từ cơ bản</a>
+    <a class="btn btn-light" href="https://code.cothilaptrinh.vn/" style="text-decoration:none;">Luyện code chấm tự động</a>
+  </p>
   <p style="margin:0;font-size:.92rem;color:#b7c6dd;">Cần tư vấn lộ trình cho con? Bạn nhắn Zalo 0985 188 655 hoặc xem
     <a href="/lo-trinh" style="color:#fff;">lộ trình học theo độ tuổi</a>.
   </p>
