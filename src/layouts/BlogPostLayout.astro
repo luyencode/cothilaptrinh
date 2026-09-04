@@ -50,10 +50,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
     <ShareButtons url={canonicalURL} title={title} />
   </div>
 
-  <!-- Post shell: center content | right sticky CTA. ToC lives outside the -->
-  <!-- grid as a floating, draggable widget (see #toc-fab-wrap below) so it -->
-  <!-- never eats into the content column's width. -->
+  <!-- Post shell: center content | right sticky CTA. ToC normally lives -->
+  <!-- outside the grid as a floating, draggable widget (see #tocFabWrap -->
+  <!-- below) so it never eats into the content column's width. On very wide -->
+  <!-- screens (see JS/CSS for the breakpoint) there's enough spare gutter to -->
+  <!-- dock it as a real sticky column instead — #tocDockedAside is that slot; -->
+  <!-- JS moves the single #toc-nav instance into whichever container is active. -->
   <div class="post-shell">
+    <aside class="toc-docked" id="tocDockedAside" aria-label="Mục lục"></aside>
+
     <div class="post-main">
       <section class="section post-section"><div class="post-content" id="post-content">
         <slot />
@@ -84,18 +89,20 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
   <!-- toggles the panel open. Drag the icon anywhere; position is remembered -->
   <!-- per-browser via localStorage. Hidden entirely when the post has <2 headings. -->
   <div class="toc-fab-wrap" id="tocFabWrap">
-    <div class="toc-inner toc-fab-panel" id="tocFabPanel" hidden>
-      <div class="toc-head">
-        <span class="toc-icon" aria-hidden="true">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3 6h.01M3 12h.01M3 18h.01"/></svg>
-        </span>
-        <p class="toc-title">Mục lục</p>
-        <span class="toc-count" id="toc-count" aria-hidden="true"></span>
-        <button type="button" class="toc-fab-close" id="tocFabClose" aria-label="Đóng mục lục">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
-        </button>
+    <div class="toc-fab-panel" id="tocFabPanel" hidden>
+      <div class="toc-inner" id="tocInner">
+        <div class="toc-head">
+          <span class="toc-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3 6h.01M3 12h.01M3 18h.01"/></svg>
+          </span>
+          <p class="toc-title">Mục lục</p>
+          <span class="toc-count" id="toc-count" aria-hidden="true"></span>
+          <button type="button" class="toc-fab-close" id="tocFabClose" aria-label="Đóng mục lục">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <nav id="toc-nav" class="toc-nav"></nav>
       </div>
-      <nav id="toc-nav" class="toc-nav"></nav>
     </div>
     <button type="button" class="toc-fab" id="tocFabBtn" aria-expanded="false" aria-controls="tocFabPanel" aria-label="Mục lục bài viết">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3 6h.01M3 12h.01M3 18h.01"/></svg>
@@ -125,6 +132,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
     const headings = content.querySelectorAll('h2, h3');
     if (headings.length < 2) {
       if (tocFabWrap) (tocFabWrap as HTMLElement).style.display = 'none';
+      const dockedAsideEmpty = document.getElementById('tocDockedAside');
+      if (dockedAsideEmpty) (dockedAsideEmpty as HTMLElement).style.display = 'none';
       return;
     }
     if (tocCount) tocCount.textContent = `${headings.length}`;
@@ -306,6 +315,38 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
     window.addEventListener('toc-nav-click', () => setOpen(false));
   })();
 
+  // Wide-screen docking: past a certain viewport width there's enough spare
+  // gutter beside the content column to show the ToC as an always-visible
+  // sticky rail instead of the click-to-open floating widget. Moves the
+  // single #tocInner node between the two containers rather than duplicating
+  // it, so there's only ever one live copy of the built <nav>.
+  (function(){
+    const tocInner = document.getElementById('tocInner');
+    const fabPanel = document.getElementById('tocFabPanel');
+    const dockedAside = document.getElementById('tocDockedAside');
+    const fabWrap = document.getElementById('tocFabWrap');
+    const closeBtn = document.getElementById('tocFabClose');
+    if (!tocInner || !fabPanel || !dockedAside || !fabWrap) return;
+
+    const dockMq = window.matchMedia('(min-width: 1700px)');
+
+    function applyDock(){
+      if (dockMq.matches) {
+        dockedAside.appendChild(tocInner);
+        if (closeBtn) closeBtn.hidden = true;
+        // Clear any open/drag state so the floating widget starts fresh if
+        // the viewport later shrinks back below the breakpoint.
+        fabPanel.classList.remove('open', 'flip-down', 'flip-right');
+        fabPanel.hidden = true;
+      } else {
+        fabPanel.appendChild(tocInner);
+        if (closeBtn) closeBtn.hidden = false;
+      }
+    }
+    applyDock();
+    dockMq.addEventListener('change', applyDock);
+  })();
+
   // Mid-article CTA injection: mobile/tablet (<1200px) after 2nd h2, desktop removes it — matches ToC breakpoint
   (function(){
     const mq = window.matchMedia('(max-width: 1200px)');
@@ -394,6 +435,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
   .post-cta-side{ position:sticky; top:88px; align-self:start; padding-top:40px; }
   .post-cta-sticky{ display:flex; flex-direction:column; gap:16px; }
 
+  /* Docked ToC rail — only shown past the very-wide breakpoint below, where
+     there's spare gutter for it without shrinking the content column. */
+  .toc-docked{ display:none; }
+
   /* Floating ToC widget — draggable icon + popover panel, lives outside the grid */
   .toc-fab-wrap{ position:fixed; left:24px; bottom:24px; z-index:70; }
   .toc-fab-wrap.dragging{ transition:none; }
@@ -402,13 +447,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
   .toc-fab:active{ cursor:grabbing; }
   .toc-fab:focus-visible{ outline:2px solid var(--gold-d); outline-offset:3px; }
   .toc-fab-count{ position:absolute; top:-3px; right:-3px; min-width:18px; height:18px; padding:0 4px; border-radius:999px; background:var(--gold); color:var(--navy); font-size:.62rem; font-weight:800; display:grid; place-items:center; box-shadow:0 0 0 2px #fff; }
+  .toc-fab-count[hidden]{ display:none; }
   .toc-fab-panel{ position:absolute; left:0; bottom:calc(100% + 12px); width:min(300px, calc(100vw - 48px)); max-height:min(60vh, 520px); display:flex; flex-direction:column; opacity:0; pointer-events:none; transform:translateY(8px) scale(.97); transform-origin:bottom left; transition:.16s opacity, .16s transform; }
+  .toc-fab-panel[hidden]{ display:none; }
   .toc-fab-panel.open{ opacity:1; pointer-events:auto; transform:translateY(0) scale(1); }
   .toc-fab-panel.flip-down{ bottom:auto; top:calc(100% + 12px); transform-origin:top left; }
   .toc-fab-panel.flip-right{ left:auto; right:0; transform-origin:bottom right; }
   .toc-fab-panel.flip-down.flip-right{ transform-origin:top right; }
   .toc-fab-panel .toc-nav{ overflow:auto; }
   .toc-fab-close{ flex:0 0 auto; width:22px; height:22px; border-radius:7px; border:1px solid transparent; background:none; color:var(--muted); display:grid; place-items:center; cursor:pointer; padding:0; }
+  .toc-fab-close[hidden]{ display:none; }
   .toc-fab-close:hover{ background:#f1f3f8; color:var(--navy); }
   .toc-fab-close:focus-visible{ outline:2px solid var(--gold-d); outline-offset:2px; }
 
@@ -420,5 +468,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
   @media(max-width:600px){
     .post-shell{ width:min(880px,92vw); }
     .toc-fab-wrap{ left:16px; bottom:16px; }
+  }
+
+  /* Very wide screens only: dock the ToC as a real sticky rail again. Content
+     stays 880px and the CTA rail 300px; this just adds a third column using
+     the gutter space wide viewports already have to spare. 300+28+880+28+300
+     = 1536px is the full 3-column width — 1700px leaves enough margin above
+     that so the grid never gets squeezed by the 94vw clamp right at the edge. */
+  @media(min-width:1700px){
+    .post-shell{ grid-template-columns:300px minmax(0,880px) 300px; width:min(1536px,94vw); }
+    .toc-docked{ display:block; position:sticky; top:88px; align-self:start; max-height:calc(100vh - 96px); overflow:auto; padding-top:40px; scrollbar-width:thin; scrollbar-color:var(--gray) transparent; }
+    .toc-docked::-webkit-scrollbar{ width:5px; }
+    .toc-docked::-webkit-scrollbar-thumb{ background:var(--gray); border-radius:999px; }
+    .toc-fab-wrap{ display:none; }
   }
 </style>
