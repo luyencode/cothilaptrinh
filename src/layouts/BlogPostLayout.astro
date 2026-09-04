@@ -54,7 +54,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
   <div class="post-shell">
     <aside class="post-toc" aria-label="Mục lục">
       <div class="toc-inner">
-        <p class="toc-title">Mục lục</p>
+        <div class="toc-head">
+          <span class="toc-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3 6h.01M3 12h.01M3 18h.01"/></svg>
+          </span>
+          <p class="toc-title">Mục lục</p>
+          <span class="toc-count" id="toc-count" aria-hidden="true"></span>
+        </div>
         <nav id="toc-nav" class="toc-nav"></nav>
       </div>
     </aside>
@@ -96,17 +102,19 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
     }
   });
 
-  // Build ToC from h2/h3 inside post-content
+  // Build ToC from h2/h3 inside post-content — improved UI
   (function(){
     const content = document.getElementById('post-content');
     const tocNav = document.getElementById('toc-nav');
     const tocAside = document.querySelector('.post-toc');
+    const tocCount = document.getElementById('toc-count');
     if (!content || !tocNav) return;
     const headings = content.querySelectorAll('h2, h3');
     if (headings.length < 2) {
       if (tocAside) (tocAside as HTMLElement).style.display = 'none';
       return;
     }
+    if (tocCount) tocCount.textContent = `${headings.length}`;
     const ul = document.createElement('ul');
     headings.forEach((h, i) => {
       if (!h.id) {
@@ -120,27 +128,43 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
       const a = document.createElement('a');
       a.href = `#${h.id}`;
       a.textContent = (h.textContent||'').trim();
+      a.setAttribute('data-toc-link', '');
       li.appendChild(a);
       ul.appendChild(li);
     });
     tocNav.appendChild(ul);
 
-    // Active section highlight
+    // Smooth scroll with offset for sticky header
+    tocNav.addEventListener('click', (e) => {
+      const a = (e.target as HTMLElement).closest('a[href^="#"]') as HTMLAnchorElement | null;
+      if (!a) return;
+      const id = a.getAttribute('href')!.slice(1);
+      const target = document.getElementById(id);
+      if (!target) return;
+      e.preventDefault();
+      const top = target.getBoundingClientRect().top + window.scrollY - 88;
+      window.scrollTo({ top, behavior: 'smooth' });
+      history.pushState(null, '', `#${id}`);
+    });
+
+    // Active section highlight — most visible heading wins
     const links = tocNav.querySelectorAll('a');
+    let activeId: string | null = null;
     const observer = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){
-          const id = e.target.id;
-          links.forEach(l=> l.classList.toggle('on', l.getAttribute('href')===`#${id}`));
-        }
-      });
-    }, { rootMargin:'-20% 0px -60% 0px', threshold:0 });
+      const visible = entries.filter(e=>e.isIntersecting).sort((a,b)=> b.intersectionRatio - a.intersectionRatio);
+      if (!visible.length) return;
+      const id = (visible[0].target as HTMLElement).id;
+      if (id !== activeId) {
+        activeId = id;
+        links.forEach(l=> l.classList.toggle('on', l.getAttribute('href')===`#${id}`));
+      }
+    }, { rootMargin:'-18% 0px -62% 0px', threshold:[0, 0.2, 0.5, 1] });
     headings.forEach(h=> observer.observe(h));
   })();
 
-  // Mid-article CTA injection: mobile (<1100px) after 2nd h2, desktop removes it
+  // Mid-article CTA injection: mobile/tablet (<1200px) after 2nd h2, desktop removes it — matches ToC breakpoint
   (function(){
-    const mq = window.matchMedia('(max-width: 1100px)');
+    const mq = window.matchMedia('(max-width: 1200px)');
     const tmpl = document.getElementById('zg-mid-template');
     let injectedEl: HTMLElement | null = null;
 
@@ -196,22 +220,31 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
   .post-bottom-share{ padding: 8px 0 0; border-top:1px solid var(--line); margin-top: 8px; }
   .post-back{ padding: 28px 0 10px; }
 
-  /* ToC left */
-  .post-toc{ position:sticky; top:88px; align-self:start; max-height:calc(100vh - 100px); overflow:auto; padding-top:40px; }
-  .toc-inner{ background:#fff; border:1px solid var(--line); border-radius:14px; padding:16px 14px; box-shadow:0 6px 16px rgba(16,30,55,.05); }
-  .toc-title{ font-size:.72rem; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--muted); margin:0 0 10px; }
-  .toc-nav ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:2px; }
+  /* ToC left — refined to match site design system */
+  .post-toc{ position:sticky; top:88px; align-self:start; max-height:calc(100vh - 96px); overflow:auto; padding-top:40px; scrollbar-width:thin; scrollbar-color: var(--gray) transparent; }
+  .post-toc::-webkit-scrollbar{ width:5px; }
+  .post-toc::-webkit-scrollbar-thumb{ background:var(--gray); border-radius:999px; }
+  .toc-inner{ background:#fff; border:1px solid var(--line); border-radius:var(--r); padding:0; box-shadow:0 8px 22px rgba(16,30,55,.06); overflow:hidden; }
+  .toc-head{ display:flex; align-items:center; gap:8px; padding:14px 16px 12px; border-bottom:1px solid var(--line); background: linear-gradient(180deg, #fff, #fbfcfe); }
+  .toc-icon{ flex:0 0 auto; width:26px; height:26px; border-radius:8px; display:grid; place-items:center; color:#fff; background: linear-gradient(135deg, var(--navy), var(--teal)); box-shadow:0 4px 10px rgba(30,58,99,.18); }
+  .toc-title{ font-size:.74rem; font-weight:800; letter-spacing:1.4px; text-transform:uppercase; color:var(--navy); margin:0; }
+  .toc-count{ margin-left:auto; font-size:.7rem; font-weight:700; color:var(--muted); background:#f1f3f8; border:1px solid var(--line); padding:2px 7px; border-radius:999px; min-width:20px; text-align:center; line-height:1.4; }
+  .toc-nav{ padding:10px 8px 12px; }
+  .toc-nav ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:1px; }
   .toc-nav li{ line-height:1.35; }
-  .toc-nav a{ display:block; padding:6px 8px; border-radius:8px; font-size:.86rem; font-weight:600; color:#33425c; border-left:2px solid transparent; text-decoration:none; }
-  .toc-nav a:hover{ background:#f1f3f8; color:var(--navy); }
-  .toc-nav a.on{ color:var(--teal); background:color-mix(in srgb, var(--gold) 14%, #fff); border-left-color:var(--teal); font-weight:700; }
-  .toc-nav li.toc-h3 a{ padding-left:18px; font-size:.82rem; color:var(--muted); }
+  .toc-nav a{ display:block; padding:7px 10px 7px 12px; border-radius:9px; font-size:.86rem; font-weight:600; color:#33425c; border-left:3px solid transparent; text-decoration:none; transition:.14s background, .14s color, .14s border-color; }
+  .toc-nav a:hover{ background:#f1f3f8; color:var(--navy); border-left-color: color-mix(in srgb, var(--teal) 55%, transparent); }
+  .toc-nav a.on{ color:var(--navy); background: color-mix(in srgb, var(--gold) 13%, #fff); border-left-color: var(--gold-d); font-weight:700; }
+  .toc-nav a.on:hover{ background: color-mix(in srgb, var(--gold) 18%, #fff); }
+  .toc-nav li.toc-h3 a{ padding-left:22px; font-size:.82rem; font-weight:500; color:var(--muted); }
+  .toc-nav li.toc-h3 a:hover{ color:var(--navy); }
+  .toc-nav li.toc-h3 a.on{ color:var(--teal); background: color-mix(in srgb, var(--teal) 8%, #fff); border-left-color: var(--teal); }
 
   /* Right sticky CTA */
   .post-cta-side{ position:sticky; top:88px; align-self:start; padding-top:40px; }
   .post-cta-sticky{ display:flex; flex-direction:column; gap:16px; }
 
-  @media(max-width:1100px){
+  @media(max-width:1200px){
     .post-shell{ grid-template-columns:1fr; gap:0; width:min(880px,92vw); }
     .post-toc, .post-cta-side{ display:none; }
     .post-section{ padding-top:28px; }
