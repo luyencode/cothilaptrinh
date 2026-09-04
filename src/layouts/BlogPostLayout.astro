@@ -232,14 +232,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
   .toc-nav{ padding:12px 10px 14px; }
   .toc-nav ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px; }
   .toc-nav li{ line-height:1.4; }
-  .toc-nav a{ display:flex; align-items:center; gap:10px; padding:10px 12px 10px 14px; border-radius:10px; font-size:.86rem; font-weight:600; color:#33425c; border-left:3px solid transparent; border:1px solid transparent; background:#fff; text-decoration:none; transition:.16s background, .16s color, .16s border-color, .16s box-shadow, .16s transform; position:relative; box-shadow:0 1px 2px rgba(16,30,55,.03); }
+  .toc-nav a{ display:flex; align-items:center; gap:10px; padding:8px 11px 8px 13px; border-radius:10px; font-size:.81rem; font-weight:600; letter-spacing:.1px; line-height:1.35; color:#33425c; border-left:3px solid transparent; border:1px solid transparent; background:#fff; text-decoration:none; transition:.16s background, .16s color, .16s border-color, .16s box-shadow, .16s transform; position:relative; box-shadow:0 1px 2px rgba(16,30,55,.03); font-family:var(--font); }
   .toc-nav a::before{ content:''; flex:0 0 auto; width:7px; height:7px; border-radius:50%; background:var(--gray); opacity:.95; transition:.16s background, .16s transform, .16s box-shadow; border:2px solid #fff; box-shadow:0 0 0 1px var(--line); }
   .toc-nav a:hover{ background: color-mix(in srgb, var(--teal) 9%, #fff); color:var(--navy); border-color: color-mix(in srgb, var(--teal) 18%, var(--line)); border-left-color: var(--teal); box-shadow:0 4px 14px rgba(46,130,150,.12); transform:translateX(1px); }
   .toc-nav a:hover::before{ background:var(--teal); border-color:#fff; box-shadow:0 0 0 2px color-mix(in srgb, var(--teal) 22%, transparent); transform:scale(1.12); }
   .toc-nav a.on{ color:var(--navy); background: color-mix(in srgb, var(--gold) 14%, #fff); border-color: color-mix(in srgb, var(--gold) 22%, var(--line)); border-left-color: var(--gold-d); font-weight:700; box-shadow:0 4px 14px rgba(242,193,61,.16); }
   .toc-nav a.on::before{ background:var(--gold-d); border-color:#fff; box-shadow:0 0 0 3px color-mix(in srgb, var(--gold) 26%, transparent); }
   .toc-nav a.on:hover{ background: color-mix(in srgb, var(--gold) 18%, #fff); border-left-color: var(--gold-d); }
-  .toc-nav li.toc-h3 a{ padding-left:26px; font-size:.82rem; font-weight:500; color:var(--muted); background:#fbfcfe; border-color:#f1f3f8; }
+  .toc-nav li.toc-h3 a{ padding-left:26px; font-size:.76rem; font-weight:500; letter-spacing:.1px; line-height:1.35; color:var(--muted); background:#fbfcfe; border-color:#f1f3f8; }
   .toc-nav li.toc-h3 a::before{ width:6px; height:6px; background:#d4dae6; box-shadow:0 0 0 1px #fff; border-width:1.5px; }
   .toc-nav li.toc-h3 a:hover{ color:var(--navy); background:#fff; border-color: color-mix(in srgb, var(--teal) 14%, var(--line)); }
   .toc-nav li.toc-h3 a:hover::before{ background:var(--teal); }
