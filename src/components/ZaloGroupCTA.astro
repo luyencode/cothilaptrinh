@@ -1,0 +1,176 @@
+---
+import { ZALO_GROUP_URL } from '../data/zalo';
+
+interface Props {
+  variant?: 'card' | 'compact' | 'hero' | 'sidebar';
+  showQR?: boolean;
+  title?: string;
+  desc?: string;
+  url?: string;
+  class?: string;
+}
+
+const {
+  variant = 'card',
+  showQR = false,
+  title = 'Chia sẻ về AI, Lập trình, Cách học',
+  desc = 'Bạn vào nhóm Zalo này để cập nhật cách học hiệu quả, cách dùng AI đúng và tài liệu luyện thi Tin học.',
+  url = ZALO_GROUP_URL,
+  class: className = '',
+} = Astro.props;
+
+const isHero = variant === 'hero';
+const isSidebar = variant === 'sidebar';
+const isCompact = variant === 'compact';
+---
+
+{isHero ? (
+  <div class:list={["zg-hero", className]} data-zg-wrap>
+    <p class="zg-kicker">Nhóm Zalo</p>
+    <p class="zg-title">{title}</p>
+    <p class="zg-desc">{desc}</p>
+    <div class="zg-actions">
+      <button type="button" class="btn zg-btn" data-zg={url} data-analytics="zalo-group-hero" aria-label="Tham gia nhóm Zalo Tài liệu và Đề thi Tin học">
+        <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Tham gia nhóm Zalo
+      </button>
+      <a href="https://code.cothilaptrinh.vn" target="_blank" rel="noopener" class="btn btn-light zg-btn-code" data-analytics="code-platform-hero" aria-label="Luyện code ngay tại code.cothilaptrinh.vn">
+        <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6 3 12l5 6M16 6l5 6-5 6"/></svg>
+        Luyện Code Ngay
+      </a>
+    </div>
+    <noscript><p class="zg-noscript">Bật JavaScript để tham gia nhóm Zalo.</p></noscript>
+  </div>
+) : isSidebar ? (
+  <aside class:list={["zg-sidebar", className]} data-zg-wrap aria-label="Nhóm Zalo">
+    <div class="zg-side-head">
+      <span class="zg-side-kicker">Nhóm Zalo</span>
+      <span class="zg-side-badge">Mới</span>
+    </div>
+    <p class="zg-side-title">{title}</p>
+    <p class="zg-side-desc">{desc}</p>
+    {showQR && (
+      <img class="zg-side-qr" src="/assets/blog/hoc-cach-hoc-cung-ai-seri-8-ky-nang-hoc-tap/qr-nhom-zalo.png" alt="Mã QR nhóm Zalo Chia sẻ về AI, Lập trình, Cách học" loading="lazy" width="220" height="220" />
+    )}
+    <div class="zg-side-actions">
+      <button type="button" class="btn zg-btn zg-btn-block" data-zg={url} data-analytics="zalo-group-sidebar" aria-label="Tham gia nhóm Zalo">
+        <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Tham gia nhóm Zalo
+      </button>
+      <a href="https://code.cothilaptrinh.vn" target="_blank" rel="noopener" class="btn btn-navy zg-btn-block" data-analytics="code-platform-sidebar" aria-label="Luyện code ngay tại code.cothilaptrinh.vn">
+        <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6 3 12l5 6M16 6l5 6-5 6"/></svg>
+        Luyện Code Ngay
+      </a>
+    </div>
+    <p class="zg-side-hint">Zalo duyệt bởi quản trị viên · Code chấm tự động miễn phí</p>
+    <noscript><p class="zg-noscript">Bật JavaScript để tham gia nhóm Zalo.</p></noscript>
+  </aside>
+) : isCompact ? (
+  <div class:list={["zg-compact", className]} data-zg-wrap>
+    <div class="zg-compact-text">
+      <span class="zg-compact-kicker">Nhóm Zalo</span>
+      <p class="zg-compact-title">{title}</p>
+      <p class="zg-compact-desc">{desc}</p>
+    </div>
+    <div class="zg-compact-actions">
+      <button type="button" class="btn zg-btn zg-btn-compact" data-zg={url} data-analytics="zalo-group-mid" aria-label="Vào nhóm Zalo">
+        <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Vào nhóm Zalo
+      </button>
+      <a href="https://code.cothilaptrinh.vn" target="_blank" rel="noopener" class="btn btn-navy zg-btn-compact-code" data-analytics="code-platform-mid" aria-label="Luyện code ngay tại code.cothilaptrinh.vn">
+        <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6 3 12l5 6M16 6l5 6-5 6"/></svg>
+        Luyện Code Ngay
+      </a>
+    </div>
+    <noscript><p class="zg-noscript">Bật JavaScript để tham gia nhóm Zalo.</p></noscript>
+  </div>
+) : (
+  <div class:list={["zg-card", className]} data-zg-wrap>
+    <p class="zg-kicker">Nhóm Zalo</p>
+    <p class="zg-card-title">{title}</p>
+    <p class="zg-card-desc">{desc}</p>
+    <div class="zg-actions">
+      <button type="button" class="btn zg-btn" data-zg={url} data-analytics="zalo-group-card" aria-label="Tham gia nhóm Zalo">
+        <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Tham gia nhóm Zalo
+      </button>
+      <a href="https://code.cothilaptrinh.vn" target="_blank" rel="noopener" class="btn btn-navy" data-analytics="code-platform-card" aria-label="Luyện code ngay tại code.cothilaptrinh.vn">
+        <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6 3 12l5 6M16 6l5 6-5 6"/></svg>
+        Luyện Code Ngay
+      </a>
+    </div>
+    <noscript><p class="zg-noscript">Bật JavaScript để tham gia nhóm Zalo.</p></noscript>
+  </div>
+)}
+
+<script>
+  // Single delegated handler for all Zalo group buttons on page.
+  // Navigation happens only via this click/keydown JS (no <a href>), so the
+  // group URL never appears as a crawlable link for bots that scan static HTML.
+  document.addEventListener('click', (e) => {
+    const btn = (e.target as HTMLElement)?.closest?.('[data-zg]') as HTMLElement | null;
+    if (!btn) return;
+    const url = btn.getAttribute('data-zg');
+    if (!url) return;
+    window.open(url, '_blank', 'noopener');
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    const btn = (e.target as HTMLElement)?.closest?.('[data-zg]') as HTMLElement | null;
+    if (!btn) return;
+    e.preventDefault();
+    const url = btn.getAttribute('data-zg');
+    if (!url) return;
+    window.open(url, '_blank', 'noopener');
+  });
+</script>
+
+<style>
+  /* Common */
+  .zg-btn{ background:#1f8b3f; color:#fff; box-shadow:0 10px 24px rgba(31,139,63,.32); border:0; cursor:pointer; }
+  .zg-btn:hover{ background:#197a35; transform:translateY(-2px); }
+  .zg-btn:focus-visible{ outline:2px solid #1f8b3f; outline-offset:2px; }
+  .zg-noscript{ font-size:.82rem; color:#8a96a8; margin-top:8px; }
+  .zg-kicker{ font-size:.78rem; font-weight:800; letter-spacing:1.6px; text-transform:uppercase; color:#1f8b3f; margin:0 0 6px; }
+
+  /* Card (default) - matches previous inline card #f6f9fc */
+  .zg-card{ margin:30px 0; border-radius:22px; padding:24px 26px; background:#f6f9fc; border:1px solid #e9ecf2; }
+  .zg-card-title{ margin:0 0 6px; font-size:1.05rem; font-weight:700; color:#1E3A63; line-height:1.3; }
+  .zg-card-desc{ margin:0 0 14px; color:#4a5b70; line-height:1.6; }
+  .zg-actions{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+  .zg-actions .btn{ white-space:nowrap; }
+  .zg-btn-code{ background:#fff; color:var(--navy); border:1px solid var(--line); box-shadow:0 6px 16px rgba(16,30,55,.08); }
+  .zg-btn-code:hover{ background:#fff; transform:translateY(-2px); box-shadow:0 10px 22px rgba(16,30,55,.14); }
+
+  /* Hero - navy gradient like existing footers */
+  .zg-hero{ margin-top:36px; border-radius:26px; padding:38px clamp(22px,5vw,48px); color:#fff; background:radial-gradient(circle at 88% -30%,rgba(242,193,61,.38),transparent 42%),linear-gradient(135deg,#1E3A63,#13294a); }
+  .zg-hero .zg-kicker{ color:#F2C13D; font-size:.82rem; letter-spacing:2px; }
+  .zg-hero .zg-title{ margin:10px 0 6px; font-size:1.45rem; font-weight:800; line-height:1.3; color:#fff; }
+  .zg-hero .zg-desc{ margin:0 0 22px; color:#dbe7f3; line-height:1.6; }
+
+  /* Compact pill - for mid-article injection */
+  .zg-compact{ margin:26px 0; border-radius:22px; padding:18px 24px; background:linear-gradient(135deg,rgba(31,139,63,.09),rgba(46,134,201,.09)); border:1px solid rgba(31,139,63,.24); display:flex; flex-wrap:wrap; align-items:center; gap:14px; }
+  .zg-compact-text{ flex:1 1 300px; min-width:240px; }
+  .zg-compact-kicker{ font-size:.72rem; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#1f8b3f; }
+  .zg-compact-title{ margin:2px 0 4px; font-weight:700; color:#1E3A63; font-size:.98rem; line-height:1.3; }
+  .zg-compact-desc{ margin:0; font-size:.88rem; color:#4a5b70; line-height:1.5; }
+  .zg-compact-actions{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; flex:0 0 auto; }
+  .zg-btn-compact{ white-space:nowrap; padding:11px 22px; border-radius:999px; font-weight:700; box-shadow:0 10px 22px rgba(31,139,63,.3); flex:0 0 auto; }
+  .zg-btn-compact-code{ white-space:nowrap; padding:11px 18px; border-radius:999px; font-weight:700; font-size:.92rem; flex:0 0 auto; }
+
+  /* Sidebar */
+  .zg-sidebar{ background:#fff; border:1px solid var(--line); border-radius:18px; padding:22px 20px; box-shadow:0 8px 22px rgba(16,30,55,.06); }
+  .zg-side-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; }
+  .zg-side-kicker{ font-size:.72rem; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#1f8b3f; }
+  .zg-side-badge{ font-size:.62rem; font-weight:800; text-transform:uppercase; letter-spacing:.4px; color:#fff; background:linear-gradient(135deg,#1f8b3f,#197a35); padding:3px 8px; border-radius:999px; }
+  .zg-side-title{ font-size:1.02rem; font-weight:800; color:#1E3A63; line-height:1.3; margin:0 0 8px; }
+  .zg-side-desc{ font-size:.88rem; color:#4a5b70; line-height:1.55; margin:0 0 14px; }
+  .zg-side-qr{ width:100%; max-width:220px; height:auto; border-radius:14px; border:1px solid #e9ecf2; display:block; margin:0 auto 14px; }
+  .zg-side-actions{ display:flex; flex-direction:column; gap:10px; }
+  .zg-btn-block{ width:100%; justify-content:center; border-radius:999px; padding:13px 20px; }
+  .zg-side-hint{ font-size:.76rem; color:#8a96a8; text-align:center; margin:10px 0 0; }
+
+  @media(max-width:1100px){
+    .zg-sidebar .zg-side-qr{ max-width:180px; }
+  }
+</style>

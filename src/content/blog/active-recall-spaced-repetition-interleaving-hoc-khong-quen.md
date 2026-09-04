@@ -137,12 +137,6 @@ Một buổi học 90 phút theo kiểu xen kẽ trông như sau:
 
 Bạn nên lưu ý một điều: interleaving hợp với giai đoạn luyện tập, không hợp với lần đầu tiếp xúc khái niệm mới. Khi mới học một dạng bài lần đầu, bạn cứ làm liền vài bài cùng dạng cho quen tay, rồi mới trộn.
 
-<div style="margin:26px 0;border-radius:22px;padding:18px 24px;background:linear-gradient(135deg,rgba(31,139,63,.09),rgba(46,134,201,.09));border:1px solid rgba(31,139,63,.24);display:flex;flex-wrap:wrap;align-items:center;gap:14px;">
-  <span style="display:inline-block;width:34px;height:34px;border-radius:11px;background:#1f8b3f;flex:0 0 auto;"></span>
-  <p style="margin:0;flex:1 1 300px;color:#1E3A63;font-weight:600;">Nhóm Zalo <strong>Chia sẻ về AI, Lập trình, Cách học</strong> là nơi bạn cập nhật cách học hiệu quả, cách dùng AI đúng và tài liệu luyện thi Tin học.</p>
-  <a href="https://zalo.me/g/bv7ry9tw8luzrh1bsqha" style="text-decoration:none;white-space:nowrap;background:#1f8b3f;color:#fff;font-weight:700;padding:11px 22px;border-radius:999px;box-shadow:0 10px 22px rgba(31,139,63,.3);">Vào nhóm Zalo</a>
-</div>
-
 ## Flashcard: một thao tác gộp cả ba kỹ thuật
 
 Flashcard là tấm thẻ có câu hỏi ở mặt trước và câu trả lời ở mặt sau. Nghe rất đơn giản, nhưng nó gộp được cả ba kỹ thuật ở trên: bạn nhìn mặt trước và tự trả lời, đó là Active Recall; bạn gặp lại thẻ đó sau nhiều ngày, đó là Spaced Repetition; bạn xáo bộ thẻ của nhiều môn, đó là Interleaving.
@@ -225,20 +219,6 @@ Prompt cuối cùng là prompt hữu ích nhất, vì viết thẻ tốt khó h�
 
 > Bạn để AI ra đề, còn phần trả lời bạn giữ lại. Ranh giới nằm đúng ở đó, và nó không di chuyển.
 
-<div style="margin:30px 0;border-radius:26px;overflow:hidden;border:1px solid #e9ecf2;box-shadow:0 16px 38px -26px rgba(30,58,99,.5);background:#fff;">
-  <div style="height:8px;background:linear-gradient(90deg,#1f8b3f 0%,#1f8b3f 50%,#2e86c9 50%,#2e86c9 100%);"></div>
-  <div style="display:flex;flex-wrap:wrap;gap:26px;padding:26px clamp(20px,4vw,34px);align-items:center;">
-    <img src="/assets/blog/active-recall-spaced-repetition-interleaving-hoc-khong-quen/qr-nhom-zalo.png" alt="Ma QR nhom Zalo Chia se ve AI, Lap trinh, Cach hoc cua Co Thi Lap Trinh" style="width:216px;flex:0 0 auto;border-radius:16px;border:1px solid #e9ecf2;" />
-    <div style="flex:1 1 300px;min-width:260px;">
-      <p style="margin:0;font-size:.8rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#1f8b3f;">Nhóm Zalo</p>
-      <p style="margin:8px 0 6px;font-size:1.28rem;font-weight:800;line-height:1.3;color:#1E3A63;">Chia sẻ về AI, Lập trình, Cách học</p>
-      <p style="margin:0 0 18px;color:#4a5b71;">Nhóm là nơi bạn cập nhật cách học hiệu quả, cách dùng AI đúng và tài liệu luyện thi Tin học. Nhóm còn có bài mới, đề luyện và kinh nghiệm của các bạn cùng học.</p>
-      <a href="https://zalo.me/g/bv7ry9tw8luzrh1bsqha" style="text-decoration:none;display:inline-block;background:#1f8b3f;color:#fff;font-weight:700;padding:12px 26px;border-radius:999px;box-shadow:0 12px 26px rgba(31,139,63,.32);">Tham gia nhóm Zalo</a>
-      <p style="margin:14px 0 0;font-size:.88rem;color:#75849a;">Bạn quét mã QR bên cạnh, hoặc bấm nút để vào thẳng nhóm.</p>
-    </div>
-  </div>
-</div>
-
 ## Câu hỏi thường gặp về ba kỹ thuật ghi nhớ
 
 **Học kiểu này mất thời gian hơn cách cũ đúng không?**
@@ -262,18 +242,10 @@ Bài số 4 của seri chuyển sang một kỹ năng khác nhưng cùng gốc r
 <div style="margin-top:36px;border-radius:26px;padding:38px clamp(22px,5vw,48px);color:#fff;background:radial-gradient(circle at 88% -30%,rgba(242,193,61,.38),transparent 42%),linear-gradient(135deg,#1E3A63,#13294a);">
   <p style="margin:0;font-size:.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#F2C13D;">Học cách học cùng AI</p>
   <p style="margin:10px 0 6px;font-size:1.45rem;font-weight:800;line-height:1.3;color:#fff;">Bài số 3: Ghi nhớ khoa học</p>
-  <p style="margin:0 0 22px;color:#dbe7f3;">Nhóm Zalo là nơi bạn cập nhật cách học hiệu quả, cách dùng AI đúng và tài liệu luyện thi Tin học. Bạn nào muốn luyện code có chấm điểm ngay thì hệ thống chấm tự động luôn mở.</p>
-  <div style="display:flex;flex-wrap:wrap;gap:26px;align-items:center;margin:0 0 20px;">
-    <img src="/assets/blog/active-recall-spaced-repetition-interleaving-hoc-khong-quen/qr-nhom-zalo.png" alt="Ma QR nhom Zalo Chia se ve AI, Lap trinh, Cach hoc" style="width:180px;flex:0 0 auto;border-radius:16px;background:#fff;padding:6px;" />
-    <div style="flex:1 1 280px;min-width:250px;">
-      <p style="margin:0 0 6px;font-size:.8rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#F2C13D;">Nhóm Zalo</p>
-      <p style="margin:0 0 16px;font-size:1.12rem;font-weight:700;color:#fff;">Chia sẻ về AI, Lập trình, Cách học</p>
-      <p style="display:flex;flex-wrap:wrap;gap:12px;margin:0;">
-        <a class="btn" href="https://zalo.me/g/bv7ry9tw8luzrh1bsqha" style="text-decoration:none;background:#1f8b3f;color:#fff;box-shadow:0 10px 24px rgba(31,139,63,.35);">Tham gia nhóm Zalo</a>
-        <a class="btn btn-gold" href="https://code.cothilaptrinh.vn/" style="text-decoration:none;">Luyện code chấm tự động</a>
-      </p>
-    </div>
-  </div>
+  <p style="margin:0 0 22px;color:#dbe7f3;">Bạn nào muốn luyện code có chấm điểm ngay thì hệ thống chấm tự động luôn mở.</p>
+  <p style="display:flex;flex-wrap:wrap;gap:12px;margin:0 0 18px;">
+    <a class="btn btn-gold" href="https://code.cothilaptrinh.vn/" style="text-decoration:none;">Luyện code chấm tự động</a>
+  </p>
   <p style="margin:0;font-size:.92rem;color:#b7c6dd;">Bài trước của seri:
     <a href="/blog/nao-bo-hoc-nhu-the-nao-12-nguyen-tac-hoc-dung-cach" style="color:#fff;">Não bộ học như thế nào, 12 nguyên tắc</a>.
   </p>

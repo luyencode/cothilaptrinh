@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import ShareButtons from '../components/ShareButtons.astro';
+import ZaloGroupCTA from '../components/ZaloGroupCTA.astro';
 
 interface Props {
   title: string;
@@ -49,21 +50,50 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
     <ShareButtons url={canonicalURL} title={title} />
   </div>
 
-  <section class="section"><div class="wrap narrow post-content">
-    <slot />
-  </div></section>
+  <!-- Post shell: left ToC | center content | right sticky CTA -->
+  <div class="post-shell">
+    <aside class="post-toc" aria-label="Mục lục">
+      <div class="toc-inner">
+        <div class="toc-head">
+          <span class="toc-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3 6h.01M3 12h.01M3 18h.01"/></svg>
+          </span>
+          <p class="toc-title">Mục lục</p>
+          <span class="toc-count" id="toc-count" aria-hidden="true"></span>
+        </div>
+        <nav id="toc-nav" class="toc-nav"></nav>
+      </div>
+    </aside>
 
-  <div class="wrap narrow">
-    <ShareButtons url={canonicalURL} title={title} />
+    <div class="post-main">
+      <section class="section post-section"><div class="post-content" id="post-content">
+        <slot />
+      </div></section>
+
+      <!-- Mobile mid CTA injected via JS after 2nd h2; hidden template for cloning -->
+      <div id="zg-mid-template" hidden>
+        <ZaloGroupCTA variant="compact" showQR={false} title="Chia sẻ về AI, Lập trình, Cách học" desc="Bạn vào nhóm Zalo này để cập nhật cách học hiệu quả, cách dùng AI đúng và tài liệu luyện thi Tin học." />
+      </div>
+
+      <div class="post-bottom-share">
+        <ShareButtons url={canonicalURL} title={title} />
+      </div>
+
+      <section class="section soft post-back"><div class="center">
+        <a class="btn btn-navy" href="/blog"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Xem tất cả bài viết</a>
+      </div></section>
+    </div>
+
+    <aside class="post-cta-side" aria-label="Nhóm Zalo">
+      <div class="post-cta-sticky">
+        <ZaloGroupCTA variant="sidebar" showQR={true} title="Chia sẻ về AI, Lập trình, Cách học" desc="Cập nhật cách học hiệu quả, cách dùng AI đúng và tài liệu luyện thi Tin học. Quét mã hoặc bấm tham gia." />
+      </div>
+    </aside>
   </div>
-
-  <section class="section soft"><div class="wrap narrow center">
-    <a class="btn btn-navy" href="/blog"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Xem tất cả bài viết</a>
-  </div></section>
 </BaseLayout>
 
 <script>
-  // Mo link ngoai o tab moi, giu link noi bo o tab hien tai
+  // External links: open outside cothilaptrinh.vn in new tab
   document.querySelectorAll('.post-content a').forEach((a) => {
     const href = a.getAttribute('href') || '';
     if (/^https?:\/\//i.test(href) && !href.includes('cothilaptrinh.vn')) {
@@ -71,6 +101,113 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
       a.setAttribute('rel', 'noopener noreferrer');
     }
   });
+
+  // Build ToC from h2/h3 inside post-content — improved UI
+  (function(){
+    const content = document.getElementById('post-content');
+    const tocNav = document.getElementById('toc-nav');
+    const tocAside = document.querySelector('.post-toc');
+    const tocCount = document.getElementById('toc-count');
+    if (!content || !tocNav) return;
+    const headings = content.querySelectorAll('h2, h3');
+    if (headings.length < 2) {
+      if (tocAside) (tocAside as HTMLElement).style.display = 'none';
+      return;
+    }
+    if (tocCount) tocCount.textContent = `${headings.length}`;
+    // Astro scopes this file's <style> by stamping a data-astro-cid-* attribute
+    // onto every element rendered from the template. Elements we create here
+    // with document.createElement never get that attribute, so the scoped
+    // .toc-nav a / li / ul rules below would silently never match them.
+    // Copy whatever scope attribute(s) tocNav itself carries onto each node
+    // we build so the ToC item styling (size, hover, active, level distinction)
+    // actually applies.
+    const scopeAttrs = Array.from(tocNav.attributes).filter(a => a.name.startsWith('data-astro-cid'));
+    const stampScope = (el: HTMLElement) => scopeAttrs.forEach(a => el.setAttribute(a.name, a.value));
+    const ul = document.createElement('ul');
+    stampScope(ul);
+    headings.forEach((h, i) => {
+      if (!h.id) {
+        const slug = (h.textContent||'').trim().toLowerCase()
+          .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+          .replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'') || `sec-${i}`;
+        h.id = slug;
+      }
+      const li = document.createElement('li');
+      stampScope(li);
+      const isSub = h.tagName === 'H3';
+      li.className = isSub ? 'toc-sub' : 'toc-main';
+      li.setAttribute('data-level', isSub ? 'sub' : 'main');
+      const a = document.createElement('a');
+      stampScope(a);
+      a.href = `#${h.id}`;
+      a.textContent = (h.textContent||'').trim();
+      a.setAttribute('data-toc-link', '');
+      a.setAttribute('data-level', isSub ? 'sub' : 'main');
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    tocNav.appendChild(ul);
+
+    // Smooth scroll with offset for sticky header
+    tocNav.addEventListener('click', (e) => {
+      const a = (e.target as HTMLElement).closest('a[href^="#"]') as HTMLAnchorElement | null;
+      if (!a) return;
+      const id = a.getAttribute('href')!.slice(1);
+      const target = document.getElementById(id);
+      if (!target) return;
+      e.preventDefault();
+      const top = target.getBoundingClientRect().top + window.scrollY - 88;
+      window.scrollTo({ top, behavior: 'smooth' });
+      history.pushState(null, '', `#${id}`);
+    });
+
+    // Active section highlight — most visible heading wins
+    const links = tocNav.querySelectorAll('a');
+    let activeId: string | null = null;
+    const observer = new IntersectionObserver((entries)=>{
+      const visible = entries.filter(e=>e.isIntersecting).sort((a,b)=> b.intersectionRatio - a.intersectionRatio);
+      if (!visible.length) return;
+      const id = (visible[0].target as HTMLElement).id;
+      if (id !== activeId) {
+        activeId = id;
+        links.forEach(l=> l.classList.toggle('on', l.getAttribute('href')===`#${id}`));
+      }
+    }, { rootMargin:'-18% 0px -62% 0px', threshold:[0, 0.2, 0.5, 1] });
+    headings.forEach(h=> observer.observe(h));
+  })();
+
+  // Mid-article CTA injection: mobile/tablet (<1200px) after 2nd h2, desktop removes it — matches ToC breakpoint
+  (function(){
+    const mq = window.matchMedia('(max-width: 1200px)');
+    const tmpl = document.getElementById('zg-mid-template');
+    let injectedEl: HTMLElement | null = null;
+
+    function inject(){
+      const isMobile = mq.matches;
+      const h2s = document.querySelectorAll('#post-content h2');
+      // Remove existing injected if any
+      if (injectedEl && injectedEl.parentNode) injectedEl.remove();
+      injectedEl = null;
+
+      if (!isMobile) return;
+      if (!tmpl || h2s.length < 2) return;
+      const target = h2s[1] as HTMLElement;
+      // Don't inject if already near the end CTA or if content short
+      if (!target) return;
+      const clone = tmpl.firstElementChild?.cloneNode(true) as HTMLElement | null;
+      if (!clone) return;
+      clone.hidden = false;
+      // The clone contains ZaloGroupCTA markup; its script handler is delegated so no extra init needed
+      // Insert after target's next block: find following sibling that is not heading, or just after h2's parent section
+      // Use target.insertAdjacentElement for simplicity
+      target.insertAdjacentElement('afterend', clone);
+      injectedEl = clone;
+    }
+
+    inject();
+    mq.addEventListener('change', inject);
+  })();
 </script>
 
 <style>
@@ -79,8 +216,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
   .post-meta { display: flex; gap: 14px; align-items: center; margin-top: 18px; flex-wrap: wrap; color: var(--muted); font-size: .9rem; }
   .post-tags { display: flex; gap: 8px; flex-wrap: wrap; }
   .post-tag { background: color-mix(in srgb, var(--c) 12%, #fff); color: var(--navy); padding: 4px 12px; border-radius: 999px; font-weight: 600; font-size: .78rem; }
-  .post-content :global(h2) { margin-top: 2em; margin-bottom: .6em; font-size: 1.5rem; }
-  .post-content :global(h3) { margin-top: 1.6em; margin-bottom: .5em; font-size: 1.2rem; }
+  .post-content :global(h2) { margin-top: 2em; margin-bottom: .6em; font-size: 1.5rem; scroll-margin-top: 88px; }
+  .post-content :global(h3) { margin-top: 1.6em; margin-bottom: .5em; font-size: 1.2rem; scroll-margin-top: 88px; }
   .post-content :global(p) { margin-bottom: 1.1em; line-height: 1.75; }
   .post-content :global(ul), .post-content :global(ol) { margin: 0 0 1.1em 1.3em; line-height: 1.7; }
   .post-content :global(li) { margin-bottom: .4em; }
@@ -90,4 +227,54 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
   .post-content :global(pre) { background: var(--navy-d); color: #e7eefb; padding: 16px 18px; border-radius: 14px; overflow-x: auto; margin: 1.2em 0; }
   .post-content :global(pre code) { background: none; padding: 0; color: inherit; }
   .post-content :global(img) { border-radius: var(--r); margin: 1.2em 0; }
+
+  /* Post shell grid — ToC 300px = CTA 300px (symmetric rails) */
+  .post-shell{ display:grid; grid-template-columns:300px minmax(0,760px) 300px; gap:28px; width:min(1440px,94vw); margin:0 auto; align-items:start; padding-bottom:40px; }
+  .post-main{ min-width:0; }
+  .post-section{ padding: 40px 0 8px; }
+  .post-bottom-share{ padding: 8px 0 0; border-top:1px solid var(--line); margin-top: 8px; }
+  .post-back{ padding: 28px 0 10px; }
+
+  /* ToC left — refined to match site design system */
+  .post-toc{ position:sticky; top:88px; align-self:start; max-height:calc(100vh - 96px); overflow:auto; padding-top:40px; scrollbar-width:thin; scrollbar-color: var(--gray) transparent; }
+  .post-toc::-webkit-scrollbar{ width:5px; }
+  .post-toc::-webkit-scrollbar-thumb{ background:var(--gray); border-radius:999px; }
+  .toc-inner{ background:#fff; border:1px solid var(--line); border-radius:var(--r); padding:0; box-shadow:0 8px 22px rgba(16,30,55,.06); overflow:hidden; }
+  .toc-head{ display:flex; align-items:center; gap:8px; padding:14px 16px 12px; border-bottom:1px solid var(--line); background: linear-gradient(180deg, #fff, #fbfcfe); }
+  .toc-icon{ flex:0 0 auto; width:26px; height:26px; border-radius:8px; display:grid; place-items:center; color:#fff; background: linear-gradient(135deg, var(--navy), var(--teal)); box-shadow:0 4px 10px rgba(30,58,99,.18); }
+  .toc-title{ font-size:.74rem; font-weight:800; letter-spacing:1.4px; text-transform:uppercase; color:var(--navy); margin:0; }
+  .toc-count{ margin-left:auto; font-size:.7rem; font-weight:700; color:var(--muted); background:#f1f3f8; border:1px solid var(--line); padding:2px 7px; border-radius:999px; min-width:20px; text-align:center; line-height:1.4; }
+  .toc-nav{ padding:12px 10px 14px; }
+  .toc-nav ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px; }
+  .toc-nav li{ line-height:1.4; }
+  .toc-nav a{ display:flex; align-items:center; gap:8px; padding:6px 10px 6px 12px; border-radius:9px; font-size:.72rem; font-weight:600; letter-spacing:.2px; line-height:1.32; color:#33425c; border-left:3px solid transparent; border:1px solid transparent; background:#fff; text-decoration:none; transition:.16s background, .16s color, .16s border-color, .16s box-shadow, .16s transform; position:relative; box-shadow:0 1px 2px rgba(16,30,55,.03); font-family:var(--font); }
+  .toc-nav a::before{ content:''; flex:0 0 auto; width:6px; height:6px; border-radius:50%; background:var(--gray); opacity:.95; transition:.16s background, .16s transform, .16s box-shadow; border:2px solid #fff; box-shadow:0 0 0 1px var(--line); }
+  .toc-nav a:hover{ background: color-mix(in srgb, var(--teal) 9%, #fff); color:var(--navy); border-color: color-mix(in srgb, var(--teal) 18%, var(--line)); border-left-color: var(--teal); box-shadow:0 4px 14px rgba(46,130,150,.12); transform:translateX(1px); }
+  .toc-nav a:hover::before{ background:var(--teal); border-color:#fff; box-shadow:0 0 0 2px color-mix(in srgb, var(--teal) 22%, transparent); transform:scale(1.12); }
+  .toc-nav a.on{ color:var(--navy); background: color-mix(in srgb, var(--gold) 14%, #fff); border-color: color-mix(in srgb, var(--gold) 22%, var(--line)); border-left-color: var(--gold-d); font-weight:700; box-shadow:0 4px 14px rgba(242,193,61,.16); }
+  .toc-nav a.on::before{ background:var(--gold-d); border-color:#fff; box-shadow:0 0 0 3px color-mix(in srgb, var(--gold) 26%, transparent); }
+  .toc-nav a.on:hover{ background: color-mix(in srgb, var(--gold) 18%, #fff); border-left-color: var(--gold-d); }
+  /* Explicit level classes — every li has toc-main (h2) or toc-sub (h3) + data-level, so levels are visible in inspector */
+  .toc-nav li.toc-main a{ font-size:.72rem; font-weight:600; color:#33425c; }
+  .toc-nav li.toc-sub a{ padding-left:24px; font-size:.68rem; font-weight:500; letter-spacing:.2px; line-height:1.32; color:var(--muted); background:#fbfcfe; border-color:#f1f3f8; }
+  .toc-nav li.toc-sub a::before{ width:5px; height:5px; background:#d4dae6; box-shadow:0 0 0 1px #fff; border-width:1.5px; }
+  .toc-nav li.toc-sub a:hover{ color:var(--navy); background:#fff; border-color: color-mix(in srgb, var(--teal) 14%, var(--line)); }
+  .toc-nav li.toc-sub a:hover::before{ background:var(--teal); }
+  .toc-nav li.toc-sub a.on{ color:var(--teal); background: color-mix(in srgb, var(--teal) 9%, #fff); border-color: color-mix(in srgb, var(--teal) 18%, var(--line)); border-left-color: var(--teal); }
+  .toc-nav li.toc-sub a.on::before{ background:var(--teal); box-shadow:0 0 0 3px color-mix(in srgb, var(--teal) 18%, transparent); }
+  /* Fallback via data-level (same as classes, survives minification/renames) */
+  .toc-nav li[data-level="sub"] a{ padding-left:24px; }
+
+  /* Right sticky CTA */
+  .post-cta-side{ position:sticky; top:88px; align-self:start; padding-top:40px; }
+  .post-cta-sticky{ display:flex; flex-direction:column; gap:16px; }
+
+  @media(max-width:1200px){
+    .post-shell{ grid-template-columns:1fr; gap:0; width:min(880px,92vw); }
+    .post-toc, .post-cta-side{ display:none; }
+    .post-section{ padding-top:28px; }
+  }
+  @media(max-width:600px){
+    .post-shell{ width:min(880px,92vw); }
+  }
 </style>
