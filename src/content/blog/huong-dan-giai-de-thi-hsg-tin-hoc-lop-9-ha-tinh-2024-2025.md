@@ -135,6 +135,4 @@ Yêu cầu của bài: tìm L nhỏ nhất sao cho mọi đoạn gồm L phần 
     <a class="btn btn-light" href="/khoa-hoc-hsg-chuyen-tin" style="text-decoration:none;">Khóa luyện thi HSG và chuyên Tin</a>
     <a class="btn" href="https://zalo.me/0985188655" style="text-decoration:none;background:#1f8b3f;color:#fff;box-shadow:0 10px 24px rgba(31,139,63,.35);">Tư vấn Zalo: 0985 188 655</a>
   </p>
-  <p style="margin:0;font-size:.92rem;color:#b7c6dd;">Vào nhóm Zalo Tài liệu và Đề thi Tin học qua sidebar để nhận đề mới hàng tuần.
-  </p>
 </div>

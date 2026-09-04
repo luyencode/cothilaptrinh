@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 680" width="1600" height="680" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif">
+  <rect width="1600" height="680" rx="28" fill="#f6f9fc"/>
+  <rect x="1" y="1" width="1598" height="678" rx="28" fill="none" stroke="#e9ecf2" stroke-width="2"/>
+  <text x="800" y="76" text-anchor="middle" font-size="38" font-weight="bold" fill="#1E3A63">Hai bộ cài có sẵn trình biên dịch cho Windows</text>
+  <text x="800" y="120" text-anchor="middle" font-size="23" fill="#75849a">Bạn tải một file cài đặt, bấm Next vài lần là gõ code được</text>
+
+  <rect x="80" y="176" width="680" height="400" rx="26" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="80" y="176" width="680" height="80" rx="26" fill="#1f8b3f"/>
+  <rect x="80" y="226" width="680" height="30" fill="#1f8b3f"/>
+  <text x="420" y="228" text-anchor="middle" font-size="29" font-weight="bold" fill="#ffffff">Code::Blocks</text>
+  <text x="120" y="304" font-size="21" fill="#2b3a4f">Bạn tải bản cài có chữ mingw trong tên file</text>
+  <text x="120" y="344" font-size="21" fill="#2b3a4f">Bản không có chữ mingw thì thiếu trình biên dịch</text>
+  <text x="120" y="384" font-size="21" fill="#2b3a4f">Bạn tạo file bằng lệnh File, New, Empty file</text>
+  <text x="120" y="424" font-size="21" fill="#2b3a4f">Phím F9 vừa dịch vừa chạy chương trình</text>
+  <rect x="120" y="466" width="600" height="72" rx="20" fill="#eaf6ed"/>
+  <text x="150" y="498" font-size="20" font-weight="bold" fill="#1f8b3f">Điểm mạnh</text>
+  <text x="150" y="526" font-size="20" fill="#2b3a4f">Giao diện gọn, nhiều trường phổ thông đang dùng</text>
+
+  <rect x="820" y="176" width="680" height="400" rx="26" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="820" y="176" width="680" height="80" rx="26" fill="#2e86c9"/>
+  <rect x="820" y="226" width="680" height="30" fill="#2e86c9"/>
+  <text x="1160" y="228" text-anchor="middle" font-size="29" font-weight="bold" fill="#ffffff">Embarcadero Dev-C++</text>
+  <text x="860" y="304" font-size="21" fill="#2b3a4f">Bạn tải từ trang chính thức của Embarcadero</text>
+  <text x="860" y="344" font-size="21" fill="#2b3a4f">Bản này đã có sẵn trình biên dịch TDM-GCC</text>
+  <text x="860" y="384" font-size="21" fill="#2b3a4f">Bạn tạo file bằng lệnh File, New, Source File</text>
+  <text x="860" y="424" font-size="21" fill="#2b3a4f">Phím F11 vừa dịch vừa chạy chương trình</text>
+  <rect x="860" y="466" width="600" height="72" rx="20" fill="#eaf3fb"/>
+  <text x="890" y="498" font-size="20" font-weight="bold" fill="#2e86c9">Điểm mạnh</text>
+  <text x="890" y="526" font-size="20" fill="#2b3a4f">Nhẹ, quen thuộc với học sinh thi Tin học</text>
+
+  <text x="800" y="626" text-anchor="middle" font-size="23" font-weight="bold" fill="#1E3A63">Bạn cài một trong hai là đủ, không cần cài cả hai</text>
+  <text x="1520" y="662" text-anchor="end" font-size="20" fill="#75849a" opacity="0.55">cothilaptrinh.vn</text>
+</svg>

@@ -217,18 +217,11 @@ Bài số 2 của seri bắt đầu từ nền móng: não bộ thực sự họ
 <div style="margin-top:36px;border-radius:26px;padding:38px clamp(22px,5vw,48px);color:#fff;background:radial-gradient(circle at 88% -30%,rgba(242,193,61,.38),transparent 42%),linear-gradient(135deg,#1E3A63,#13294a);">
   <p style="margin:0;font-size:.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#F2C13D;">Học cách học cùng AI</p>
   <p style="margin:10px 0 6px;font-size:1.45rem;font-weight:800;line-height:1.3;color:#fff;">Seri 10 bài về 8 kỹ năng học tập</p>
-  <p style="margin:0 0 22px;color:#dbe7f3;">Nhóm Zalo là nơi bạn cập nhật cách học hiệu quả, cách dùng AI đúng và tài liệu luyện thi Tin học. Bạn nào muốn luyện code có chấm điểm ngay thì hệ thống chấm tự động luôn mở.</p>
-  <div style="display:flex;flex-wrap:wrap;gap:26px;align-items:center;margin:0 0 20px;">
-    <img src="/assets/blog/hoc-cach-hoc-cung-ai-seri-8-ky-nang-hoc-tap/qr-nhom-zalo.png" alt="Ma QR nhom Zalo Chia se ve AI, Lap trinh, Cach hoc" style="width:180px;flex:0 0 auto;border-radius:16px;background:#fff;padding:6px;" />
-    <div style="flex:1 1 280px;min-width:250px;">
-      <p style="margin:0 0 6px;font-size:.8rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#F2C13D;">Nhóm Zalo</p>
-      <p style="margin:0 0 16px;font-size:1.12rem;font-weight:700;color:#fff;">Chia sẻ về AI, Lập trình, Cách học</p>
-      <p style="display:flex;flex-wrap:wrap;gap:12px;margin:0;">
-        <button type="button" class="btn" data-zg="aHR0cHM6Ly96YWxvLm1lL2cvYnY3cnk5dHc4bHV6cmgxc2JzcWhh" style="background:#1f8b3f;color:#fff;box-shadow:0 10px 24px rgba(31,139,63,.35);" aria-label="Tham gia nhóm Zalo">Tham gia nhóm Zalo</button>
-        <a class="btn btn-gold" href="https://code.cothilaptrinh.vn/" style="text-decoration:none;">Luyện code chấm tự động</a>
-      </p>
-    </div>
-  </div>
+  <p style="margin:0 0 22px;color:#dbe7f3;">Bạn nào muốn luyện code có chấm điểm ngay thì hệ thống chấm tự động luôn mở.</p>
+  <p style="display:flex;flex-wrap:wrap;gap:12px;margin:0 0 18px;">
+    <a class="btn btn-gold" href="https://code.cothilaptrinh.vn/" style="text-decoration:none;">Luyện code chấm tự động</a>
+    <a class="btn btn-light" href="/khoa-hoc" style="text-decoration:none;">Các khóa học lập trình</a>
+  </p>
   <p style="margin:0;font-size:.92rem;color:#b7c6dd;">Công cụ dùng trong seri:
     <a href="https://chatgpt.com/" style="color:#fff;">ChatGPT</a>,
     <a href="https://claude.ai/" style="color:#fff;">Claude</a>,

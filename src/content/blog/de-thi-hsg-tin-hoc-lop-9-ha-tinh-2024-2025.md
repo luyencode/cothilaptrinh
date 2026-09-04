@@ -309,6 +309,4 @@ Cả bốn bài của đề này nằm trong contest tại https://code.cothilap
     <a class="btn btn-light" href="/khoa-hoc-hsg-chuyen-tin" style="text-decoration:none;">Khóa luyện thi HSG và chuyên Tin</a>
     <a class="btn" href="https://zalo.me/0985188655" style="text-decoration:none;background:#1f8b3f;color:#fff;box-shadow:0 10px 24px rgba(31,139,63,.35);">Tư vấn Zalo: 0985 188 655</a>
   </p>
-  <p style="margin:0;font-size:.92rem;color:#b7c6dd;">Tham gia nhóm Zalo Tài liệu và Đề thi Tin học qua sidebar để không bỏ lỡ đề thi mới.
-  </p>
 </div>

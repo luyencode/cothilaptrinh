@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 680" width="1600" height="680" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif">
+  <rect width="1600" height="680" rx="28" fill="#f6f9fc"/>
+  <rect x="1" y="1" width="1598" height="678" rx="28" fill="none" stroke="#e9ecf2" stroke-width="2"/>
+  <text x="800" y="76" text-anchor="middle" font-size="38" font-weight="bold" fill="#1E3A63">Chạy Hello World trên OneCompiler trong bốn bước</text>
+  <text x="800" y="120" text-anchor="middle" font-size="23" fill="#75849a">Bạn không cần cài phần mềm và không cần tạo tài khoản</text>
+
+  <rect x="80" y="180" width="330" height="230" rx="24" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <circle cx="245" cy="236" r="30" fill="#2e86c9"/>
+  <text x="245" y="247" text-anchor="middle" font-size="30" font-weight="bold" fill="#ffffff">1</text>
+  <text x="245" y="308" text-anchor="middle" font-size="23" font-weight="bold" fill="#1E3A63">Mở trang web</text>
+  <text x="245" y="344" text-anchor="middle" font-size="20" fill="#2b3a4f">onecompiler.com/cpp</text>
+  <text x="245" y="376" text-anchor="middle" font-size="20" fill="#75849a">bằng Chrome hoặc Edge</text>
+
+  <rect x="440" y="180" width="330" height="230" rx="24" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <circle cx="605" cy="236" r="30" fill="#2e86c9"/>
+  <text x="605" y="247" text-anchor="middle" font-size="30" font-weight="bold" fill="#ffffff">2</text>
+  <text x="605" y="308" text-anchor="middle" font-size="23" font-weight="bold" fill="#1E3A63">Xóa code mẫu</text>
+  <text x="605" y="344" text-anchor="middle" font-size="20" fill="#2b3a4f">Bạn bôi đen rồi xóa</text>
+  <text x="605" y="376" text-anchor="middle" font-size="20" fill="#75849a">phần trang có sẵn</text>
+
+  <rect x="800" y="180" width="330" height="230" rx="24" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <circle cx="965" cy="236" r="30" fill="#1f8b3f"/>
+  <text x="965" y="247" text-anchor="middle" font-size="30" font-weight="bold" fill="#ffffff">3</text>
+  <text x="965" y="308" text-anchor="middle" font-size="23" font-weight="bold" fill="#1E3A63">Gõ chương trình</text>
+  <text x="965" y="344" text-anchor="middle" font-size="20" fill="#2b3a4f">Bạn gõ tay, không chép</text>
+  <text x="965" y="376" text-anchor="middle" font-size="20" fill="#75849a">để nhớ được cú pháp</text>
+
+  <rect x="1160" y="180" width="330" height="230" rx="24" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <circle cx="1325" cy="236" r="30" fill="#1f8b3f"/>
+  <text x="1325" y="247" text-anchor="middle" font-size="30" font-weight="bold" fill="#ffffff">4</text>
+  <text x="1325" y="308" text-anchor="middle" font-size="23" font-weight="bold" fill="#1E3A63">Bấm nút Run</text>
+  <text x="1325" y="344" text-anchor="middle" font-size="20" fill="#2b3a4f">Kết quả hiện bên phải</text>
+  <text x="1325" y="376" text-anchor="middle" font-size="20" fill="#75849a">trong khung Output</text>
+
+  <rect x="80" y="452" width="1410" height="130" rx="24" fill="#13294a"/>
+  <text x="120" y="496" font-size="20" fill="#F2C13D" font-weight="bold">Khung nhập liệu STDIN</text>
+  <text x="120" y="536" font-size="21" fill="#ffffff">Bài tập nào yêu cầu nhập số liệu, bạn gõ dữ liệu vào ô STDIN ở thẻ I/O rồi mới bấm Run.</text>
+  <text x="120" y="566" font-size="20" fill="#b7c6dd">Chương trình đọc dữ liệu từ ô này giống như đọc từ bàn phím.</text>
+  <text x="1520" y="662" text-anchor="end" font-size="20" fill="#75849a" opacity="0.55">cothilaptrinh.vn</text>
+</svg>

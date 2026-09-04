@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 770" width="1600" height="770" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif">
+  <rect width="1600" height="770" rx="28" fill="#f6f9fc"/>
+  <rect x="1" y="1" width="1598" height="768" rx="28" fill="none" stroke="#e9ecf2" stroke-width="2"/>
+  <text x="800" y="78" text-anchor="middle" font-size="39" font-weight="bold" fill="#1E3A63">Học khối và học xen kẽ khác nhau thế nào</text>
+  <text x="800" y="124" text-anchor="middle" font-size="24" fill="#75849a">Đề thi không ghi sẵn dạng bài, nên nhận ra dạng cũng là một kỹ năng cần luyện</text>
+  <text x="120" y="216" font-size="26" font-weight="bold" fill="#c0392b">HỌC KHỐI</text>
+  <text x="120" y="248" font-size="22" fill="#75849a">Cày một môn suốt buổi</text>
+  <rect x="470" y="186" width="158" height="74" rx="18" fill="#c0392b"/>
+  <text x="549" y="233" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">Toán</text>
+  <rect x="644" y="186" width="158" height="74" rx="18" fill="#c0392b"/>
+  <text x="723" y="233" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">Toán</text>
+  <rect x="818" y="186" width="158" height="74" rx="18" fill="#c0392b"/>
+  <text x="897" y="233" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">Toán</text>
+  <rect x="992" y="186" width="158" height="74" rx="18" fill="#c0392b"/>
+  <text x="1071" y="233" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">Toán</text>
+  <rect x="1166" y="186" width="158" height="74" rx="18" fill="#c0392b"/>
+  <text x="1245" y="233" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">Toán</text>
+  <rect x="1340" y="186" width="158" height="74" rx="18" fill="#c0392b"/>
+  <text x="1419" y="233" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">Toán</text>
+  <text x="470" y="300" font-size="22" fill="#1E3A63">Làm đúng nhiều hơn lúc luyện, quên nhanh hơn lúc thi</text>
+  <text x="120" y="426" font-size="26" font-weight="bold" fill="#1f8b3f">HỌC XEN KẼ</text>
+  <text x="120" y="458" font-size="22" fill="#75849a">Trộn các môn trong một buổi</text>
+  <rect x="470" y="396" width="158" height="74" rx="18" fill="#1f8b3f"/>
+  <text x="549" y="443" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">Toán</text>
+  <rect x="644" y="396" width="158" height="74" rx="18" fill="#2e86c9"/>
+  <text x="723" y="443" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">Văn</text>
+  <rect x="818" y="396" width="158" height="74" rx="18" fill="#F2C13D"/>
+  <text x="897" y="443" text-anchor="middle" font-size="24" font-weight="bold" fill="#13294a">Anh</text>
+  <rect x="992" y="396" width="158" height="74" rx="18" fill="#1f8b3f"/>
+  <text x="1071" y="443" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">Toán</text>
+  <rect x="1166" y="396" width="158" height="74" rx="18" fill="#2e86c9"/>
+  <text x="1245" y="443" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">Văn</text>
+  <rect x="1340" y="396" width="158" height="74" rx="18" fill="#F2C13D"/>
+  <text x="1419" y="443" text-anchor="middle" font-size="24" font-weight="bold" fill="#13294a">Anh</text>
+  <text x="470" y="510" font-size="22" fill="#1E3A63">Khó hơn lúc luyện, nhớ chắc hơn hẳn lúc thi</text>
+  <rect x="290" y="596" width="1020" height="86" rx="26" fill="#ffffff" stroke="#F2C13D" stroke-width="3"/>
+  <text x="800" y="648" text-anchor="middle" font-size="26" font-weight="bold" fill="#1E3A63">Bạn trộn khi đã quen dạng, không trộn ngay lần đầu gặp khái niệm mới</text>
+  <text x="800" y="742" text-anchor="middle" font-size="22" fill="#75849a">Cô Thi Lập Trình  |  cothilaptrinh.vn</text>
+</svg>
