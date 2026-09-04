@@ -115,7 +115,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
       return;
     }
     if (tocCount) tocCount.textContent = `${headings.length}`;
+    // Astro scopes this file's <style> by stamping a data-astro-cid-* attribute
+    // onto every element rendered from the template. Elements we create here
+    // with document.createElement never get that attribute, so the scoped
+    // .toc-nav a / li / ul rules below would silently never match them.
+    // Copy whatever scope attribute(s) tocNav itself carries onto each node
+    // we build so the ToC item styling (size, hover, active, level distinction)
+    // actually applies.
+    const scopeAttrs = Array.from(tocNav.attributes).filter(a => a.name.startsWith('data-astro-cid'));
+    const stampScope = (el: HTMLElement) => scopeAttrs.forEach(a => el.setAttribute(a.name, a.value));
     const ul = document.createElement('ul');
+    stampScope(ul);
     headings.forEach((h, i) => {
       if (!h.id) {
         const slug = (h.textContent||'').trim().toLowerCase()
@@ -124,10 +134,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
         h.id = slug;
       }
       const li = document.createElement('li');
+      stampScope(li);
       const isSub = h.tagName === 'H3';
       li.className = isSub ? 'toc-sub' : 'toc-main';
       li.setAttribute('data-level', isSub ? 'sub' : 'main');
       const a = document.createElement('a');
+      stampScope(a);
       a.href = `#${h.id}`;
       a.textContent = (h.textContent||'').trim();
       a.setAttribute('data-toc-link', '');
