@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import ShareButtons from '../components/ShareButtons.astro';
+import ZaloGroupCTA from '../components/ZaloGroupCTA.astro';
 
 interface Props {
   title: string;
@@ -49,21 +50,44 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
     <ShareButtons url={canonicalURL} title={title} />
   </div>
 
-  <section class="section"><div class="wrap narrow post-content">
-    <slot />
-  </div></section>
+  <!-- Post shell: left ToC | center content | right sticky CTA -->
+  <div class="post-shell">
+    <aside class="post-toc" aria-label="Mục lục">
+      <div class="toc-inner">
+        <p class="toc-title">Mục lục</p>
+        <nav id="toc-nav" class="toc-nav"></nav>
+      </div>
+    </aside>
 
-  <div class="wrap narrow">
-    <ShareButtons url={canonicalURL} title={title} />
+    <div class="post-main">
+      <section class="section post-section"><div class="post-content" id="post-content">
+        <slot />
+      </div></section>
+
+      <!-- Mobile mid CTA injected via JS after 2nd h2; hidden template for cloning -->
+      <div id="zg-mid-template" hidden>
+        <ZaloGroupCTA variant="compact" showQR={false} title="Chia sẻ về AI, Lập trình, Cách học" desc="Bạn vào nhóm Zalo này để cập nhật cách học hiệu quả, cách dùng AI đúng và tài liệu luyện thi Tin học." />
+      </div>
+
+      <div class="post-bottom-share">
+        <ShareButtons url={canonicalURL} title={title} />
+      </div>
+
+      <section class="section soft post-back"><div class="center">
+        <a class="btn btn-navy" href="/blog"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Xem tất cả bài viết</a>
+      </div></section>
+    </div>
+
+    <aside class="post-cta-side" aria-label="Nhóm Zalo">
+      <div class="post-cta-sticky">
+        <ZaloGroupCTA variant="sidebar" showQR={true} title="Chia sẻ về AI, Lập trình, Cách học" desc="Cập nhật cách học hiệu quả, cách dùng AI đúng và tài liệu luyện thi Tin học. Quét mã hoặc bấm tham gia." />
+      </div>
+    </aside>
   </div>
-
-  <section class="section soft"><div class="wrap narrow center">
-    <a class="btn btn-navy" href="/blog"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Xem tất cả bài viết</a>
-  </div></section>
 </BaseLayout>
 
 <script>
-  // Mo link ngoai o tab moi, giu link noi bo o tab hien tai
+  // External links: open outside cothilaptrinh.vn in new tab
   document.querySelectorAll('.post-content a').forEach((a) => {
     const href = a.getAttribute('href') || '';
     if (/^https?:\/\//i.test(href) && !href.includes('cothilaptrinh.vn')) {
@@ -71,6 +95,80 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
       a.setAttribute('rel', 'noopener noreferrer');
     }
   });
+
+  // Build ToC from h2/h3 inside post-content
+  (function(){
+    const content = document.getElementById('post-content');
+    const tocNav = document.getElementById('toc-nav');
+    const tocAside = document.querySelector('.post-toc');
+    if (!content || !tocNav) return;
+    const headings = content.querySelectorAll('h2, h3');
+    if (headings.length < 2) {
+      if (tocAside) (tocAside as HTMLElement).style.display = 'none';
+      return;
+    }
+    const ul = document.createElement('ul');
+    headings.forEach((h, i) => {
+      if (!h.id) {
+        const slug = (h.textContent||'').trim().toLowerCase()
+          .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+          .replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'') || `sec-${i}`;
+        h.id = slug;
+      }
+      const li = document.createElement('li');
+      li.className = h.tagName === 'H3' ? 'toc-h3' : 'toc-h2';
+      const a = document.createElement('a');
+      a.href = `#${h.id}`;
+      a.textContent = (h.textContent||'').trim();
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    tocNav.appendChild(ul);
+
+    // Active section highlight
+    const links = tocNav.querySelectorAll('a');
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          const id = e.target.id;
+          links.forEach(l=> l.classList.toggle('on', l.getAttribute('href')===`#${id}`));
+        }
+      });
+    }, { rootMargin:'-20% 0px -60% 0px', threshold:0 });
+    headings.forEach(h=> observer.observe(h));
+  })();
+
+  // Mid-article CTA injection: mobile (<1100px) after 2nd h2, desktop removes it
+  (function(){
+    const mq = window.matchMedia('(max-width: 1100px)');
+    const tmpl = document.getElementById('zg-mid-template');
+    let injectedEl: HTMLElement | null = null;
+
+    function inject(){
+      const isMobile = mq.matches;
+      const h2s = document.querySelectorAll('#post-content h2');
+      // Remove existing injected if any
+      if (injectedEl && injectedEl.parentNode) injectedEl.remove();
+      injectedEl = null;
+
+      if (!isMobile) return;
+      if (!tmpl || h2s.length < 2) return;
+      const target = h2s[1] as HTMLElement;
+      // Don't inject if already near the end CTA or if content short
+      if (!target) return;
+      const clone = tmpl.firstElementChild?.cloneNode(true) as HTMLElement | null;
+      if (!clone) return;
+      clone.hidden = false;
+      // The clone contains ZaloGroupCTA markup; its script handler is delegated so no extra init needed
+      // Insert after target's next block: find following sibling that is not heading, or just after h2's parent section
+      // Use target.insertAdjacentElement for simplicity
+      target.insertAdjacentElement('afterend', clone);
+      injectedEl = clone;
+    }
+
+    inject();
+    mq.addEventListener('change', inject);
+  })();
 </script>
 
 <style>
@@ -79,8 +177,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
   .post-meta { display: flex; gap: 14px; align-items: center; margin-top: 18px; flex-wrap: wrap; color: var(--muted); font-size: .9rem; }
   .post-tags { display: flex; gap: 8px; flex-wrap: wrap; }
   .post-tag { background: color-mix(in srgb, var(--c) 12%, #fff); color: var(--navy); padding: 4px 12px; border-radius: 999px; font-weight: 600; font-size: .78rem; }
-  .post-content :global(h2) { margin-top: 2em; margin-bottom: .6em; font-size: 1.5rem; }
-  .post-content :global(h3) { margin-top: 1.6em; margin-bottom: .5em; font-size: 1.2rem; }
+  .post-content :global(h2) { margin-top: 2em; margin-bottom: .6em; font-size: 1.5rem; scroll-margin-top: 88px; }
+  .post-content :global(h3) { margin-top: 1.6em; margin-bottom: .5em; font-size: 1.2rem; scroll-margin-top: 88px; }
   .post-content :global(p) { margin-bottom: 1.1em; line-height: 1.75; }
   .post-content :global(ul), .post-content :global(ol) { margin: 0 0 1.1em 1.3em; line-height: 1.7; }
   .post-content :global(li) { margin-bottom: .4em; }
@@ -90,4 +188,35 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
   .post-content :global(pre) { background: var(--navy-d); color: #e7eefb; padding: 16px 18px; border-radius: 14px; overflow-x: auto; margin: 1.2em 0; }
   .post-content :global(pre code) { background: none; padding: 0; color: inherit; }
   .post-content :global(img) { border-radius: var(--r); margin: 1.2em 0; }
+
+  /* Post shell grid */
+  .post-shell{ display:grid; grid-template-columns:220px minmax(0,760px) 300px; gap:32px; width:min(1280px,94vw); margin:0 auto; align-items:start; padding-bottom:40px; }
+  .post-main{ min-width:0; }
+  .post-section{ padding: 40px 0 8px; }
+  .post-bottom-share{ padding: 8px 0 0; border-top:1px solid var(--line); margin-top: 8px; }
+  .post-back{ padding: 28px 0 10px; }
+
+  /* ToC left */
+  .post-toc{ position:sticky; top:88px; align-self:start; max-height:calc(100vh - 100px); overflow:auto; padding-top:40px; }
+  .toc-inner{ background:#fff; border:1px solid var(--line); border-radius:14px; padding:16px 14px; box-shadow:0 6px 16px rgba(16,30,55,.05); }
+  .toc-title{ font-size:.72rem; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--muted); margin:0 0 10px; }
+  .toc-nav ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:2px; }
+  .toc-nav li{ line-height:1.35; }
+  .toc-nav a{ display:block; padding:6px 8px; border-radius:8px; font-size:.86rem; font-weight:600; color:#33425c; border-left:2px solid transparent; text-decoration:none; }
+  .toc-nav a:hover{ background:#f1f3f8; color:var(--navy); }
+  .toc-nav a.on{ color:var(--teal); background:color-mix(in srgb, var(--gold) 14%, #fff); border-left-color:var(--teal); font-weight:700; }
+  .toc-nav li.toc-h3 a{ padding-left:18px; font-size:.82rem; color:var(--muted); }
+
+  /* Right sticky CTA */
+  .post-cta-side{ position:sticky; top:88px; align-self:start; padding-top:40px; }
+  .post-cta-sticky{ display:flex; flex-direction:column; gap:16px; }
+
+  @media(max-width:1100px){
+    .post-shell{ grid-template-columns:1fr; gap:0; width:min(880px,92vw); }
+    .post-toc, .post-cta-side{ display:none; }
+    .post-section{ padding-top:28px; }
+  }
+  @media(max-width:600px){
+    .post-shell{ width:min(880px,92vw); }
+  }
 </style>

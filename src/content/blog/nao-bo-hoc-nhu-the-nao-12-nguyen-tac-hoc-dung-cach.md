@@ -139,12 +139,6 @@ Ba chi tiết quyết định nằm ở chỗ ít ai để ý. Thứ nhất, b�
 
 Về giấc ngủ, Viện Hàn lâm Y học Giấc ngủ Hoa Kỳ khuyến nghị trẻ 6 đến 12 tuổi ngủ 9 đến 12 tiếng mỗi ngày, và thiếu niên 13 đến 18 tuổi ngủ 8 đến 10 tiếng. Bạn cắt giấc ngủ để ôn thêm một tiếng thì thường mất nhiều hơn được, vì phần củng cố trí nhớ diễn ra đúng trong lúc bạn ngủ.
 
-<div style="margin:26px 0;border-radius:22px;padding:18px 24px;background:linear-gradient(135deg,rgba(31,139,63,.09),rgba(46,134,201,.09));border:1px solid rgba(31,139,63,.24);display:flex;flex-wrap:wrap;align-items:center;gap:14px;">
-  <span style="display:inline-block;width:34px;height:34px;border-radius:11px;background:#1f8b3f;flex:0 0 auto;"></span>
-  <p style="margin:0;flex:1 1 300px;color:#1E3A63;font-weight:600;">Nhóm Zalo <strong>Chia sẻ về AI, Lập trình, Cách học</strong> là nơi bạn cập nhật cách học hiệu quả, cách dùng AI đúng và tài liệu luyện thi Tin học.</p>
-  <a href="https://zalo.me/g/bv7ry9tw8luzrh1bsqha" style="text-decoration:none;white-space:nowrap;background:#1f8b3f;color:#fff;font-weight:700;padding:11px 22px;border-radius:999px;box-shadow:0 10px 22px rgba(31,139,63,.3);">Vào nhóm Zalo</a>
-</div>
-
 ## Nhật ký học tập: bạn phải đo trước khi sửa
 
 Bạn đọc xong 12 nguyên tắc thì rất dễ tin là mình đã hiểu. Nhưng bạn chỉ biết mình đang vi phạm nguyên tắc nào khi có số liệu của chính mình. Đó là lý do bài tập của bài này là một quyển nhật ký bảy ngày.
@@ -223,20 +217,6 @@ Prompt thứ ba là prompt đáng giá nhất, vì nó buộc AI làm việc tr�
 
 Với môn Tin học, bạn có thể áp dụng ngay nguyên tắc Attention vào một buổi luyện code: bạn làm 20 phút rồi nộp bài lấy phản hồi, thay vì ngồi liền 90 phút mới nộp. Hệ thống [chấm tự động code.cothilaptrinh.vn](https://code.cothilaptrinh.vn/) trả kết quả ngay sau khi bạn nộp, nên bạn chia buổi luyện thành nhiều chặng ngắn mà vẫn biết mình đang tiến hay lùi.
 
-<div style="margin:30px 0;border-radius:26px;overflow:hidden;border:1px solid #e9ecf2;box-shadow:0 16px 38px -26px rgba(30,58,99,.5);background:#fff;">
-  <div style="height:8px;background:linear-gradient(90deg,#1f8b3f 0%,#1f8b3f 50%,#2e86c9 50%,#2e86c9 100%);"></div>
-  <div style="display:flex;flex-wrap:wrap;gap:26px;padding:26px clamp(20px,4vw,34px);align-items:center;">
-    <img src="/assets/blog/nao-bo-hoc-nhu-the-nao-12-nguyen-tac-hoc-dung-cach/qr-nhom-zalo.png" alt="Ma QR nhom Zalo Chia se ve AI, Lap trinh, Cach hoc cua Co Thi Lap Trinh" style="width:216px;flex:0 0 auto;border-radius:16px;border:1px solid #e9ecf2;" />
-    <div style="flex:1 1 300px;min-width:260px;">
-      <p style="margin:0;font-size:.8rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#1f8b3f;">Nhóm Zalo</p>
-      <p style="margin:8px 0 6px;font-size:1.28rem;font-weight:800;line-height:1.3;color:#1E3A63;">Chia sẻ về AI, Lập trình, Cách học</p>
-      <p style="margin:0 0 18px;color:#4a5b71;">Nhóm là nơi bạn cập nhật cách học hiệu quả, cách dùng AI đúng và tài liệu luyện thi Tin học. Nhóm còn có bài mới, đề luyện và kinh nghiệm của các bạn cùng học.</p>
-      <a href="https://zalo.me/g/bv7ry9tw8luzrh1bsqha" style="text-decoration:none;display:inline-block;background:#1f8b3f;color:#fff;font-weight:700;padding:12px 26px;border-radius:999px;box-shadow:0 12px 26px rgba(31,139,63,.32);">Tham gia nhóm Zalo</a>
-      <p style="margin:14px 0 0;font-size:.88rem;color:#75849a;">Bạn quét mã QR bên cạnh, hoặc bấm nút để vào thẳng nhóm.</p>
-    </div>
-  </div>
-</div>
-
 ## Câu hỏi thường gặp về não bộ và việc học
 
 **Nghe nhạc khi học có thực sự xấu không?**
@@ -267,7 +247,7 @@ Bài số 3 của seri đi vào phần được hỏi nhiều nhất: vì sao b�
       <p style="margin:0 0 6px;font-size:.8rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#F2C13D;">Nhóm Zalo</p>
       <p style="margin:0 0 16px;font-size:1.12rem;font-weight:700;color:#fff;">Chia sẻ về AI, Lập trình, Cách học</p>
       <p style="display:flex;flex-wrap:wrap;gap:12px;margin:0;">
-        <a class="btn" href="https://zalo.me/g/bv7ry9tw8luzrh1bsqha" style="text-decoration:none;background:#1f8b3f;color:#fff;box-shadow:0 10px 24px rgba(31,139,63,.35);">Tham gia nhóm Zalo</a>
+        <button type="button" class="btn" data-zg="aHR0cHM6Ly96YWxvLm1lL2cvYnY3cnk5dHc4bHV6cmgxc2JzcWhh" style="background:#1f8b3f;color:#fff;box-shadow:0 10px 24px rgba(31,139,63,.35);" aria-label="Tham gia nhóm Zalo">Tham gia nhóm Zalo</button>
         <a class="btn btn-gold" href="https://code.cothilaptrinh.vn/" style="text-decoration:none;">Luyện code chấm tự động</a>
       </p>
     </div>

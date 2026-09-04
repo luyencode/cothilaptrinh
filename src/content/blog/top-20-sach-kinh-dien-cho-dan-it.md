@@ -68,13 +68,6 @@ Hai cuốn còn lại nói về việc sửa lại thứ đã viết. **[Refacto
 
 Bạn hãy chọn một dự án cũ của mình, mỗi tối đọc một phép biến đổi trong danh mục của Refactoring và áp dụng đúng phép đó vào dự án. Bạn sẽ nhớ lâu hơn so với việc đọc liền ba cuốn trong một tuần.
 
-<div style="margin:30px 0;border-radius:22px;padding:24px 26px;background:#f6f9fc;border:1px solid #e9ecf2;">
-  <p style="margin:0 0 8px;font-size:.78rem;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:#1f8b3f;">Nhóm Zalo</p>
-  <p style="margin:0 0 6px;font-size:1.05rem;font-weight:700;color:#1E3A63;">Chia sẻ về AI, Lập trình, Cách học</p>
-  <p style="margin:0 0 14px;color:#4a5b70;">Bạn vào nhóm Zalo này để cập nhật cách học hiệu quả, cách dùng AI đúng và tài liệu luyện thi Tin học.</p>
-  <a class="btn" href="https://zalo.me/g/bv7ry9tw8luzrh1bsqha" style="text-decoration:none;background:#1f8b3f;color:#fff;">Tham gia nhóm Zalo</a>
-</div>
-
 ## Giai đoạn 3: 5 cuốn sách về thiết kế phần mềm và hệ thống lớn
 
 ![Năm cuốn sách kinh điển về thiết kế phần mềm và kiến trúc hệ thống](/assets/blog/top-20-sach-kinh-dien-cho-dan-it/giai-doan-3-thiet-ke.svg)
@@ -254,13 +247,6 @@ Bạn tạo tài khoản Amazon, thêm một thẻ thanh toán quốc tế, rồ
 **Một năm bạn nên đọc bao nhiêu cuốn?**
 Bốn cuốn đọc kỹ có giá trị hơn hai mươi cuốn đọc lướt. Bạn hãy đặt mục tiêu theo số thay đổi bạn tạo ra trong code của mình, chứ không theo số cuốn sách bạn gấp lại.
 
-<div style="margin:30px 0;border-radius:22px;padding:24px 26px;background:#f6f9fc;border:1px solid #e9ecf2;">
-  <p style="margin:0 0 8px;font-size:.78rem;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:#1f8b3f;">Nhóm Zalo</p>
-  <p style="margin:0 0 6px;font-size:1.05rem;font-weight:700;color:#1E3A63;">Chia sẻ về AI, Lập trình, Cách học</p>
-  <p style="margin:0 0 14px;color:#4a5b70;">Bạn vào nhóm Zalo này để cập nhật cách học hiệu quả, cách dùng AI đúng và tài liệu luyện thi Tin học.</p>
-  <a class="btn" href="https://zalo.me/g/bv7ry9tw8luzrh1bsqha" style="text-decoration:none;background:#1f8b3f;color:#fff;">Tham gia nhóm Zalo</a>
-</div>
-
 ## Kết luận
 
 **Hai mươi cuốn sách này không biến bạn thành lập trình viên giỏi, nhưng chúng rút ngắn quãng đường bạn phải tự mò mẫm.** Mỗi cuốn là kinh nghiệm nhiều năm của những người đã đi qua các vấn đề tương tự, và bạn tiếp cận được kinh nghiệm đó với chi phí của một cuốn sách.
@@ -277,7 +263,7 @@ Bạn không cần đọc cả hai mươi cuốn trong năm nay. Bạn chọn m�
       <p style="margin:0 0 6px;font-size:.8rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#F2C13D;">Nhóm Zalo</p>
       <p style="margin:0 0 16px;font-size:1.12rem;font-weight:700;color:#fff;">Chia sẻ về AI, Lập trình, Cách học</p>
       <p style="display:flex;flex-wrap:wrap;gap:12px;margin:0;">
-        <a class="btn" href="https://zalo.me/g/bv7ry9tw8luzrh1bsqha" style="text-decoration:none;background:#1f8b3f;color:#fff;box-shadow:0 10px 24px rgba(31,139,63,.35);">Tham gia nhóm Zalo</a>
+        <button type="button" class="btn" data-zg="aHR0cHM6Ly96YWxvLm1lL2cvYnY3cnk5dHc4bHV6cmgxc2JzcWhh" style="background:#1f8b3f;color:#fff;box-shadow:0 10px 24px rgba(31,139,63,.35);" aria-label="Tham gia nhóm Zalo">Tham gia nhóm Zalo</button>
         <a class="btn btn-gold" href="https://code.cothilaptrinh.vn/" style="text-decoration:none;">Luyện code chấm tự động</a>
         <a class="btn btn-light" href="/khoa-hoc-ctdl-giai-thuat" style="text-decoration:none;">Khóa cấu trúc dữ liệu và giải thuật</a>
       </p>

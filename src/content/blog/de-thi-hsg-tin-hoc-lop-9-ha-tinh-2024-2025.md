@@ -263,10 +263,6 @@ Bài viết này giữ đúng vai trò lưu trữ đề: toàn bộ phần phân
 
 **cothilaptrinh.vn/blog/huong-dan-giai-de-thi-hsg-tin-hoc-lop-9-ha-tinh-2024-2025**
 
-Tham gia nhóm Zalo Tài liệu và Đề thi Tin học để không bỏ lỡ tin tức quan trọng và các đề thi mới:
-
-**https://zalo.me/g/bv7ry9tw8luzrh1bsqha**
-
 <a id="cach-tu-luyen"></a>
 
 ## Cách dùng đề này để tự luyện
@@ -313,8 +309,6 @@ Cả bốn bài của đề này nằm trong contest tại https://code.cothilap
     <a class="btn btn-light" href="/khoa-hoc-hsg-chuyen-tin" style="text-decoration:none;">Khóa luyện thi HSG và chuyên Tin</a>
     <a class="btn" href="https://zalo.me/0985188655" style="text-decoration:none;background:#1f8b3f;color:#fff;box-shadow:0 10px 24px rgba(31,139,63,.35);">Tư vấn Zalo: 0985 188 655</a>
   </p>
-  <p style="margin:0;font-size:.92rem;color:#b7c6dd;">Tham gia nhóm Zalo
-    <a href="https://zalo.me/g/bv7ry9tw8luzrh1bsqha" style="color:#fff;">Tài liệu và Đề thi Tin học</a>
-    để không bỏ lỡ tin tức quan trọng và các đề thi mới.
+  <p style="margin:0;font-size:.92rem;color:#b7c6dd;">Tham gia nhóm Zalo Tài liệu và Đề thi Tin học qua sidebar để không bỏ lỡ đề thi mới.
   </p>
 </div>

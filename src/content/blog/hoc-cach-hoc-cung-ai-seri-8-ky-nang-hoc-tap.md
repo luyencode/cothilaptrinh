@@ -92,12 +92,6 @@ AI đáp ứng rất tốt điều thứ nhất, và đáp ứng được một 
 
 Với các môn chưa có hệ thống chấm, nguyên tắc vẫn giữ nguyên: sau mỗi lần học, bạn phải có một lần tự kiểm tra cho ra kết quả đúng sai rõ ràng, chứ không phải cảm giác. Bài số 3 của seri sẽ hướng dẫn bạn tự dựng vòng lặp đó bằng flashcard, còn bài số 5 dựng nó bằng cách giải thích lại cho AI nghe.
 
-<div style="margin:26px 0;border-radius:22px;padding:18px 24px;background:linear-gradient(135deg,rgba(31,139,63,.09),rgba(46,134,201,.09));border:1px solid rgba(31,139,63,.24);display:flex;flex-wrap:wrap;align-items:center;gap:14px;">
-  <span style="display:inline-block;width:34px;height:34px;border-radius:11px;background:#1f8b3f;flex:0 0 auto;"></span>
-  <p style="margin:0;flex:1 1 300px;color:#1E3A63;font-weight:600;">Nhóm Zalo <strong>Chia sẻ về AI, Lập trình, Cách học</strong> là nơi bạn cập nhật cách học hiệu quả, cách dùng AI đúng và tài liệu luyện thi Tin học.</p>
-  <a href="https://zalo.me/g/bv7ry9tw8luzrh1bsqha" style="text-decoration:none;white-space:nowrap;background:#1f8b3f;color:#fff;font-weight:700;padding:11px 22px;border-radius:999px;box-shadow:0 10px 22px rgba(31,139,63,.3);">Vào nhóm Zalo</a>
-</div>
-
 ## Cách dùng seri: mỗi lần một kỹ năng, không đọc dồn
 
 ![Thu tu 10 bai trong seri Hoc cach hoc cung AI, tu mo dau den portfolio hoc tap](/assets/blog/hoc-cach-hoc-cung-ai-seri-8-ky-nang-hoc-tap/thu-tu-10-bai.svg)
@@ -113,20 +107,6 @@ Cách dùng hiệu quả gồm ba bước, lặp lại với từng bài:
 > Bạn học một kỹ năng cho tới khi nó thành thói quen thì kỹ năng đó ở lại. Bạn đọc cả 10 bài trong một tối thì không kỹ năng nào ở lại.
 
 Học sinh đang trong giai đoạn ôn thi gấp có thể đi nhanh hơn, nhưng vẫn nên để một khoảng trống giữa hai bài. Phần quyết định nằm ở lúc bạn thực sự dùng kỹ năng đó, chứ không nằm ở lúc đọc.
-
-<div style="margin:30px 0;border-radius:26px;overflow:hidden;border:1px solid #e9ecf2;box-shadow:0 16px 38px -26px rgba(30,58,99,.5);background:#fff;">
-  <div style="height:8px;background:linear-gradient(90deg,#1f8b3f 0%,#1f8b3f 50%,#2e86c9 50%,#2e86c9 100%);"></div>
-  <div style="display:flex;flex-wrap:wrap;gap:26px;padding:26px clamp(20px,4vw,34px);align-items:center;">
-    <img src="/assets/blog/hoc-cach-hoc-cung-ai-seri-8-ky-nang-hoc-tap/qr-nhom-zalo.png" alt="Ma QR nhom Zalo Chia se ve AI, Lap trinh, Cach hoc cua Co Thi Lap Trinh" style="width:216px;flex:0 0 auto;border-radius:16px;border:1px solid #e9ecf2;" />
-    <div style="flex:1 1 300px;min-width:260px;">
-      <p style="margin:0;font-size:.8rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#1f8b3f;">Nhóm Zalo</p>
-      <p style="margin:8px 0 6px;font-size:1.28rem;font-weight:800;line-height:1.3;color:#1E3A63;">Chia sẻ về AI, Lập trình, Cách học</p>
-      <p style="margin:0 0 18px;color:#4a5b71;">Nhóm là nơi bạn cập nhật cách học hiệu quả, cách dùng AI đúng và tài liệu luyện thi Tin học. Nhóm còn có bài mới, đề luyện và kinh nghiệm của các bạn cùng học.</p>
-      <a href="https://zalo.me/g/bv7ry9tw8luzrh1bsqha" style="text-decoration:none;display:inline-block;background:#1f8b3f;color:#fff;font-weight:700;padding:12px 26px;border-radius:999px;box-shadow:0 12px 26px rgba(31,139,63,.32);">Tham gia nhóm Zalo</a>
-      <p style="margin:14px 0 0;font-size:.88rem;color:#75849a;">Bạn quét mã QR bên cạnh, hoặc bấm nút để vào thẳng nhóm.</p>
-    </div>
-  </div>
-</div>
 
 ## Chuẩn bị gì trước khi bắt đầu
 
@@ -214,12 +194,6 @@ Hai dòng điểm thấp nhất chính là hai kỹ năng bạn cần chú ý nh
 
 **Dành cho ba mẹ:** seri này viết để con tự đọc và tự làm, ba mẹ không cần dạy lại. Việc hiệu quả nhất ba mẹ có thể làm chỉ gồm hai điều: ba mẹ giúp con lập một tài khoản AI để con dùng hợp lệ và ba mẹ nắm được, rồi sau mỗi bài ba mẹ hỏi con đúng một câu, lần này con áp dụng được điều gì. Một câu hỏi đều đặn có sức nặng hơn nhiều một buổi nhắc nhở dài.
 
-<div style="margin:26px 0;border-radius:22px;padding:18px 24px;background:linear-gradient(135deg,rgba(31,139,63,.09),rgba(46,134,201,.09));border:1px solid rgba(31,139,63,.24);display:flex;flex-wrap:wrap;align-items:center;gap:14px;">
-  <span style="display:inline-block;width:34px;height:34px;border-radius:11px;background:#2e86c9;flex:0 0 auto;"></span>
-  <p style="margin:0;flex:1 1 300px;color:#1E3A63;font-weight:600;">Bạn vào nhóm Zalo <strong>Chia sẻ về AI, Lập trình, Cách học</strong> để cập nhật cách học hiệu quả, cách dùng AI đúng và tài liệu luyện thi Tin học.</p>
-  <a href="https://zalo.me/g/bv7ry9tw8luzrh1bsqha" style="text-decoration:none;white-space:nowrap;background:#1f8b3f;color:#fff;font-weight:700;padding:11px 22px;border-radius:999px;box-shadow:0 10px 22px rgba(31,139,63,.3);">Vào nhóm Zalo</a>
-</div>
-
 ## Câu hỏi thường gặp về việc học sinh THCS học cùng AI
 
 **Cho con dùng AI để học có làm con lười suy nghĩ đi không?**
@@ -250,7 +224,7 @@ Bài số 2 của seri bắt đầu từ nền móng: não bộ thực sự họ
       <p style="margin:0 0 6px;font-size:.8rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#F2C13D;">Nhóm Zalo</p>
       <p style="margin:0 0 16px;font-size:1.12rem;font-weight:700;color:#fff;">Chia sẻ về AI, Lập trình, Cách học</p>
       <p style="display:flex;flex-wrap:wrap;gap:12px;margin:0;">
-        <a class="btn" href="https://zalo.me/g/bv7ry9tw8luzrh1bsqha" style="text-decoration:none;background:#1f8b3f;color:#fff;box-shadow:0 10px 24px rgba(31,139,63,.35);">Tham gia nhóm Zalo</a>
+        <button type="button" class="btn" data-zg="aHR0cHM6Ly96YWxvLm1lL2cvYnY3cnk5dHc4bHV6cmgxc2JzcWhh" style="background:#1f8b3f;color:#fff;box-shadow:0 10px 24px rgba(31,139,63,.35);" aria-label="Tham gia nhóm Zalo">Tham gia nhóm Zalo</button>
         <a class="btn btn-gold" href="https://code.cothilaptrinh.vn/" style="text-decoration:none;">Luyện code chấm tự động</a>
       </p>
     </div>
