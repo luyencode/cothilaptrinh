@@ -1,12 +1,12 @@
 ---
-import { ZALO_GROUP_ENCODED } from '../data/zalo';
+import { ZALO_GROUP_URL } from '../data/zalo';
 
 interface Props {
   variant?: 'card' | 'compact' | 'hero' | 'sidebar';
   showQR?: boolean;
   title?: string;
   desc?: string;
-  encoded?: string;
+  url?: string;
   class?: string;
 }
 
@@ -15,7 +15,7 @@ const {
   showQR = false,
   title = 'Chia sẻ về AI, Lập trình, Cách học',
   desc = 'Bạn vào nhóm Zalo này để cập nhật cách học hiệu quả, cách dùng AI đúng và tài liệu luyện thi Tin học.',
-  encoded = ZALO_GROUP_ENCODED,
+  url = ZALO_GROUP_URL,
   class: className = '',
 } = Astro.props;
 
@@ -30,7 +30,7 @@ const isCompact = variant === 'compact';
     <p class="zg-title">{title}</p>
     <p class="zg-desc">{desc}</p>
     <div class="zg-actions">
-      <button type="button" class="btn zg-btn" data-zg={encoded} data-analytics="zalo-group-hero" aria-label="Tham gia nhóm Zalo Tài liệu và Đề thi Tin học">
+      <button type="button" class="btn zg-btn" data-zg={url} data-analytics="zalo-group-hero" aria-label="Tham gia nhóm Zalo Tài liệu và Đề thi Tin học">
         <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         Tham gia nhóm Zalo
       </button>
@@ -53,7 +53,7 @@ const isCompact = variant === 'compact';
       <img class="zg-side-qr" src="/assets/blog/hoc-cach-hoc-cung-ai-seri-8-ky-nang-hoc-tap/qr-nhom-zalo.png" alt="Mã QR nhóm Zalo Chia sẻ về AI, Lập trình, Cách học" loading="lazy" width="220" height="220" />
     )}
     <div class="zg-side-actions">
-      <button type="button" class="btn zg-btn zg-btn-block" data-zg={encoded} data-analytics="zalo-group-sidebar" aria-label="Tham gia nhóm Zalo">
+      <button type="button" class="btn zg-btn zg-btn-block" data-zg={url} data-analytics="zalo-group-sidebar" aria-label="Tham gia nhóm Zalo">
         <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         Tham gia nhóm Zalo
       </button>
@@ -73,7 +73,7 @@ const isCompact = variant === 'compact';
       <p class="zg-compact-desc">{desc}</p>
     </div>
     <div class="zg-compact-actions">
-      <button type="button" class="btn zg-btn zg-btn-compact" data-zg={encoded} data-analytics="zalo-group-mid" aria-label="Vào nhóm Zalo">
+      <button type="button" class="btn zg-btn zg-btn-compact" data-zg={url} data-analytics="zalo-group-mid" aria-label="Vào nhóm Zalo">
         <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         Vào nhóm Zalo
       </button>
@@ -90,7 +90,7 @@ const isCompact = variant === 'compact';
     <p class="zg-card-title">{title}</p>
     <p class="zg-card-desc">{desc}</p>
     <div class="zg-actions">
-      <button type="button" class="btn zg-btn" data-zg={encoded} data-analytics="zalo-group-card" aria-label="Tham gia nhóm Zalo">
+      <button type="button" class="btn zg-btn" data-zg={url} data-analytics="zalo-group-card" aria-label="Tham gia nhóm Zalo">
         <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         Tham gia nhóm Zalo
       </button>
@@ -104,28 +104,24 @@ const isCompact = variant === 'compact';
 )}
 
 <script>
-  // Single delegated handler for all Zalo group buttons on page (onclick redirect to avoid bot scan)
+  // Single delegated handler for all Zalo group buttons on page.
+  // Navigation happens only via this click/keydown JS (no <a href>), so the
+  // group URL never appears as a crawlable link for bots that scan static HTML.
   document.addEventListener('click', (e) => {
     const btn = (e.target as HTMLElement)?.closest?.('[data-zg]') as HTMLElement | null;
     if (!btn) return;
-    const enc = btn.getAttribute('data-zg');
-    if (!enc) return;
-    try {
-      const url = atob(enc);
-      window.open(url, '_blank', 'noopener');
-    } catch {}
+    const url = btn.getAttribute('data-zg');
+    if (!url) return;
+    window.open(url, '_blank', 'noopener');
   });
   document.addEventListener('keydown', (e) => {
     if (e.key !== 'Enter' && e.key !== ' ') return;
     const btn = (e.target as HTMLElement)?.closest?.('[data-zg]') as HTMLElement | null;
     if (!btn) return;
     e.preventDefault();
-    const enc = btn.getAttribute('data-zg');
-    if (!enc) return;
-    try {
-      const url = atob(enc);
-      window.open(url, '_blank', 'noopener');
-    } catch {}
+    const url = btn.getAttribute('data-zg');
+    if (!url) return;
+    window.open(url, '_blank', 'noopener');
   });
 </script>
 
