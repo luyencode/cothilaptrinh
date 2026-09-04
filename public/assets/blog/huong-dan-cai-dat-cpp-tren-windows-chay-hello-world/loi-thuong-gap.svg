@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 680" width="1600" height="680" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif">
+  <rect width="1600" height="680" rx="28" fill="#f6f9fc"/>
+  <rect x="1" y="1" width="1598" height="678" rx="28" fill="none" stroke="#e9ecf2" stroke-width="2"/>
+  <text x="800" y="76" text-anchor="middle" font-size="38" font-weight="bold" fill="#1E3A63">Bốn lỗi hay gặp ở lần chạy C++ đầu tiên</text>
+  <text x="800" y="120" text-anchor="middle" font-size="23" fill="#75849a">Lỗi nào cũng có nguyên nhân rõ ràng, bạn không cần cài lại máy</text>
+
+  <rect x="80" y="172" width="700" height="212" rx="24" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="110" y="202" width="640" height="48" rx="14" fill="#fdeaea"/>
+  <text x="132" y="234" font-size="21" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#b03a3a">'g++' is not recognized</text>
+  <text x="110" y="292" font-size="21" font-weight="bold" fill="#1E3A63">Windows chưa tìm thấy trình biên dịch</text>
+  <text x="110" y="328" font-size="20" fill="#75849a">Bạn kiểm tra lại biến môi trường Path, đường dẫn phải</text>
+  <text x="110" y="356" font-size="20" fill="#75849a">trỏ đúng vào thư mục bin và cửa sổ lệnh phải mở lại</text>
+
+  <rect x="820" y="172" width="700" height="212" rx="24" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="850" y="202" width="640" height="48" rx="14" fill="#fdeaea"/>
+  <text x="872" y="234" font-size="21" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#b03a3a">expected ';' before ...</text>
+  <text x="850" y="292" font-size="21" font-weight="bold" fill="#1E3A63">Chương trình thiếu dấu chấm phẩy</text>
+  <text x="850" y="328" font-size="20" fill="#75849a">Bạn xem số dòng trong thông báo lỗi, dấu thiếu thường</text>
+  <text x="850" y="356" font-size="20" fill="#75849a">nằm ở cuối dòng ngay phía trên dòng bị báo</text>
+
+  <rect x="80" y="404" width="700" height="212" rx="24" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="110" y="434" width="640" height="48" rx="14" fill="#fdeaea"/>
+  <text x="132" y="466" font-size="21" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#b03a3a">cout was not declared</text>
+  <text x="110" y="524" font-size="21" font-weight="bold" fill="#1E3A63">Chương trình thiếu dòng include hoặc namespace</text>
+  <text x="110" y="560" font-size="20" fill="#75849a">Bạn xem lại hai dòng đầu, chú ý dấu ngoặc nhọn của</text>
+  <text x="110" y="588" font-size="20" fill="#75849a">iostream và chính tả của namespace std</text>
+
+  <rect x="820" y="404" width="700" height="212" rx="24" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="850" y="434" width="640" height="48" rx="14" fill="#fff6e0"/>
+  <text x="872" y="466" font-size="21" font-weight="bold" fill="#8a6a12">Cửa sổ đen vụt tắt</text>
+  <text x="850" y="524" font-size="21" font-weight="bold" fill="#1E3A63">Chương trình chạy xong và tự đóng</text>
+  <text x="850" y="560" font-size="20" fill="#75849a">Đây không phải lỗi. Bạn chạy bằng phím F9 hoặc F11 của</text>
+  <text x="850" y="588" font-size="20" fill="#75849a">phần mềm để cửa sổ giữ lại kết quả</text>
+  <text x="1520" y="656" text-anchor="end" font-size="20" fill="#75849a" opacity="0.55">cothilaptrinh.vn</text>
+</svg>
