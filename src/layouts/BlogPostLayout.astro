@@ -124,11 +124,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
         h.id = slug;
       }
       const li = document.createElement('li');
-      li.className = h.tagName === 'H3' ? 'toc-sub' : 'toc-main';
+      const isSub = h.tagName === 'H3';
+      li.className = isSub ? 'toc-sub' : 'toc-main';
+      li.setAttribute('data-level', isSub ? 'sub' : 'main');
       const a = document.createElement('a');
       a.href = `#${h.id}`;
       a.textContent = (h.textContent||'').trim();
       a.setAttribute('data-toc-link', '');
+      a.setAttribute('data-level', isSub ? 'sub' : 'main');
       li.appendChild(a);
       ul.appendChild(li);
     });
@@ -239,12 +242,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
   .toc-nav a.on{ color:var(--navy); background: color-mix(in srgb, var(--gold) 14%, #fff); border-color: color-mix(in srgb, var(--gold) 22%, var(--line)); border-left-color: var(--gold-d); font-weight:700; box-shadow:0 4px 14px rgba(242,193,61,.16); }
   .toc-nav a.on::before{ background:var(--gold-d); border-color:#fff; box-shadow:0 0 0 3px color-mix(in srgb, var(--gold) 26%, transparent); }
   .toc-nav a.on:hover{ background: color-mix(in srgb, var(--gold) 18%, #fff); border-left-color: var(--gold-d); }
+  /* Explicit level classes — every li has toc-main (h2) or toc-sub (h3) + data-level, so levels are visible in inspector */
+  .toc-nav li.toc-main a{ font-size:.72rem; font-weight:600; color:#33425c; }
   .toc-nav li.toc-sub a{ padding-left:24px; font-size:.68rem; font-weight:500; letter-spacing:.2px; line-height:1.32; color:var(--muted); background:#fbfcfe; border-color:#f1f3f8; }
   .toc-nav li.toc-sub a::before{ width:5px; height:5px; background:#d4dae6; box-shadow:0 0 0 1px #fff; border-width:1.5px; }
   .toc-nav li.toc-sub a:hover{ color:var(--navy); background:#fff; border-color: color-mix(in srgb, var(--teal) 14%, var(--line)); }
   .toc-nav li.toc-sub a:hover::before{ background:var(--teal); }
   .toc-nav li.toc-sub a.on{ color:var(--teal); background: color-mix(in srgb, var(--teal) 9%, #fff); border-color: color-mix(in srgb, var(--teal) 18%, var(--line)); border-left-color: var(--teal); }
   .toc-nav li.toc-sub a.on::before{ background:var(--teal); box-shadow:0 0 0 3px color-mix(in srgb, var(--teal) 18%, transparent); }
+  /* Fallback via data-level (same as classes, survives minification/renames) */
+  .toc-nav li[data-level="sub"] a{ padding-left:24px; }
 
   /* Right sticky CTA */
   .post-cta-side{ position:sticky; top:88px; align-self:start; padding-top:40px; }
