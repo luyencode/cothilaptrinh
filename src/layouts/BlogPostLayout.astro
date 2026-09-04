@@ -213,8 +213,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
   .post-content :global(pre code) { background: none; padding: 0; color: inherit; }
   .post-content :global(img) { border-radius: var(--r); margin: 1.2em 0; }
 
-  /* Post shell grid */
-  .post-shell{ display:grid; grid-template-columns:220px minmax(0,760px) 300px; gap:32px; width:min(1280px,94vw); margin:0 auto; align-items:start; padding-bottom:40px; }
+  /* Post shell grid — ToC 300px = CTA 300px (symmetric rails) */
+  .post-shell{ display:grid; grid-template-columns:300px minmax(0,760px) 300px; gap:28px; width:min(1440px,94vw); margin:0 auto; align-items:start; padding-bottom:40px; }
   .post-main{ min-width:0; }
   .post-section{ padding: 40px 0 8px; }
   .post-bottom-share{ padding: 8px 0 0; border-top:1px solid var(--line); margin-top: 8px; }
