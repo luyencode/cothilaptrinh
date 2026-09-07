@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 680" width="1600" height="680" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif">
+  <rect width="1600" height="680" rx="28" fill="#f6f9fc"/>
+  <rect x="1" y="1" width="1598" height="678" rx="28" fill="none" stroke="#e9ecf2" stroke-width="2"/>
+  <text x="800" y="76" text-anchor="middle" font-size="38" font-weight="bold" fill="#1E3A63">Chọn đúng bản cài Code::Blocks cho Windows</text>
+  <text x="800" y="120" text-anchor="middle" font-size="23" fill="#75849a">Chữ mingw trong tên file là chi tiết quyết định của cả bước tải về</text>
+
+  <rect x="80" y="168" width="700" height="420" rx="24" fill="#ffffff" stroke="#1f8b3f" stroke-width="3"/>
+  <rect x="80" y="168" width="700" height="66" rx="24" fill="#1f8b3f"/>
+  <rect x="80" y="210" width="700" height="24" fill="#1f8b3f"/>
+  <text x="430" y="212" text-anchor="middle" font-size="25" font-weight="bold" fill="#ffffff">Bản nên tải cho người mới</text>
+  <rect x="116" y="264" width="628" height="60" rx="14" fill="#13294a"/>
+  <text x="430" y="303" text-anchor="middle" font-size="24" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#9fe0b4">codeblocks-25.03mingw-setup.exe</text>
+  <text x="130" y="368" font-size="21" fill="#1E3A63">Bản này đóng gói sẵn trình biên dịch GCC</text>
+  <text x="130" y="408" font-size="21" fill="#1E3A63">Bạn cài xong là biên dịch được ngay</text>
+  <text x="130" y="448" font-size="21" fill="#1E3A63">Dung lượng lớn hơn vì kèm cả bộ công cụ</text>
+  <text x="130" y="488" font-size="21" fill="#1E3A63">Bạn không phải chỉnh biến môi trường Path</text>
+  <rect x="116" y="514" width="628" height="52" rx="14" fill="#eaf6ee"/>
+  <text x="430" y="547" text-anchor="middle" font-size="21" font-weight="bold" fill="#1f8b3f">Có chữ mingw: tải bản này</text>
+
+  <rect x="820" y="168" width="700" height="420" rx="24" fill="#ffffff" stroke="#e9ecf2" stroke-width="3"/>
+  <rect x="820" y="168" width="700" height="66" rx="24" fill="#75849a"/>
+  <rect x="820" y="210" width="700" height="24" fill="#75849a"/>
+  <text x="1170" y="212" text-anchor="middle" font-size="25" font-weight="bold" fill="#ffffff">Bản dễ tải nhầm</text>
+  <rect x="856" y="264" width="628" height="60" rx="14" fill="#13294a"/>
+  <text x="1170" y="303" text-anchor="middle" font-size="24" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#f0a5a5">codeblocks-25.03-setup.exe</text>
+  <text x="870" y="368" font-size="21" fill="#75849a">Bản này chỉ có giao diện soạn thảo</text>
+  <text x="870" y="408" font-size="21" fill="#75849a">Máy chưa có trình biên dịch nào bên trong</text>
+  <text x="870" y="448" font-size="21" fill="#75849a">Bạn bấm chạy sẽ gặp báo lỗi tìm không ra GCC</text>
+  <text x="870" y="488" font-size="21" fill="#75849a">Bản này hợp với người đã cài compiler riêng</text>
+  <rect x="856" y="514" width="628" height="52" rx="14" fill="#f3f5f8"/>
+  <text x="1170" y="547" text-anchor="middle" font-size="21" font-weight="bold" fill="#75849a">Thiếu chữ mingw: chưa nên tải</text>
+
+  <text x="800" y="634" text-anchor="middle" font-size="23" font-weight="bold" fill="#1E3A63">Bạn đọc kỹ tên file trước khi bấm tải, một chữ mingw tiết kiệm cả buổi sửa lỗi</text>
+  <text x="1520" y="664" text-anchor="end" font-size="20" fill="#75849a" opacity="0.55">cothilaptrinh.vn</text>
+</svg>

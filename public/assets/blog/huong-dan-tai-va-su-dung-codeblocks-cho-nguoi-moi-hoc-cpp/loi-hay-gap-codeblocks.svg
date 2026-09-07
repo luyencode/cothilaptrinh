@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 680" width="1600" height="680" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif">
+  <rect width="1600" height="680" rx="28" fill="#f6f9fc"/>
+  <rect x="1" y="1" width="1598" height="678" rx="28" fill="none" stroke="#e9ecf2" stroke-width="2"/>
+  <text x="800" y="76" text-anchor="middle" font-size="38" font-weight="bold" fill="#1E3A63">Bốn lỗi hay gặp khi dùng Code::Blocks lần đầu</text>
+  <text x="800" y="120" text-anchor="middle" font-size="23" fill="#75849a">Bạn đọc trước bốn tình huống này để không mất buổi học đầu tiên</text>
+
+  <rect x="80" y="170" width="700" height="196" rx="22" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="80" y="170" width="10" height="196" rx="5" fill="#c25b5b"/>
+  <text x="120" y="214" font-size="23" font-weight="bold" fill="#1E3A63">Máy báo không tìm thấy trình biên dịch</text>
+  <rect x="120" y="232" width="620" height="42" rx="12" fill="#13294a"/>
+  <text x="140" y="260" font-size="19" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#f0a5a5">Can't find compiler executable</text>
+  <text x="120" y="308" font-size="20" fill="#75849a">Nguyên nhân thường gặp: bạn tải bản không có chữ mingw.</text>
+  <text x="120" y="340" font-size="20" fill="#75849a">Cách xử lý: bạn gỡ ra, tải lại bản mingw rồi cài lại.</text>
+
+  <rect x="820" y="170" width="700" height="196" rx="22" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="820" y="170" width="10" height="196" rx="5" fill="#c25b5b"/>
+  <text x="860" y="214" font-size="23" font-weight="bold" fill="#1E3A63">Cửa sổ kết quả hiện rồi tắt ngay</text>
+  <rect x="860" y="232" width="620" height="42" rx="12" fill="#13294a"/>
+  <text x="880" y="260" font-size="19" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#F2C13D">chuong trinh chay xong tu dong dong</text>
+  <text x="860" y="308" font-size="20" fill="#75849a">Nguyên nhân thường gặp: bạn chạy file .exe bằng cách bấm đúp.</text>
+  <text x="860" y="340" font-size="20" fill="#75849a">Cách xử lý: bạn chạy bằng phím F9 ngay trong Code::Blocks.</text>
+
+  <rect x="80" y="390" width="700" height="196" rx="22" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="80" y="390" width="10" height="196" rx="5" fill="#F2C13D"/>
+  <text x="120" y="434" font-size="23" font-weight="bold" fill="#1E3A63">Chương trình chạy ra kết quả của bài cũ</text>
+  <rect x="120" y="452" width="620" height="42" rx="12" fill="#13294a"/>
+  <text x="140" y="480" font-size="19" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#F2C13D">ket qua khong doi sau khi sua code</text>
+  <text x="120" y="528" font-size="20" fill="#75849a">Nguyên nhân thường gặp: bạn chưa lưu file trước khi bấm chạy.</text>
+  <text x="120" y="560" font-size="20" fill="#75849a">Cách xử lý: bạn bấm Ctrl và S, sau đó bấm F9 lại.</text>
+
+  <rect x="820" y="390" width="700" height="196" rx="22" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="820" y="390" width="10" height="196" rx="5" fill="#F2C13D"/>
+  <text x="860" y="434" font-size="23" font-weight="bold" fill="#1E3A63">Chữ tiếng Việt in ra bị vỡ</text>
+  <rect x="860" y="452" width="620" height="42" rx="12" fill="#13294a"/>
+  <text x="880" y="480" font-size="19" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#F2C13D">Xin chao -&gt; Xin ch�o</text>
+  <text x="860" y="528" font-size="20" fill="#75849a">Nguyên nhân thường gặp: cửa sổ dòng lệnh dùng bảng mã khác.</text>
+  <text x="860" y="560" font-size="20" fill="#75849a">Cách xử lý: bạn viết thông báo bằng tiếng Việt không dấu.</text>
+
+  <text x="800" y="638" text-anchor="middle" font-size="23" font-weight="bold" fill="#1E3A63">Ba trong bốn lỗi trên đến từ thao tác, không phải từ chương trình bạn viết</text>
+  <text x="1520" y="666" text-anchor="end" font-size="20" fill="#75849a" opacity="0.55">cothilaptrinh.vn</text>
+</svg>

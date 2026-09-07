@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 680" width="1600" height="680" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif">
+  <rect width="1600" height="680" rx="28" fill="#f6f9fc"/>
+  <rect x="1" y="1" width="1598" height="678" rx="28" fill="none" stroke="#e9ecf2" stroke-width="2"/>
+  <text x="800" y="76" text-anchor="middle" font-size="38" font-weight="bold" fill="#1E3A63">Tạo file hello_world.cpp và chạy bằng phím F9</text>
+  <text x="800" y="120" text-anchor="middle" font-size="23" fill="#75849a">Bạn lưu file trước khi bấm chạy, đây là bước hay bị bỏ quên nhất</text>
+
+  <rect x="80" y="168" width="700" height="420" rx="24" fill="#13294a"/>
+  <rect x="80" y="168" width="700" height="52" rx="24" fill="#0d1e38"/>
+  <rect x="80" y="198" width="700" height="22" fill="#0d1e38"/>
+  <circle cx="118" cy="194" r="8" fill="#f0a5a5"/>
+  <circle cx="146" cy="194" r="8" fill="#F2C13D"/>
+  <circle cx="174" cy="194" r="8" fill="#9fe0b4"/>
+  <text x="210" y="201" font-size="20" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#b7c6dd">hello_world.cpp</text>
+  <text x="120" y="272" font-size="24" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#62b4ec">#include &lt;iostream&gt;</text>
+  <text x="120" y="312" font-size="24" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#8fa6bf">using namespace std;</text>
+  <text x="120" y="376" font-size="24" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#F2C13D">int main() {</text>
+  <text x="152" y="416" font-size="24" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#ffffff">cout &lt;&lt; "Hello World";</text>
+  <text x="152" y="456" font-size="24" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#9fe0b4">return 0;</text>
+  <text x="120" y="496" font-size="24" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#F2C13D">}</text>
+  <rect x="120" y="524" width="620" height="44" rx="12" fill="#1b3355"/>
+  <text x="140" y="553" font-size="20" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#9fe0b4">Hello World</text>
+
+  <rect x="820" y="168" width="680" height="94" rx="20" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="820" y="168" width="10" height="94" rx="5" fill="#2e86c9"/>
+  <text x="856" y="206" font-size="22" font-weight="bold" fill="#1E3A63">Bước 1: mở file trống mới</text>
+  <text x="856" y="240" font-size="20" fill="#75849a">Bạn chọn File, New, Empty file trên thanh trình đơn</text>
+
+  <rect x="820" y="278" width="680" height="94" rx="20" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="820" y="278" width="10" height="94" rx="5" fill="#2e86c9"/>
+  <text x="856" y="316" font-size="22" font-weight="bold" fill="#1E3A63">Bước 2: lưu file với đuôi .cpp</text>
+  <text x="856" y="350" font-size="20" fill="#75849a">Bạn bấm Ctrl và S, đặt tên file là hello_world.cpp</text>
+
+  <rect x="820" y="388" width="680" height="94" rx="20" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="820" y="388" width="10" height="94" rx="5" fill="#1f8b3f"/>
+  <text x="856" y="426" font-size="22" font-weight="bold" fill="#1E3A63">Bước 3: gõ chương trình</text>
+  <text x="856" y="460" font-size="20" fill="#75849a">Bạn gõ tay từng dòng thay vì sao chép cả khối</text>
+
+  <rect x="820" y="498" width="680" height="94" rx="20" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="820" y="498" width="10" height="94" rx="5" fill="#F2C13D"/>
+  <text x="856" y="536" font-size="22" font-weight="bold" fill="#1E3A63">Bước 4: bấm F9 để dịch và chạy</text>
+  <text x="856" y="570" font-size="20" fill="#75849a">Một cửa sổ đen hiện ra kèm dòng chữ kết quả</text>
+
+  <text x="800" y="634" text-anchor="middle" font-size="23" font-weight="bold" fill="#1E3A63">Phím F9 dịch và chạy trong một lần bấm, Ctrl và F9 chỉ dịch, Ctrl và F10 chạy lại bản đã dịch</text>
+  <text x="1520" y="664" text-anchor="end" font-size="20" fill="#75849a" opacity="0.55">cothilaptrinh.vn</text>
+</svg>

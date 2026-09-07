@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 680" width="1600" height="680" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif">
+  <rect width="1600" height="680" rx="28" fill="#f6f9fc"/>
+  <rect x="1" y="1" width="1598" height="678" rx="28" fill="none" stroke="#e9ecf2" stroke-width="2"/>
+  <text x="800" y="76" text-anchor="middle" font-size="38" font-weight="bold" fill="#1E3A63">Cách tổ chức thư mục theo môn học, bài học và bài tập</text>
+  <text x="800" y="120" text-anchor="middle" font-size="23" fill="#75849a">Ba tầng thư mục là đủ cho một khóa học, thêm tầng nữa là bạn bắt đầu lạc đường</text>
+
+  <rect x="80" y="168" width="760" height="420" rx="24" fill="#13294a"/>
+  <text x="118" y="216" font-size="22" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#F2C13D">D:\LapTrinh\</text>
+  <text x="146" y="254" font-size="22" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#62b4ec">CPP_CoBan\</text>
+  <text x="182" y="292" font-size="22" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#9fe0b4">Bai01_HelloWorld\</text>
+  <text x="218" y="330" font-size="22" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#ffffff">hello_world.cpp</text>
+  <text x="218" y="368" font-size="22" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#ffffff">bai_tap_01.cpp</text>
+  <text x="218" y="406" font-size="22" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#b7c6dd">ghi_chu.txt</text>
+  <text x="182" y="444" font-size="22" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#9fe0b4">Bai02_BienVaKieuDuLieu\</text>
+  <text x="182" y="482" font-size="22" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#9fe0b4">Bai03_CauLenhReNhanh\</text>
+  <text x="146" y="520" font-size="22" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#62b4ec">CPP_LuyenDe\</text>
+  <text x="146" y="558" font-size="22" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#62b4ec">TaiLieu\</text>
+
+  <rect x="880" y="168" width="640" height="128" rx="20" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="880" y="168" width="10" height="128" rx="5" fill="#F2C13D"/>
+  <text x="916" y="208" font-size="23" font-weight="bold" fill="#1E3A63">Tầng 1: thư mục gốc</text>
+  <text x="916" y="244" font-size="20" fill="#75849a">Bạn đặt một thư mục duy nhất cho việc học</text>
+  <text x="916" y="274" font-size="20" fill="#75849a">lập trình, tên không dấu, không khoảng trắng</text>
+
+  <rect x="880" y="312" width="640" height="128" rx="20" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="880" y="312" width="10" height="128" rx="5" fill="#2e86c9"/>
+  <text x="916" y="352" font-size="23" font-weight="bold" fill="#1E3A63">Tầng 2: môn học hoặc khóa học</text>
+  <text x="916" y="388" font-size="20" fill="#75849a">Mỗi khóa một thư mục riêng, ví dụ CPP_CoBan,</text>
+  <text x="916" y="418" font-size="20" fill="#75849a">CPP_LuyenDe, Python_CoBan</text>
+
+  <rect x="880" y="456" width="640" height="132" rx="20" fill="#ffffff" stroke="#e9ecf2" stroke-width="2"/>
+  <rect x="880" y="456" width="10" height="132" rx="5" fill="#1f8b3f"/>
+  <text x="916" y="496" font-size="23" font-weight="bold" fill="#1E3A63">Tầng 3: từng bài học</text>
+  <text x="916" y="532" font-size="20" fill="#75849a">Tên bắt đầu bằng số hai chữ số để thư mục tự</text>
+  <text x="916" y="562" font-size="20" fill="#75849a">sắp đúng thứ tự buổi học</text>
+
+  <text x="800" y="634" text-anchor="middle" font-size="23" font-weight="bold" fill="#1E3A63">Bạn dựng cây thư mục ngay từ bài đầu tiên, việc dọn lại sau ba tháng tốn hơn nhiều</text>
+  <text x="1520" y="664" text-anchor="end" font-size="20" fill="#75849a" opacity="0.55">cothilaptrinh.vn</text>
+</svg>

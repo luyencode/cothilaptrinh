@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 680" width="1600" height="680" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif">
+  <rect width="1600" height="680" rx="28" fill="#f6f9fc"/>
+  <rect x="1" y="1" width="1598" height="678" rx="28" fill="none" stroke="#e9ecf2" stroke-width="2"/>
+  <text x="800" y="76" text-anchor="middle" font-size="38" font-weight="bold" fill="#1E3A63">Quy tắc đặt tên file và thư mục khi học lập trình</text>
+  <text x="800" y="120" text-anchor="middle" font-size="23" fill="#75849a">Bốn quy tắc nhỏ giúp bạn tìm lại bài cũ sau vài tháng</text>
+
+  <rect x="80" y="168" width="700" height="420" rx="24" fill="#ffffff" stroke="#1f8b3f" stroke-width="3"/>
+  <rect x="80" y="168" width="700" height="66" rx="24" fill="#1f8b3f"/>
+  <rect x="80" y="210" width="700" height="24" fill="#1f8b3f"/>
+  <text x="430" y="212" text-anchor="middle" font-size="25" font-weight="bold" fill="#ffffff">Cách đặt tên nên theo</text>
+  <text x="118" y="290" font-size="22" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#1f8b3f">Bai01_HelloWorld</text>
+  <text x="118" y="330" font-size="19" fill="#75849a">Số hai chữ số ở đầu giúp thư mục tự sắp đúng thứ tự</text>
+  <text x="118" y="382" font-size="22" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#1f8b3f">tinh_tong_day_so.cpp</text>
+  <text x="118" y="422" font-size="19" fill="#75849a">Tên gợi đúng nội dung bài, viết thường và nối bằng gạch dưới</text>
+  <text x="118" y="474" font-size="22" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#1f8b3f">bai_tap_03_v2.cpp</text>
+  <text x="118" y="514" font-size="19" fill="#75849a">Bản sửa lần sau ghi rõ v2, bạn giữ lại được cả bản cũ</text>
+  <rect x="116" y="530" width="628" height="42" rx="12" fill="#eaf6ee"/>
+  <text x="430" y="558" text-anchor="middle" font-size="20" font-weight="bold" fill="#1f8b3f">Không dấu, không khoảng trắng, đuôi .cpp</text>
+
+  <rect x="820" y="168" width="700" height="420" rx="24" fill="#ffffff" stroke="#e9ecf2" stroke-width="3"/>
+  <rect x="820" y="168" width="700" height="66" rx="24" fill="#75849a"/>
+  <rect x="820" y="210" width="700" height="24" fill="#75849a"/>
+  <text x="1170" y="212" text-anchor="middle" font-size="25" font-weight="bold" fill="#ffffff">Cách đặt tên nên tránh</text>
+  <text x="858" y="290" font-size="22" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" fill="#c25b5b">Bài tập buổi 1.cpp</text>
+  <text x="858" y="330" font-size="19" fill="#75849a">Dấu tiếng Việt và khoảng trắng gây lỗi ở một số trình biên dịch</text>
+  <text x="858" y="382" font-size="22" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#c25b5b">bai moi nhat (2).cpp</text>
+  <text x="858" y="422" font-size="19" fill="#75849a">Tên không nói lên nội dung, một tháng sau bạn không đoán ra</text>
+  <text x="858" y="474" font-size="22" font-family="DejaVu Sans Mono, Courier New, monospace" fill="#c25b5b">Untitled1.cpp</text>
+  <text x="858" y="514" font-size="19" fill="#75849a">Tên mặc định của phần mềm, các file dồn lại thành một mớ</text>
+  <rect x="856" y="530" width="628" height="42" rx="12" fill="#f3f5f8"/>
+  <text x="1170" y="558" text-anchor="middle" font-size="20" font-weight="bold" fill="#75849a">Tên mơ hồ khiến bạn gõ lại bài đã làm</text>
+
+  <text x="800" y="634" text-anchor="middle" font-size="23" font-weight="bold" fill="#1E3A63">Bạn đặt tên cho người đọc lại là chính mình sau ba tháng, không phải cho hôm nay</text>
+  <text x="1520" y="664" text-anchor="end" font-size="20" fill="#75849a" opacity="0.55">cothilaptrinh.vn</text>
+</svg>
