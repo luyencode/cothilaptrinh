@@ -8,25 +8,22 @@ interface Props {
   description: string;
   date: Date;
   tags: string[];
-  accent?: string;
   cover?: string;
   author?: string;
 }
-const { title, description, date, tags, accent = '#1E3A63', cover, author = 'Đặng Kim Thi' } = Astro.props;
+const { title, description, date, tags, cover, author = 'Đặng Kim Thi' } = Astro.props;
 const formattedDate = date.toLocaleDateString('vi-VN', { day: 'numeric', month: 'long', year: 'numeric' });
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
 ---
 <BaseLayout
   title={`${title} | Cô Thi Lập Trình`}
   description={description}
-  accent={accent}
-  heroClass="lighthero"
   ogImage={cover}
   ogType="article"
   publishedTime={date}
 >
-  <section class="hero tint"><div class="wrap narrow">
-    <span class="eyebrow"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20V2H6.5A2.5 2.5 0 0 0 4 4.5v15z"/></svg> Blog</span>
+  <section class="phead"><div class="wrap narrow">
+    <div class="crumbs"><a href="/blog">Bài viết</a></div>
     <h1>{title}</h1>
     <p class="lead">{description}</p>
     <div class="post-meta">
@@ -73,8 +70,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
         <ShareButtons url={canonicalURL} title={title} />
       </div>
 
-      <section class="section soft post-back"><div class="center">
-        <a class="btn btn-navy" href="/blog"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Xem tất cả bài viết</a>
+      <section class="post-back"><div class="center">
+        <a class="btn btn-green" href="/blog"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Xem tất cả bài viết</a>
       </div></section>
     </div>
 
@@ -381,22 +378,22 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
 </script>
 
 <style>
-  .post-cover { display: block; width: 100%; height: auto; border-radius: var(--r); margin-top: 28px; box-shadow: 0 22px 48px rgba(16,30,55,.16); border: 1px solid var(--line); }
-  .post-author { display: inline-flex; align-items: center; gap: .4em; font-weight: 700; color: var(--navy); }
+  .post-cover { display: block; width: 100%; height: auto; border-radius: var(--r-lg); margin-top: 28px; box-shadow: 0 22px 48px rgba(16,30,55,.16); border: 1px solid var(--line); }
+  .post-author { display: inline-flex; align-items: center; gap: .4em; font-weight: 700; color: var(--green); }
   .post-meta { display: flex; gap: 14px; align-items: center; margin-top: 18px; flex-wrap: wrap; color: var(--muted); font-size: .9rem; }
   .post-tags { display: flex; gap: 8px; flex-wrap: wrap; }
-  .post-tag { background: color-mix(in srgb, var(--c) 12%, #fff); color: var(--navy); padding: 4px 12px; border-radius: 999px; font-weight: 600; font-size: .78rem; }
+  .post-tag { background: color-mix(in srgb, var(--green) 12%, #fff); color: var(--green); padding: 4px 12px; border-radius: 999px; font-weight: 600; font-size: .78rem; }
   .post-content :global(h2) { margin-top: 2em; margin-bottom: .6em; font-size: 1.5rem; scroll-margin-top: 88px; }
   .post-content :global(h3) { margin-top: 1.6em; margin-bottom: .5em; font-size: 1.2rem; scroll-margin-top: 88px; }
   .post-content :global(p) { margin-bottom: 1.1em; line-height: 1.75; }
   .post-content :global(ul), .post-content :global(ol) { margin: 0 0 1.1em 1.3em; line-height: 1.7; }
   .post-content :global(li) { margin-bottom: .4em; }
-  .post-content :global(a) { color: var(--navy); text-decoration: underline; }
-  .post-content :global(blockquote) { border-left: 3px solid var(--gold); padding-left: 16px; color: var(--muted); font-style: italic; margin: 1.2em 0; }
-  .post-content :global(code) { background: #f1f3f8; padding: .15em .4em; border-radius: 6px; font-size: .9em; }
-  .post-content :global(pre) { background: var(--navy-d); color: #e7eefb; padding: 16px 18px; border-radius: 14px; overflow-x: auto; margin: 1.2em 0; }
+  .post-content :global(a) { color: var(--green); text-decoration: underline; }
+  .post-content :global(blockquote) { border-left: 3px solid var(--blue); padding-left: 16px; color: var(--muted); font-style: italic; margin: 1.2em 0; }
+  .post-content :global(code) { background: var(--mint); padding: .15em .4em; border-radius: 6px; font-size: .9em; }
+  .post-content :global(pre) { background: var(--ink); color: #e7eefb; padding: 16px 18px; border-radius: 14px; overflow-x: auto; margin: 1.2em 0; }
   .post-content :global(pre code) { background: none; padding: 0; color: inherit; }
-  .post-content :global(img) { border-radius: var(--r); margin: 1.2em 0; }
+  .post-content :global(img) { border-radius: var(--r-lg); margin: 1.2em 0; }
 
   /* Post shell grid — content restored to its original 880px, CTA rail 300px */
   .post-shell{ display:grid; grid-template-columns:minmax(0,880px) 300px; gap:28px; width:min(1208px,94vw); margin:0 auto; align-items:start; padding-bottom:40px; }
@@ -405,29 +402,29 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
   .post-bottom-share{ padding: 8px 0 0; border-top:1px solid var(--line); margin-top: 8px; }
   .post-back{ padding: 28px 0 10px; }
 
-  .toc-inner{ background:#fff; border:1px solid var(--line); border-radius:var(--r); padding:0; box-shadow:0 8px 22px rgba(16,30,55,.06); overflow:hidden; }
-  .toc-head{ display:flex; align-items:center; gap:8px; padding:14px 16px 12px; border-bottom:1px solid var(--line); background: linear-gradient(180deg, #fff, #fbfcfe); }
-  .toc-icon{ flex:0 0 auto; width:26px; height:26px; border-radius:8px; display:grid; place-items:center; color:#fff; background: linear-gradient(135deg, var(--navy), var(--teal)); box-shadow:0 4px 10px rgba(30,58,99,.18); }
-  .toc-title{ font-size:.74rem; font-weight:800; letter-spacing:1.4px; text-transform:uppercase; color:var(--navy); margin:0; }
-  .toc-count{ margin-left:auto; font-size:.7rem; font-weight:700; color:var(--muted); background:#f1f3f8; border:1px solid var(--line); padding:2px 7px; border-radius:999px; min-width:20px; text-align:center; line-height:1.4; }
+  .toc-inner{ background:#fff; border:1px solid var(--line); border-radius:var(--r-lg); padding:0; box-shadow:0 8px 22px rgba(16,30,55,.06); overflow:hidden; }
+  .toc-head{ display:flex; align-items:center; gap:8px; padding:14px 16px 12px; border-bottom:1px solid var(--line); background: #fff; }
+  .toc-icon{ flex:0 0 auto; width:26px; height:26px; border-radius:8px; display:grid; place-items:center; color:#fff; background: var(--green); box-shadow:0 4px 10px rgba(30,58,99,.18); }
+  .toc-title{ font-size:.74rem; font-weight:800; letter-spacing:1.4px; text-transform:uppercase; color:var(--green); margin:0; }
+  .toc-count{ margin-left:auto; font-size:.7rem; font-weight:700; color:var(--muted); background:var(--mint); border:1px solid var(--line); padding:2px 7px; border-radius:999px; min-width:20px; text-align:center; line-height:1.4; }
   .toc-nav{ padding:12px 10px 14px; }
   .toc-nav ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px; }
   .toc-nav li{ line-height:1.4; }
-  .toc-nav a{ display:flex; align-items:center; gap:8px; padding:6px 10px 6px 12px; border-radius:9px; font-size:.72rem; font-weight:600; letter-spacing:.2px; line-height:1.32; color:#33425c; border-left:3px solid transparent; border:1px solid transparent; background:#fff; text-decoration:none; transition:.16s background, .16s color, .16s border-color, .16s box-shadow, .16s transform; position:relative; box-shadow:0 1px 2px rgba(16,30,55,.03); font-family:var(--font); }
-  .toc-nav a::before{ content:''; flex:0 0 auto; width:6px; height:6px; border-radius:50%; background:var(--gray); opacity:.95; transition:.16s background, .16s transform, .16s box-shadow; border:2px solid #fff; box-shadow:0 0 0 1px var(--line); }
-  .toc-nav a:hover{ background: color-mix(in srgb, var(--teal) 9%, #fff); color:var(--navy); border-color: color-mix(in srgb, var(--teal) 18%, var(--line)); border-left-color: var(--teal); box-shadow:0 4px 14px rgba(46,130,150,.12); transform:translateX(1px); }
-  .toc-nav a:hover::before{ background:var(--teal); border-color:#fff; box-shadow:0 0 0 2px color-mix(in srgb, var(--teal) 22%, transparent); transform:scale(1.12); }
-  .toc-nav a.on{ color:var(--navy); background: color-mix(in srgb, var(--gold) 14%, #fff); border-color: color-mix(in srgb, var(--gold) 22%, var(--line)); border-left-color: var(--gold-d); font-weight:700; box-shadow:0 4px 14px rgba(242,193,61,.16); }
-  .toc-nav a.on::before{ background:var(--gold-d); border-color:#fff; box-shadow:0 0 0 3px color-mix(in srgb, var(--gold) 26%, transparent); }
-  .toc-nav a.on:hover{ background: color-mix(in srgb, var(--gold) 18%, #fff); border-left-color: var(--gold-d); }
+  .toc-nav a{ display:flex; align-items:center; gap:8px; padding:6px 10px 6px 12px; border-radius:9px; font-size:.72rem; font-weight:600; letter-spacing:.2px; line-height:1.32; color:var(--ink); border-left:3px solid transparent; border:1px solid transparent; background:#fff; text-decoration:none; transition:.16s background, .16s color, .16s border-color, .16s box-shadow, .16s transform; position:relative; box-shadow:0 1px 2px rgba(16,30,55,.03); font-family:var(--font); }
+  .toc-nav a::before{ content:''; flex:0 0 auto; width:6px; height:6px; border-radius:50%; background:var(--line); opacity:.95; transition:.16s background, .16s transform, .16s box-shadow; border:2px solid #fff; box-shadow:0 0 0 1px var(--line); }
+  .toc-nav a:hover{ background: color-mix(in srgb, var(--blue) 9%, #fff); color:var(--green); border-color: color-mix(in srgb, var(--blue) 18%, var(--line)); border-left-color: var(--blue); box-shadow:0 4px 14px rgba(46,130,150,.12); transform:translateX(1px); }
+  .toc-nav a:hover::before{ background:var(--blue); border-color:#fff; box-shadow:0 0 0 2px color-mix(in srgb, var(--blue) 22%, transparent); transform:scale(1.12); }
+  .toc-nav a.on{ color:var(--green); background: color-mix(in srgb, var(--blue) 14%, #fff); border-color: color-mix(in srgb, var(--blue) 22%, var(--line)); border-left-color: var(--blue); font-weight:700; box-shadow:0 4px 14px rgba(242,193,61,.16); }
+  .toc-nav a.on::before{ background:var(--blue); border-color:#fff; box-shadow:0 0 0 3px color-mix(in srgb, var(--blue) 26%, transparent); }
+  .toc-nav a.on:hover{ background: color-mix(in srgb, var(--blue) 18%, #fff); border-left-color: var(--blue); }
   /* Explicit level classes — every li has toc-main (h2) or toc-sub (h3) + data-level, so levels are visible in inspector */
-  .toc-nav li.toc-main a{ font-size:.72rem; font-weight:600; color:#33425c; }
-  .toc-nav li.toc-sub a{ padding-left:24px; font-size:.68rem; font-weight:500; letter-spacing:.2px; line-height:1.32; color:var(--muted); background:#fbfcfe; border-color:#f1f3f8; }
+  .toc-nav li.toc-main a{ font-size:.72rem; font-weight:600; color:var(--ink); }
+  .toc-nav li.toc-sub a{ padding-left:24px; font-size:.68rem; font-weight:500; letter-spacing:.2px; line-height:1.32; color:var(--muted); background:#fff; border-color:var(--mint); }
   .toc-nav li.toc-sub a::before{ width:5px; height:5px; background:#d4dae6; box-shadow:0 0 0 1px #fff; border-width:1.5px; }
-  .toc-nav li.toc-sub a:hover{ color:var(--navy); background:#fff; border-color: color-mix(in srgb, var(--teal) 14%, var(--line)); }
-  .toc-nav li.toc-sub a:hover::before{ background:var(--teal); }
-  .toc-nav li.toc-sub a.on{ color:var(--teal); background: color-mix(in srgb, var(--teal) 9%, #fff); border-color: color-mix(in srgb, var(--teal) 18%, var(--line)); border-left-color: var(--teal); }
-  .toc-nav li.toc-sub a.on::before{ background:var(--teal); box-shadow:0 0 0 3px color-mix(in srgb, var(--teal) 18%, transparent); }
+  .toc-nav li.toc-sub a:hover{ color:var(--green); background:#fff; border-color: color-mix(in srgb, var(--blue) 14%, var(--line)); }
+  .toc-nav li.toc-sub a:hover::before{ background:var(--blue); }
+  .toc-nav li.toc-sub a.on{ color:var(--blue); background: color-mix(in srgb, var(--blue) 9%, #fff); border-color: color-mix(in srgb, var(--blue) 18%, var(--line)); border-left-color: var(--blue); }
+  .toc-nav li.toc-sub a.on::before{ background:var(--blue); box-shadow:0 0 0 3px color-mix(in srgb, var(--blue) 18%, transparent); }
   /* Fallback via data-level (same as classes, survives minification/renames) */
   .toc-nav li[data-level="sub"] a{ padding-left:24px; }
 
@@ -442,11 +439,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
   /* Floating ToC widget — draggable icon + popover panel, lives outside the grid */
   .toc-fab-wrap{ position:fixed; left:24px; bottom:24px; z-index:70; }
   .toc-fab-wrap.dragging{ transition:none; }
-  .toc-fab{ width:52px; height:52px; padding:0; border-radius:50%; border:1px solid rgba(255,255,255,.24); background:linear-gradient(135deg, var(--navy), var(--teal)); color:#fff; display:grid; place-items:center; cursor:grab; box-shadow:0 10px 26px rgba(30,58,99,.32); position:relative; touch-action:none; }
+  .toc-fab{ width:52px; height:52px; padding:0; border-radius:50%; border:1px solid rgba(255,255,255,.24); background:var(--green); color:#fff; display:grid; place-items:center; cursor:grab; box-shadow:0 10px 26px rgba(30,58,99,.32); position:relative; touch-action:none; }
   .toc-fab:hover{ box-shadow:0 12px 30px rgba(30,58,99,.4); }
   .toc-fab:active{ cursor:grabbing; }
-  .toc-fab:focus-visible{ outline:2px solid var(--gold-d); outline-offset:3px; }
-  .toc-fab-count{ position:absolute; top:-3px; right:-3px; min-width:18px; height:18px; padding:0 4px; border-radius:999px; background:var(--gold); color:var(--navy); font-size:.62rem; font-weight:800; display:grid; place-items:center; box-shadow:0 0 0 2px #fff; }
+  .toc-fab:focus-visible{ outline:2px solid var(--blue); outline-offset:3px; }
+  .toc-fab-count{ position:absolute; top:-3px; right:-3px; min-width:18px; height:18px; padding:0 4px; border-radius:999px; background:var(--blue); color:var(--green); font-size:.62rem; font-weight:800; display:grid; place-items:center; box-shadow:0 0 0 2px #fff; }
   .toc-fab-count[hidden]{ display:none; }
   .toc-fab-panel{ position:absolute; left:0; bottom:calc(100% + 12px); width:min(300px, calc(100vw - 48px)); max-height:min(60vh, 520px); display:flex; flex-direction:column; opacity:0; pointer-events:none; transform:translateY(8px) scale(.97); transform-origin:bottom left; transition:.16s opacity, .16s transform; }
   .toc-fab-panel[hidden]{ display:none; }
@@ -457,8 +454,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
   .toc-fab-panel .toc-nav{ overflow:auto; }
   .toc-fab-close{ flex:0 0 auto; width:22px; height:22px; border-radius:7px; border:1px solid transparent; background:none; color:var(--muted); display:grid; place-items:center; cursor:pointer; padding:0; }
   .toc-fab-close[hidden]{ display:none; }
-  .toc-fab-close:hover{ background:#f1f3f8; color:var(--navy); }
-  .toc-fab-close:focus-visible{ outline:2px solid var(--gold-d); outline-offset:2px; }
+  .toc-fab-close:hover{ background:var(--mint); color:var(--green); }
+  .toc-fab-close:focus-visible{ outline:2px solid var(--blue); outline-offset:2px; }
 
   @media(max-width:1200px){
     .post-shell{ grid-template-columns:1fr; gap:0; width:min(880px,92vw); }
@@ -477,9 +474,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
      that so the grid never gets squeezed by the 94vw clamp right at the edge. */
   @media(min-width:1700px){
     .post-shell{ grid-template-columns:300px minmax(0,880px) 300px; width:min(1536px,94vw); }
-    .toc-docked{ display:block; position:sticky; top:88px; align-self:start; max-height:calc(100vh - 96px); overflow:auto; padding-top:40px; scrollbar-width:thin; scrollbar-color:var(--gray) transparent; }
+    .toc-docked{ display:block; position:sticky; top:88px; align-self:start; max-height:calc(100vh - 96px); overflow:auto; padding-top:40px; scrollbar-width:thin; scrollbar-color:var(--line) transparent; }
     .toc-docked::-webkit-scrollbar{ width:5px; }
-    .toc-docked::-webkit-scrollbar-thumb{ background:var(--gray); border-radius:999px; }
+    .toc-docked::-webkit-scrollbar-thumb{ background:var(--line); border-radius:999px; }
     .toc-fab-wrap{ display:none; }
   }
 </style>
